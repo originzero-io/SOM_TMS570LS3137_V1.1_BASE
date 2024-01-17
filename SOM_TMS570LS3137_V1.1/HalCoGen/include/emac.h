@@ -77,7 +77,7 @@ extern "C" {
 #define EMAC_BROADCAST_ENABLE			(1U)
 #define EMAC_UNICAST_ENABLE				(1U)
 #define EMAC_CHANNELNUMBER					(0U)
-#define EMAC_PHYADDRESS						(1U)
+#define EMAC_PHYADDRESS						(0U)
 
 /*
  * Macros to indicate EMAC Channel Numbers

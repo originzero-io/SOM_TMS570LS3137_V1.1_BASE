@@ -1,14 +1,14 @@
 # FIXED
 
 LwIP/src/api/netdb.obj: ../LwIP/src/api/netdb.c
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/netdb.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/Core/Inc/main.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/arch.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cc.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cpu.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/netdb.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/arch.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cc.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cpu.h
 LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h
 LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h
@@ -28,25 +28,25 @@ LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/i
 LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/limits.h
 LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/ctype.h
 LwIP/src/api/netdb.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_isfuncdcl.h
-LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
+LwIP/src/api/netdb.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 
 ../LwIP/src/api/netdb.c:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/netdb.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/netdb.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/Core/Inc/main.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/arch.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/arch.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cc.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cc.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cpu.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cpu.h:
 
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 
@@ -86,5 +86,5 @@ C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/ctype.h:
 
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_isfuncdcl.h:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 

@@ -165,6 +165,7 @@ struct pbuf* EMAC_to_pbuf(hdkif_t *hdkif)
 }
 
 #define ETHERNET_EMAC_PACKET_CONTROL(curr_bd) ((EMAC_BUF_DESC_EOP == (curr_bd->flags_pktlen & EMAC_BUF_DESC_EOP) || EMAC_BUF_DESC_SOP == (curr_bd->flags_pktlen & EMAC_BUF_DESC_SOP)) && NULL != curr_bd)
+#define ETHERNET_EMAC_PACKET_END_CONTROL(curr_bd) (EMAC_BUF_DESC_EOP == (curr_bd->flags_pktlen & EMAC_BUF_DESC_EOP) && NULL != curr_bd)
 
 void EMAC_to_pbuf2(hdkif_t *hdkif, struct pbuf *p)
 {
@@ -182,10 +183,6 @@ void EMAC_to_pbuf2(hdkif_t *hdkif, struct pbuf *p)
 
     while (is_received)
     {
-        uint32_t a = curr_bd->flags_pktlen & EMAC_BUF_DESC_OWNER;
-        uint32_t b = curr_bd->flags_pktlen & EMAC_BUF_DESC_SOP;
-        uint32_t c = curr_bd->flags_pktlen & EMAC_BUF_DESC_EOP;
-        uint32_t d = curr_bd->flags_pktlen & EMAC_BUF_DESC_EOQ;
 
         if (NULL == curr_bd)
             break;
@@ -442,6 +439,7 @@ static void ethernetif_input(void const *argument)
                     if (netif->input(p, netif) != ERR_OK)
                     {
                     }
+
                     release_pbuf_to_pool(p);
                 }
             }

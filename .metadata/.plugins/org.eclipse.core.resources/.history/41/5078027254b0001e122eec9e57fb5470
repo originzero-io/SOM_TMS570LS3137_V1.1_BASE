@@ -1,0 +1,23 @@
+/*
+ * core.c
+ *
+ *  Created on: Nov 17, 2023
+ *      Author: fatih
+ */
+
+#include "core.h"
+
+processor_mode_enum_t get_processor_mode(void)
+{
+    cpsr_register_union_t cpsr;
+    cpsr.value = __get_CPSR();
+
+    if (cpsr.bits.T == 0)
+    {
+        return PROCESSOR_MODE_HANDLER;
+    }
+    else
+    {
+        return PROCESSOR_MODE_THREAD;
+    }
+}

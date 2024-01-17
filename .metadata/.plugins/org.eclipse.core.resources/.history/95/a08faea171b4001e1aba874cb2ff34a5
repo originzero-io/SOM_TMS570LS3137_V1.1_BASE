@@ -1,0 +1,190 @@
+#include "FreeRTOS.h"
+#include "os_queue.h"
+#include "os_task.h"
+
+/* TI Libraries */
+#include "het.h"
+#include "gio.h"
+#include "esm.h"
+#include "sys_core.h"
+#include "sys_vim.h"
+#include "sci.h"
+
+/* standart libraries */
+#include <stdio.h>
+#include <stdint.h>
+
+#include "results.h"
+#include "lwiplib.h"
+#include "lwip/init.h"
+#include "lwip/dhcp.h"
+
+static results_enum_t ethernet_lwip_init(bool is_async);
+
+/*
+ * The tasks as described in the comments at the top of this file.
+ */
+static void defaultTask(void *pvParameters);
+static void userTask(void *pvParameters);
+
+/*-----------------------------------------------------------*/
+/*
+ typedef enum {
+ BIG_ENDIAN_,
+ LITTLE_ENDIAN_,
+ UNKNOWN_ENDIAN_
+ } EndianType;
+
+ EndianType check_endian() {
+ unsigned int testVar = 1; // Using an integer (usually 4 bytes)
+ char *bytePtr = (char *)&testVar;
+
+ if (bytePtr[0] == 1) {
+ return LITTLE_ENDIAN_; // Least significant byte is at lowest address
+ } else if (bytePtr[sizeof(testVar) - 1] == 1) {
+ return BIG_ENDIAN_; // Most significant byte is at lowest address
+ } else {
+ return UNKNOWN_ENDIAN_; // Just in case of an unexpected scenario
+ }
+ }
+ */
+/**
+ * main.c
+ */
+void user_main(void)
+{
+    /*
+     EndianType endian = check_endian();
+     */
+#if 1
+
+    vimInit();
+    esmInit();
+    _enable_IRQ();
+    _enable_interrupt_();
+    esmEnableInterrupt(0xffffffff);
+
+    sciInit();
+
+    sys_thread_new("default", defaultTask, NULL, configMINIMAL_STACK_SIZE * 8,
+                   osPriorityIdle);
+
+    vTaskStartScheduler();
+
+    /* If all is well, the scheduler will now be running, and the following
+     line will never be reached.  If the following line does execute, then
+     there was insufficient FreeRTOS heap memory available for the idle and/or
+     timer tasks to be created.  See the memory management section on the
+     FreeRTOS web site for more details. */
+    for (;;)
+        ;
+#else
+
+    vimInit();
+    esmInit();
+    _enable_IRQ();
+    _enable_interrupt_();
+    esmEnableInterrupt(0xffffffff);
+
+
+  //  gioSetDirection(hetPORT1, 0XFFFFFFFF);
+
+    ethernet_lwip_init(false);
+
+
+    while(1)
+    {
+
+    }
+#endif
+}
+
+extern uint8 emacAddress[6U];
+
+void user_main2(void)
+{
+
+    while (1)
+    {
+
+    }
+}
+
+static results_enum_t ethernet_lwip_init(bool is_async)
+{
+    results_enum_t return_value;
+
+#if NO_SYS
+  lwip_init();
+#else
+    tcpip_init(NULL, NULL);
+#endif
+
+    uint8_t ip_address_array[] = { 192, 168, 1, 150 };
+    uint8_t net_mask_array[] = { 255, 255, 255, 0 };
+    uint8_t gateway_address_array[] = { 192, 168, 1, 1 };
+
+    return_value = lwip_init_sync(0, &emacAddress[0], &ip_address_array[0],
+                                  &net_mask_array[0], &gateway_address_array[0],
+                                  IPADDR_USE_DHCP);
+
+    return return_value;
+}
+
+/*-----------------------------------------------------------*/
+
+static void uart_write(uint8_t *string, uint32_t string_len)
+{
+    while (string_len--)
+    {
+        while ((scilinREG->FLR & 0x4) == 4)
+            ; /* wait until busy */
+        sciSendByte(scilinREG, *string++); /* send out text   */
+    }
+}
+volatile uint8_t dhcp_status = 0;
+static void defaultTask(void *pvParameters)
+{
+    log_printf("program started\n");
+
+    ethernet_lwip_init(false);
+
+    for (;;)
+    {
+        // dhcp_status = dhcp_supplied_address(&gnetif);
+        //  log_printf("fatih, %d", i);
+        // i++;
+        vTaskDelay(1000);
+    }
+}
+
+/*-----------------------------------------------------------*/
+
+static void userTask(void *pvParameters)
+{
+    for (;;)
+    {
+
+        vTaskDelay(1);
+    }
+}
+/*-----------------------------------------------------------*/
+
+int log_printf(const char *__restrict _format, ...)
+{
+    char log_buffer[1000];
+
+    va_list va;
+    va_start(va, _format);
+    int size = vsprintf(log_buffer, _format, va);
+
+    if (size > 0)
+    {
+        sciSend(scilinREG, size, (uint8_t*) &log_buffer[0]);
+    }
+
+    va_end(va);
+
+    return size;
+}
+

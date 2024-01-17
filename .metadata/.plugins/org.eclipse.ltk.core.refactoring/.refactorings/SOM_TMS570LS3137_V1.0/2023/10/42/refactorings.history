@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SOM_TMS570LS3137_V1.0/user_files&apos; to &apos;user&apos;" description="Rename resource &apos;user_files&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="user_files" name="user" stamp="1697896448198" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SOM_TMS570LS3137_V1.0/user/Inch&apos; to &apos;Inc&apos;" description="Rename resource &apos;Inch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="user/Inch" name="Inc" stamp="1697896464137" updateReferences="true"/>
+</session>

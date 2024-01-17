@@ -1,0 +1,868 @@
+
+**** Build of configuration Debug for project SOM_TMS570LS3137_V1.0 ****
+
+"C:\\ti\\ccs1100\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_lib.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/api_lib.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_lib.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/api/api_lib.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_lib.c", line 58: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_lib.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/api_lib.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_msg.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/api_msg.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_msg.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/api/api_msg.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_msg.c", line 39: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/api_msg.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/api_msg.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/err.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/err.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/err.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/api/err.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/err.c", line 39: fatal error #1965: cannot open source file "lwip/err.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/err.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/err.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/if_api.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/if_api.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/if_api.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/api/if_api.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/if_api.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/if_api.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/if_api.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netbuf.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/netbuf.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netbuf.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/api/netbuf.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netbuf.c", line 45: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netbuf.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/netbuf.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netdb.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/netdb.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netdb.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:44: recipe for target 'libraries/ThirdParty/lwip/src/api/netdb.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netdb.c", line 38: fatal error #1965: cannot open source file "lwip/netdb.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netdb.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/netdb.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netifapi.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/netifapi.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netifapi.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:51: recipe for target 'libraries/ThirdParty/lwip/src/api/netifapi.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netifapi.c", line 41: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/netifapi.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/netifapi.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/sockets.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/sockets.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/sockets.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:58: recipe for target 'libraries/ThirdParty/lwip/src/api/sockets.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/sockets.c", line 40: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/sockets.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/sockets.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/tcpip.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/api/tcpip.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/api"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/tcpip.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/api/subdir_rules.mk:65: recipe for target 'libraries/ThirdParty/lwip/src/api/tcpip.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/tcpip.c", line 39: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/api/tcpip.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/api/tcpip.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/apps/mqtt/mqtt.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/apps/mqtt/mqtt.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/apps/mqtt"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/apps/mqtt/mqtt.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/apps/mqtt/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/apps/mqtt/mqtt.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/apps/mqtt/mqtt.c", line 50: fatal error #1965: cannot open source file "mqtt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/apps/mqtt/mqtt.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/apps/mqtt/mqtt.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/altcp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/core/altcp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp.c", line 117: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/altcp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_alloc.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/altcp_alloc.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_alloc.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/core/altcp_alloc.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_alloc.c", line 44: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_alloc.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/altcp_alloc.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_tcp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/altcp_tcp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_tcp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/core/altcp_tcp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_tcp.c", line 45: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/altcp_tcp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/altcp_tcp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/def.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/def.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/def.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/core/def.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/def.c", line 61: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/def.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/def.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/dns.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/dns.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/dns.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/core/dns.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/dns.c", line 87: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/dns.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/dns.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/inet_chksum.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/inet_chksum.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/inet_chksum.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:44: recipe for target 'libraries/ThirdParty/lwip/src/core/inet_chksum.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/inet_chksum.c", line 48: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/inet_chksum.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/inet_chksum.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/init.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/init.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/init.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:51: recipe for target 'libraries/ThirdParty/lwip/src/core/init.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/init.c", line 38: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/init.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/init.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ip.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ip.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ip.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:58: recipe for target 'libraries/ThirdParty/lwip/src/core/ip.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ip.c", line 56: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ip.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ip.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/mem.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/mem.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/mem.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:65: recipe for target 'libraries/ThirdParty/lwip/src/core/mem.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/mem.c", line 56: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/mem.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/mem.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/memp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/memp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/memp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:72: recipe for target 'libraries/ThirdParty/lwip/src/core/memp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/memp.c", line 46: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/memp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/memp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/netif.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/netif.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/netif.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:79: recipe for target 'libraries/ThirdParty/lwip/src/core/netif.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/netif.c", line 51: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/netif.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/netif.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/pbuf.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/pbuf.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/pbuf.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:86: recipe for target 'libraries/ThirdParty/lwip/src/core/pbuf.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/pbuf.c", line 71: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/pbuf.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/pbuf.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/raw.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/raw.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/raw.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:93: recipe for target 'libraries/ThirdParty/lwip/src/core/raw.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/raw.c", line 48: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/raw.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/raw.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/stats.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/stats.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/stats.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:100: recipe for target 'libraries/ThirdParty/lwip/src/core/stats.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/stats.c", line 39: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/stats.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/stats.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/sys.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/sys.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/sys.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:107: recipe for target 'libraries/ThirdParty/lwip/src/core/sys.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/sys.c", line 119: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/sys.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/sys.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/tcp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:114: recipe for target 'libraries/ThirdParty/lwip/src/core/tcp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp.c", line 100: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/tcp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_in.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/tcp_in.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_in.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:121: recipe for target 'libraries/ThirdParty/lwip/src/core/tcp_in.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_in.c", line 44: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_in.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/tcp_in.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_out.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/tcp_out.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_out.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:128: recipe for target 'libraries/ThirdParty/lwip/src/core/tcp_out.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_out.c", line 63: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/tcp_out.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/tcp_out.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/timeouts.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/timeouts.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/timeouts.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:135: recipe for target 'libraries/ThirdParty/lwip/src/core/timeouts.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/timeouts.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/timeouts.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/timeouts.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/udp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/udp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/udp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/subdir_rules.mk:142: recipe for target 'libraries/ThirdParty/lwip/src/core/udp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/udp.c", line 48: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/udp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/udp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/acd.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/acd.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/acd.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/acd.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/acd.c", line 64: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/acd.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/acd.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/autoip.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/autoip.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/autoip.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/autoip.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/autoip.c", line 57: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/autoip.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/autoip.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/dhcp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/dhcp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/dhcp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/dhcp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/dhcp.c", line 66: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/dhcp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/dhcp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/etharp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/etharp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/etharp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/etharp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/etharp.c", line 46: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/etharp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/etharp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/icmp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/icmp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/icmp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/icmp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/icmp.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/icmp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/icmp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/igmp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/igmp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/igmp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:44: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/igmp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/igmp.c", line 83: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/igmp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/igmp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/ip4.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:51: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/ip4.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4.c", line 41: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/ip4.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_addr.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/ip4_addr.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_addr.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:58: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/ip4_addr.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_addr.c", line 39: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_addr.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/ip4_addr.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_frag.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv4/ip4_frag.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv4"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_frag.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv4/subdir_rules.mk:65: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv4/ip4_frag.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_frag.c", line 41: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv4/ip4_frag.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv4/ip4_frag.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/dhcp6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/dhcp6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/dhcp6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/dhcp6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/dhcp6.c", line 58: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/dhcp6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/dhcp6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ethip6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/ethip6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ethip6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/ethip6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ethip6.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ethip6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/ethip6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/icmp6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/icmp6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/icmp6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/icmp6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/icmp6.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/icmp6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/icmp6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/inet6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/inet6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/inet6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/inet6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/inet6.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/inet6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/inet6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/ip6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/ip6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/ip6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_addr.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/ip6_addr.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_addr.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:44: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/ip6_addr.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_addr.c", line 43: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_addr.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/ip6_addr.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_frag.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/ip6_frag.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_frag.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:51: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/ip6_frag.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_frag.c", line 42: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/ip6_frag.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/ip6_frag.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/mld6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/mld6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/mld6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:58: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/mld6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/mld6.c", line 54: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/mld6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/mld6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/nd6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/core/ipv6/nd6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/core/ipv6"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/nd6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/core/ipv6/subdir_rules.mk:65: recipe for target 'libraries/ThirdParty/lwip/src/core/ipv6/nd6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/nd6.c", line 44: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/core/ipv6/nd6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/core/ipv6/nd6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/bridgeif.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/netif/bridgeif.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif.c", line 82: fatal error #1965: cannot open source file "netif/bridgeif.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/bridgeif.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif_fdb.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/bridgeif_fdb.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif_fdb.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/netif/bridgeif_fdb.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif_fdb.c", line 44: fatal error #1965: cannot open source file "netif/bridgeif.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/bridgeif_fdb.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/bridgeif_fdb.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ethernet.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ethernet.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ethernet.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/netif/ethernet.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ethernet.c", line 41: fatal error #1965: cannot open source file "lwip/opt.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ethernet.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ethernet.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/lowpan6.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/netif/lowpan6.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6.c", line 51: fatal error #1965: cannot open source file "netif/lowpan6.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/lowpan6.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_ble.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/lowpan6_ble.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_ble.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/netif/lowpan6_ble.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_ble.c", line 69: fatal error #1965: cannot open source file "netif/lowpan6_ble.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_ble.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/lowpan6_ble.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_common.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/lowpan6_common.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_common.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:44: recipe for target 'libraries/ThirdParty/lwip/src/netif/lowpan6_common.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_common.c", line 51: fatal error #1965: cannot open source file "netif/lowpan6_common.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/lowpan6_common.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/lowpan6_common.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/slipif.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/slipif.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/slipif.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:51: recipe for target 'libraries/ThirdParty/lwip/src/netif/slipif.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/slipif.c", line 62: fatal error #1965: cannot open source file "netif/slipif.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/slipif.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/slipif.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/zepif.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/zepif.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/zepif.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/subdir_rules.mk:58: recipe for target 'libraries/ThirdParty/lwip/src/netif/zepif.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/zepif.c", line 50: fatal error #1965: cannot open source file "netif/zepif.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/zepif.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/zepif.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/auth.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/auth.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/auth.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/auth.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/auth.c", line 71: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/auth.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/auth.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ccp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/ccp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ccp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/ccp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ccp.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ccp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/ccp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-md5.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/chap-md5.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-md5.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/chap-md5.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-md5.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-md5.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/chap-md5.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-new.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/chap-new.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-new.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/chap-new.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-new.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap-new.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/chap-new.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap_ms.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/chap_ms.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap_ms.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/chap_ms.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap_ms.c", line 77: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/chap_ms.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/chap_ms.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/demand.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/demand.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/demand.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:44: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/demand.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/demand.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/demand.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/demand.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eap.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/eap.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eap.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:51: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/eap.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eap.c", line 46: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eap.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/eap.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ecp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/ecp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ecp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:58: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/ecp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ecp.c", line 60: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ecp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/ecp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eui64.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/eui64.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eui64.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:65: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/eui64.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eui64.c", line 38: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/eui64.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/eui64.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/fsm.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/fsm.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/fsm.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:72: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/fsm.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/fsm.c", line 43: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/fsm.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/fsm.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipcp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/ipcp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipcp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:79: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/ipcp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipcp.c", line 43: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipcp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/ipcp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipv6cp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/ipv6cp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipv6cp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:86: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/ipv6cp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipv6cp.c", line 150: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ipv6cp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/ipv6cp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/lcp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/lcp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/lcp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:93: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/lcp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/lcp.c", line 43: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/lcp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/lcp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/magic.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/magic.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/magic.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:100: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/magic.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/magic.c", line 75: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/magic.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/magic.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/mppe.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/mppe.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/mppe.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:107: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/mppe.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/mppe.c", line 26: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/mppe.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/mppe.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/multilink.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/multilink.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/multilink.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:114: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/multilink.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/multilink.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/multilink.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/multilink.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ppp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/ppp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ppp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:121: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/ppp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ppp.c", line 88: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/ppp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/ppp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppapi.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/pppapi.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppapi.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:128: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/pppapi.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppapi.c", line 34: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppapi.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/pppapi.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppcrypt.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/pppcrypt.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppcrypt.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:135: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/pppcrypt.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppcrypt.c", line 33: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppcrypt.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/pppcrypt.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppoe.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/pppoe.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppoe.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:142: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/pppoe.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppoe.c", line 71: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppoe.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/pppoe.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppol2tp.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/pppol2tp.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppol2tp.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:149: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/pppol2tp.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppol2tp.c", line 53: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppol2tp.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/pppol2tp.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppos.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/pppos.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppos.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:156: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/pppos.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppos.c", line 34: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/pppos.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/pppos.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/upap.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/upap.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/upap.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:163: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/upap.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/upap.c", line 43: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/upap.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/upap.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/utils.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/utils.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/utils.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:170: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/utils.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/utils.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/utils.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/utils.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/vj.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/vj.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/vj.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/subdir_rules.mk:177: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/vj.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/vj.c", line 31: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/vj.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/vj.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp/polarssl"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/polarssl/subdir_rules.mk:9: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.c", line 41: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/polarssl/arc4.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/des.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/polarssl/des.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp/polarssl"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/des.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/polarssl/subdir_rules.mk:16: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/polarssl/des.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/des.c", line 42: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/des.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/polarssl/des.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md4.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/polarssl/md4.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp/polarssl"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md4.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/polarssl/subdir_rules.mk:23: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/polarssl/md4.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md4.c", line 42: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md4.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/polarssl/md4.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md5.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/polarssl/md5.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp/polarssl"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md5.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/polarssl/subdir_rules.mk:30: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/polarssl/md5.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md5.c", line 41: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/md5.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/polarssl/md5.obj] Error 1
+Building file: "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -Ooff --opt_for_speed=1 --include_path="C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/HalCoGen/include" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/Core/Inc" --include_path="D:/Projects/ANAKS/Projects/Software/ES/SOM_TMS570LS3137/SOM_TMS570LS3137_V1.0/user/Inc" --include_path="D:/Projects/ANAKS/librarys/019-library-results/results/Inc" -g --c99 --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi --preproc_with_compile --preproc_dependency="libraries/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.d_raw" --obj_directory="libraries/ThirdParty/lwip/src/netif/ppp/polarssl"  "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.c"
+ 
+>> Compilation failure
+libraries/ThirdParty/LwIP/src/netif/ppp/polarssl/subdir_rules.mk:37: recipe for target 'libraries/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.obj' failed
+"D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.c", line 41: fatal error #1965: cannot open source file "netif/ppp/ppp_opts.h"
+1 catastrophic error detected in the compilation of "D:/Projects/ANAKS/librarys/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.c".
+Compilation terminated.
+gmake: *** [libraries/ThirdParty/lwip/src/netif/ppp/polarssl/sha1.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

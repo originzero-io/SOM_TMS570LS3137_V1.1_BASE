@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;SOM_TMS570LS3137_V1.1/libraries/results&apos;" deleteContents="false" description="Delete resource &apos;SOM_TMS570LS3137_V1.1/libraries/results&apos;" element1="/SOM_TMS570LS3137_V1.1/libraries/results" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1703226275755"/>
+</session>

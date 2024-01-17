@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="LastUsedHeaderTemplate" value="Default C++ header template"/>
+	<item key="LastUsedSourceTemplate" value="Default C++ source template"/>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="CResourceRenameRefactoringInputPage">
+		<item key="updateReferences" value="true"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="askReindex.detail" value="0"/>
+	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="sys_arch_mbox_fetch"/>
+			<item value="xQueueGenericCreate"/>
+			<item value="prvInitialiseMutex"/>
+			<item value="xQueueGenericSend"/>
+			<item value="mem_malloc"/>
+			<item value="pvPortMalloc"/>
+			<item value="ucPortCountLeadingZeros"/>
+			<item value="ulPortCountLeadingZeros"/>
+			<item value="MPU_xTaskGetCurrentTaskHandle"/>
+			<item value="portPRIGROUP_SHIFT"/>
+			<item value="xPortSysTickHandler"/>
+			<item value="xPortPendSVHandler"/>
+			<item value="vPortSVCHandler"/>
+			<item value="configMAX_SYSCALL_INTERRUPT_PRIORITY"/>
+			<item value="configKERNEL_INTERRUPT_PRIORITY"/>
+			<item value="configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY"/>
+			<item value="configLIBRARY_LOWEST_INTERRUPT_PRIORITY"/>
+			<item value="configPRIO_BITS"/>
+			<item value="configUSE_NEWLIB_REENTRANT"/>
+			<item value="configMESSAGE_BUFFER_LENGTH_TYPE"/>
+			<item value="INCLUDE_xTaskGetCurrentTaskHandle"/>
+			<item value="configQUEUE_REGISTRY_SIZE"/>
+			<item value="configCPU_CLOCK_HZ"/>
+			<item value="configUSE_TICK_HOOK"/>
+			<item value="configUSE_IDLE_HOOK"/>
+			<item value="configUSE_PREEMPTION"/>
+			<item value="configENABLE_FPU"/>
+			<item value="dhcp_status"/>
+			<item value="lwip_sys_mutex"/>
+			<item value="xSwitchRequired"/>
+			<item value="osCMSIS"/>
+			<item value="xSemaphoreCreateRecursiveMutexStatic"/>
+			<item value="xSemaphoreCreateMutexStatic"/>
+			<item value="osMutex"/>
+			<item value="mutex"/>
+			<item value="osMutexAcquire"/>
+			<item value="osMutexWait"/>
+			<item value="LWIP_IGMP"/>
+			<item value="CHECKSUM_BY_HARDWARE"/>
+			<item value="TCPIP_THREAD_STACKSIZE"/>
+			<item value="DEFAULT_THREAD_STACKSIZE"/>
+			<item value="LWIP_STATS"/>
+			<item value="LWIP_ALTCP"/>
+			<item value="TCPIP_MBOX_SIZE"/>
+			<item value="sys_thread_new"/>
+			<item value="tcpip"/>
+			<item value="emac_rx_int_isr"/>
+			<item value="LWIP_UNUSED_ARG"/>
+			<item value="dhcp_bind"/>
+			<item value="DHCP_STATE_BOUND"/>
+			<item value="dhcp_inform"/>
+			<item value="DHCP_STATE_SELECTING"/>
+			<item value="ethernet_input"/>
+			<item value="EMACHWInit"/>
+			<item value="xSemaphore"/>
+			<item value="RTOS_MA"/>
+			<item value="RTOS_VER"/>
+			<item value="FREERTOS"/>
+			<item value="FREERTOS_M"/>
+			<item value="FREERTOS_VER"/>
+			<item value="xSemaphoreGiveRecursive"/>
+			<item value="EMACTxIntHandler"/>
+			<item value="SYS_ARCH_UNPROTECT"/>
+			<item value="LWIP_DEBUG_TIMERNAMES"/>
+			<item value="sys_arch_unprotect"/>
+			<item value="mdio_base"/>
+			<item value="LWIP_TESTMODE"/>
+			<item value="lwip_win32_platform_diag"/>
+			<item value="sprintf"/>
+			<item value="IntMasterIRQEnable"/>
+			<item value="xTaskGetTickCount"/>
+			<item value="PPP_SUPPORT"/>
+			<item value="sys_jiffies"/>
+			<item value="sys_now"/>
+			<item value="NO_SYS"/>
+			<item value="lwip_port_rand"/>
+			<item value="EMACCore0RxIsr"/>
+			<item value="lwIPRxIntHandler"/>
+			<item value="LWIP_VERSION_REVISION"/>
+			<item value="dhcp_set_state"/>
+			<item value="dhcp_state"/>
+			<item value="netif_dhcp_state"/>
+			<item value="structdhcp"/>
+			<item value="dhcp_get_state"/>
+			<item value="DHCPstate"/>
+			<item value="VERSION"/>
+			<item value="kernelHEAP"/>
+			<item value="kernelTEXT"/>
+			<item value="mainQUEUE_SEND_FREQUENCY_MS"/>
+			<item value="xQueueCreate"/>
+		</list>
+	</section>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item key="DIALOG_X_ORIGIN" value="652"/>
+		<item key="DIALOG_Y_ORIGIN" value="632"/>
+		<item key="DIALOG_WIDTH" value="825"/>
+		<item key="DIALOG_HEIGHT" value="438"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="714"/>
+		<item key="size.height" value="234"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.browser.opentype.OpenTypeActionSettings">
+		<item key="show_namespaces" value="true"/>
+		<item key="show_classes" value="true"/>
+		<item key="show_structs" value="true"/>
+		<item key="show_typedefs" value="true"/>
+		<item key="show_enums" value="true"/>
+		<item key="show_unions" value="true"/>
+		<item key="show_functions" value="true"/>
+		<item key="show_variables" value="true"/>
+		<item key="show_enumerators" value="true"/>
+		<item key="show_macros" value="true"/>
+		<item key="show_lowlevel" value="true"/>
+		<item key="x" value="636"/>
+		<item key="y" value="-1198"/>
+		<item key="width" value="565"/>
+		<item key="height" value="681"/>
+	</section>
+</section>

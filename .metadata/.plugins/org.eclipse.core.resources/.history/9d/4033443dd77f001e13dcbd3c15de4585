@@ -1,0 +1,320 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
+
+GEN_OPTS__FLAG := 
+GEN_CMDS__FLAG := 
+
+ORDERED_OBJS += \
+"./Core/Src/cc.obj" \
+"./Core/Src/emac_driver.obj" \
+"./Core/Src/ethernetif.obj" \
+"./Core/Src/lwip.obj" \
+"./Core/Src/lwiplib.obj" \
+"./Core/Src/main.obj" \
+"./Core/Src/perf.obj" \
+"./Core/Src/sys_arch.obj" \
+"./HalCoGen/source/dabort.obj" \
+"./HalCoGen/source/emac.obj" \
+"./HalCoGen/source/errata_SSWF021_45.obj" \
+"./HalCoGen/source/esm.obj" \
+"./HalCoGen/source/mdio.obj" \
+"./HalCoGen/source/notification.obj" \
+"./HalCoGen/source/os_croutine.obj" \
+"./HalCoGen/source/os_event_groups.obj" \
+"./HalCoGen/source/os_heap.obj" \
+"./HalCoGen/source/os_list.obj" \
+"./HalCoGen/source/os_mpu_wrappers.obj" \
+"./HalCoGen/source/os_port.obj" \
+"./HalCoGen/source/os_portasm.obj" \
+"./HalCoGen/source/os_queue.obj" \
+"./HalCoGen/source/os_tasks.obj" \
+"./HalCoGen/source/os_timer.obj" \
+"./HalCoGen/source/phy_dp83640.obj" \
+"./HalCoGen/source/pinmux.obj" \
+"./HalCoGen/source/sys_core.obj" \
+"./HalCoGen/source/sys_dma.obj" \
+"./HalCoGen/source/sys_intvecs.obj" \
+"./HalCoGen/source/sys_main.obj" \
+"./HalCoGen/source/sys_mpu.obj" \
+"./HalCoGen/source/sys_pcr.obj" \
+"./HalCoGen/source/sys_phantom.obj" \
+"./HalCoGen/source/sys_pmm.obj" \
+"./HalCoGen/source/sys_pmu.obj" \
+"./HalCoGen/source/sys_selftest.obj" \
+"./HalCoGen/source/sys_startup.obj" \
+"./HalCoGen/source/sys_vim.obj" \
+"./HalCoGen/source/system.obj" \
+"./libraries/lwip/src/api/api_lib.obj" \
+"./libraries/lwip/src/api/api_msg.obj" \
+"./libraries/lwip/src/api/err.obj" \
+"./libraries/lwip/src/api/if_api.obj" \
+"./libraries/lwip/src/api/netbuf.obj" \
+"./libraries/lwip/src/api/netdb.obj" \
+"./libraries/lwip/src/api/netifapi.obj" \
+"./libraries/lwip/src/api/sockets.obj" \
+"./libraries/lwip/src/api/tcpip.obj" \
+"./libraries/lwip/src/apps/mqtt/mqtt.obj" \
+"./libraries/lwip/src/core/altcp.obj" \
+"./libraries/lwip/src/core/altcp_alloc.obj" \
+"./libraries/lwip/src/core/altcp_tcp.obj" \
+"./libraries/lwip/src/core/def.obj" \
+"./libraries/lwip/src/core/dns.obj" \
+"./libraries/lwip/src/core/inet_chksum.obj" \
+"./libraries/lwip/src/core/init.obj" \
+"./libraries/lwip/src/core/ip.obj" \
+"./libraries/lwip/src/core/mem.obj" \
+"./libraries/lwip/src/core/memp.obj" \
+"./libraries/lwip/src/core/netif.obj" \
+"./libraries/lwip/src/core/pbuf.obj" \
+"./libraries/lwip/src/core/raw.obj" \
+"./libraries/lwip/src/core/stats.obj" \
+"./libraries/lwip/src/core/sys.obj" \
+"./libraries/lwip/src/core/tcp.obj" \
+"./libraries/lwip/src/core/tcp_in.obj" \
+"./libraries/lwip/src/core/tcp_out.obj" \
+"./libraries/lwip/src/core/timeouts.obj" \
+"./libraries/lwip/src/core/udp.obj" \
+"./libraries/lwip/src/core/ipv4/acd.obj" \
+"./libraries/lwip/src/core/ipv4/autoip.obj" \
+"./libraries/lwip/src/core/ipv4/dhcp.obj" \
+"./libraries/lwip/src/core/ipv4/etharp.obj" \
+"./libraries/lwip/src/core/ipv4/icmp.obj" \
+"./libraries/lwip/src/core/ipv4/igmp.obj" \
+"./libraries/lwip/src/core/ipv4/ip4.obj" \
+"./libraries/lwip/src/core/ipv4/ip4_addr.obj" \
+"./libraries/lwip/src/core/ipv4/ip4_frag.obj" \
+"./libraries/lwip/src/core/ipv6/dhcp6.obj" \
+"./libraries/lwip/src/core/ipv6/ethip6.obj" \
+"./libraries/lwip/src/core/ipv6/icmp6.obj" \
+"./libraries/lwip/src/core/ipv6/inet6.obj" \
+"./libraries/lwip/src/core/ipv6/ip6.obj" \
+"./libraries/lwip/src/core/ipv6/ip6_addr.obj" \
+"./libraries/lwip/src/core/ipv6/ip6_frag.obj" \
+"./libraries/lwip/src/core/ipv6/mld6.obj" \
+"./libraries/lwip/src/core/ipv6/nd6.obj" \
+"./libraries/lwip/src/netif/bridgeif.obj" \
+"./libraries/lwip/src/netif/bridgeif_fdb.obj" \
+"./libraries/lwip/src/netif/ethernet.obj" \
+"./libraries/lwip/src/netif/lowpan6.obj" \
+"./libraries/lwip/src/netif/lowpan6_ble.obj" \
+"./libraries/lwip/src/netif/lowpan6_common.obj" \
+"./libraries/lwip/src/netif/slipif.obj" \
+"./libraries/lwip/src/netif/zepif.obj" \
+"./libraries/lwip/src/netif/ppp/auth.obj" \
+"./libraries/lwip/src/netif/ppp/ccp.obj" \
+"./libraries/lwip/src/netif/ppp/chap-md5.obj" \
+"./libraries/lwip/src/netif/ppp/chap-new.obj" \
+"./libraries/lwip/src/netif/ppp/chap_ms.obj" \
+"./libraries/lwip/src/netif/ppp/demand.obj" \
+"./libraries/lwip/src/netif/ppp/eap.obj" \
+"./libraries/lwip/src/netif/ppp/ecp.obj" \
+"./libraries/lwip/src/netif/ppp/eui64.obj" \
+"./libraries/lwip/src/netif/ppp/fsm.obj" \
+"./libraries/lwip/src/netif/ppp/ipcp.obj" \
+"./libraries/lwip/src/netif/ppp/ipv6cp.obj" \
+"./libraries/lwip/src/netif/ppp/lcp.obj" \
+"./libraries/lwip/src/netif/ppp/magic.obj" \
+"./libraries/lwip/src/netif/ppp/mppe.obj" \
+"./libraries/lwip/src/netif/ppp/multilink.obj" \
+"./libraries/lwip/src/netif/ppp/ppp.obj" \
+"./libraries/lwip/src/netif/ppp/pppapi.obj" \
+"./libraries/lwip/src/netif/ppp/pppcrypt.obj" \
+"./libraries/lwip/src/netif/ppp/pppoe.obj" \
+"./libraries/lwip/src/netif/ppp/pppol2tp.obj" \
+"./libraries/lwip/src/netif/ppp/pppos.obj" \
+"./libraries/lwip/src/netif/ppp/upap.obj" \
+"./libraries/lwip/src/netif/ppp/utils.obj" \
+"./libraries/lwip/src/netif/ppp/vj.obj" \
+"./libraries/lwip/src/netif/ppp/polarssl/arc4.obj" \
+"./libraries/lwip/src/netif/ppp/polarssl/des.obj" \
+"./libraries/lwip/src/netif/ppp/polarssl/md4.obj" \
+"./libraries/lwip/src/netif/ppp/polarssl/md5.obj" \
+"./libraries/lwip/src/netif/ppp/polarssl/sha1.obj" \
+"./libraries/results/Src/results.obj" \
+"../HalCoGen/source/sys_link.cmd" \
+$(GEN_CMDS__FLAG) \
+-lrtsv7R4_T_be_v3D16_eabi.lib \
+
+-include ../makefile.init
+
+RM := DEL /F
+RMDIR := RMDIR /S/Q
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include Core/Src/subdir_vars.mk
+-include HalCoGen/source/subdir_vars.mk
+-include libraries/lwip/src/api/subdir_vars.mk
+-include libraries/lwip/src/apps/mqtt/subdir_vars.mk
+-include libraries/lwip/src/core/subdir_vars.mk
+-include libraries/lwip/src/core/ipv4/subdir_vars.mk
+-include libraries/lwip/src/core/ipv6/subdir_vars.mk
+-include libraries/lwip/src/netif/subdir_vars.mk
+-include libraries/lwip/src/netif/ppp/subdir_vars.mk
+-include libraries/lwip/src/netif/ppp/polarssl/subdir_vars.mk
+-include libraries/results/Src/subdir_vars.mk
+-include Core/Src/subdir_rules.mk
+-include HalCoGen/source/subdir_rules.mk
+-include libraries/lwip/src/api/subdir_rules.mk
+-include libraries/lwip/src/apps/mqtt/subdir_rules.mk
+-include libraries/lwip/src/core/subdir_rules.mk
+-include libraries/lwip/src/core/ipv4/subdir_rules.mk
+-include libraries/lwip/src/core/ipv6/subdir_rules.mk
+-include libraries/lwip/src/netif/subdir_rules.mk
+-include libraries/lwip/src/netif/ppp/subdir_rules.mk
+-include libraries/lwip/src/netif/ppp/polarssl/subdir_rules.mk
+-include libraries/results/Src/subdir_rules.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C55_DEPS)),)
+-include $(C55_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(S67_DEPS)),)
+-include $(S67_DEPS)
+endif
+ifneq ($(strip $(S62_DEPS)),)
+-include $(S62_DEPS)
+endif
+ifneq ($(strip $(S_DEPS)),)
+-include $(S_DEPS)
+endif
+ifneq ($(strip $(OPT_DEPS)),)
+-include $(OPT_DEPS)
+endif
+ifneq ($(strip $(C??_DEPS)),)
+-include $(C??_DEPS)
+endif
+ifneq ($(strip $(ASM_UPPER_DEPS)),)
+-include $(ASM_UPPER_DEPS)
+endif
+ifneq ($(strip $(S??_DEPS)),)
+-include $(S??_DEPS)
+endif
+ifneq ($(strip $(C64_DEPS)),)
+-include $(C64_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(S64_DEPS)),)
+-include $(S64_DEPS)
+endif
+ifneq ($(strip $(INO_DEPS)),)
+-include $(INO_DEPS)
+endif
+ifneq ($(strip $(CLA_DEPS)),)
+-include $(CLA_DEPS)
+endif
+ifneq ($(strip $(S55_DEPS)),)
+-include $(S55_DEPS)
+endif
+ifneq ($(strip $(SV7A_DEPS)),)
+-include $(SV7A_DEPS)
+endif
+ifneq ($(strip $(C62_DEPS)),)
+-include $(C62_DEPS)
+endif
+ifneq ($(strip $(C67_DEPS)),)
+-include $(C67_DEPS)
+endif
+ifneq ($(strip $(PDE_DEPS)),)
+-include $(PDE_DEPS)
+endif
+ifneq ($(strip $(K_DEPS)),)
+-include $(K_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(C43_DEPS)),)
+-include $(C43_DEPS)
+endif
+ifneq ($(strip $(S43_DEPS)),)
+-include $(S43_DEPS)
+endif
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+ifneq ($(strip $(SA_DEPS)),)
+-include $(SA_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+EXE_OUTPUTS += \
+SOM_TMS570LS3137_V1.1.out \
+
+EXE_OUTPUTS__QUOTED += \
+"SOM_TMS570LS3137_V1.1.out" \
+
+BIN_OUTPUTS += \
+SOM_TMS570LS3137_V1.1.hex \
+
+BIN_OUTPUTS__QUOTED += \
+"SOM_TMS570LS3137_V1.1.hex" \
+
+
+# All Target
+all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+	@$(MAKE) --no-print-directory -Onone "SOM_TMS570LS3137_V1.1.out"
+
+# Tool invocations
+SOM_TMS570LS3137_V1.1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+	@echo 'Building target: "$@"'
+	@echo 'Invoking: Arm Linker'
+	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -g --c99 --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi -z -m"SOM_TMS570LS3137_V1.1.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SOM_TMS570LS3137_V1.1_linkInfo.xml" --rom_model --be32 -o "SOM_TMS570LS3137_V1.1.out" $(ORDERED_OBJS)
+	@echo 'Finished building target: "$@"'
+	@echo ' '
+
+SOM_TMS570LS3137_V1.1.hex: $(EXE_OUTPUTS)
+	@echo 'Building secondary target: "$@"'
+	@echo 'Invoking: Arm Hex Utility'
+	"C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex" --diag_wrap=off -o "SOM_TMS570LS3137_V1.1.hex" $(EXE_OUTPUTS__QUOTED)
+	@echo 'Finished building secondary target: "$@"'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
+	-$(RM) "Core\Src\cc.obj" "Core\Src\emac_driver.obj" "Core\Src\ethernetif.obj" "Core\Src\lwip.obj" "Core\Src\lwiplib.obj" "Core\Src\main.obj" "Core\Src\perf.obj" "Core\Src\sys_arch.obj" "HalCoGen\source\dabort.obj" "HalCoGen\source\emac.obj" "HalCoGen\source\errata_SSWF021_45.obj" "HalCoGen\source\esm.obj" "HalCoGen\source\mdio.obj" "HalCoGen\source\notification.obj" "HalCoGen\source\os_croutine.obj" "HalCoGen\source\os_event_groups.obj" "HalCoGen\source\os_heap.obj" "HalCoGen\source\os_list.obj" "HalCoGen\source\os_mpu_wrappers.obj" "HalCoGen\source\os_port.obj" "HalCoGen\source\os_portasm.obj" "HalCoGen\source\os_queue.obj" "HalCoGen\source\os_tasks.obj" "HalCoGen\source\os_timer.obj" "HalCoGen\source\phy_dp83640.obj" "HalCoGen\source\pinmux.obj" "HalCoGen\source\sys_core.obj" "HalCoGen\source\sys_dma.obj" "HalCoGen\source\sys_intvecs.obj" "HalCoGen\source\sys_main.obj" "HalCoGen\source\sys_mpu.obj" "HalCoGen\source\sys_pcr.obj" "HalCoGen\source\sys_phantom.obj" "HalCoGen\source\sys_pmm.obj" 
+	-$(RM) "HalCoGen\source\sys_pmu.obj" "HalCoGen\source\sys_selftest.obj" "HalCoGen\source\sys_startup.obj" "HalCoGen\source\sys_vim.obj" "HalCoGen\source\system.obj" "libraries\lwip\src\api\api_lib.obj" "libraries\lwip\src\api\api_msg.obj" "libraries\lwip\src\api\err.obj" "libraries\lwip\src\api\if_api.obj" "libraries\lwip\src\api\netbuf.obj" "libraries\lwip\src\api\netdb.obj" "libraries\lwip\src\api\netifapi.obj" "libraries\lwip\src\api\sockets.obj" "libraries\lwip\src\api\tcpip.obj" "libraries\lwip\src\apps\mqtt\mqtt.obj" "libraries\lwip\src\core\altcp.obj" "libraries\lwip\src\core\altcp_alloc.obj" "libraries\lwip\src\core\altcp_tcp.obj" "libraries\lwip\src\core\def.obj" "libraries\lwip\src\core\dns.obj" "libraries\lwip\src\core\inet_chksum.obj" "libraries\lwip\src\core\init.obj" "libraries\lwip\src\core\ip.obj" "libraries\lwip\src\core\mem.obj" "libraries\lwip\src\core\memp.obj" "libraries\lwip\src\core\netif.obj" "libraries\lwip\src\core\pbuf.obj" "libraries\lwip\src\core\raw.obj" "libraries\lwip\src\core\stats.obj" 
+	-$(RM) "libraries\lwip\src\core\sys.obj" "libraries\lwip\src\core\tcp.obj" "libraries\lwip\src\core\tcp_in.obj" "libraries\lwip\src\core\tcp_out.obj" "libraries\lwip\src\core\timeouts.obj" "libraries\lwip\src\core\udp.obj" "libraries\lwip\src\core\ipv4\acd.obj" "libraries\lwip\src\core\ipv4\autoip.obj" "libraries\lwip\src\core\ipv4\dhcp.obj" "libraries\lwip\src\core\ipv4\etharp.obj" "libraries\lwip\src\core\ipv4\icmp.obj" "libraries\lwip\src\core\ipv4\igmp.obj" "libraries\lwip\src\core\ipv4\ip4.obj" "libraries\lwip\src\core\ipv4\ip4_addr.obj" "libraries\lwip\src\core\ipv4\ip4_frag.obj" "libraries\lwip\src\core\ipv6\dhcp6.obj" "libraries\lwip\src\core\ipv6\ethip6.obj" "libraries\lwip\src\core\ipv6\icmp6.obj" "libraries\lwip\src\core\ipv6\inet6.obj" "libraries\lwip\src\core\ipv6\ip6.obj" "libraries\lwip\src\core\ipv6\ip6_addr.obj" "libraries\lwip\src\core\ipv6\ip6_frag.obj" "libraries\lwip\src\core\ipv6\mld6.obj" "libraries\lwip\src\core\ipv6\nd6.obj" "libraries\lwip\src\netif\bridgeif.obj" "libraries\lwip\src\netif\bridgeif_fdb.obj" 
+	-$(RM) "libraries\lwip\src\netif\ethernet.obj" "libraries\lwip\src\netif\lowpan6.obj" "libraries\lwip\src\netif\lowpan6_ble.obj" "libraries\lwip\src\netif\lowpan6_common.obj" "libraries\lwip\src\netif\slipif.obj" "libraries\lwip\src\netif\zepif.obj" "libraries\lwip\src\netif\ppp\auth.obj" "libraries\lwip\src\netif\ppp\ccp.obj" "libraries\lwip\src\netif\ppp\chap-md5.obj" "libraries\lwip\src\netif\ppp\chap-new.obj" "libraries\lwip\src\netif\ppp\chap_ms.obj" "libraries\lwip\src\netif\ppp\demand.obj" "libraries\lwip\src\netif\ppp\eap.obj" "libraries\lwip\src\netif\ppp\ecp.obj" "libraries\lwip\src\netif\ppp\eui64.obj" "libraries\lwip\src\netif\ppp\fsm.obj" "libraries\lwip\src\netif\ppp\ipcp.obj" "libraries\lwip\src\netif\ppp\ipv6cp.obj" "libraries\lwip\src\netif\ppp\lcp.obj" "libraries\lwip\src\netif\ppp\magic.obj" "libraries\lwip\src\netif\ppp\mppe.obj" "libraries\lwip\src\netif\ppp\multilink.obj" "libraries\lwip\src\netif\ppp\ppp.obj" "libraries\lwip\src\netif\ppp\pppapi.obj" "libraries\lwip\src\netif\ppp\pppcrypt.obj" 
+	-$(RM) "libraries\lwip\src\netif\ppp\pppoe.obj" "libraries\lwip\src\netif\ppp\pppol2tp.obj" "libraries\lwip\src\netif\ppp\pppos.obj" "libraries\lwip\src\netif\ppp\upap.obj" "libraries\lwip\src\netif\ppp\utils.obj" "libraries\lwip\src\netif\ppp\vj.obj" "libraries\lwip\src\netif\ppp\polarssl\arc4.obj" "libraries\lwip\src\netif\ppp\polarssl\des.obj" "libraries\lwip\src\netif\ppp\polarssl\md4.obj" "libraries\lwip\src\netif\ppp\polarssl\md5.obj" "libraries\lwip\src\netif\ppp\polarssl\sha1.obj" "libraries\results\Src\results.obj" 
+	-$(RM) "Core\Src\cc.d" "Core\Src\emac_driver.d" "Core\Src\ethernetif.d" "Core\Src\lwip.d" "Core\Src\lwiplib.d" "Core\Src\main.d" "Core\Src\perf.d" "Core\Src\sys_arch.d" "HalCoGen\source\emac.d" "HalCoGen\source\errata_SSWF021_45.d" "HalCoGen\source\esm.d" "HalCoGen\source\mdio.d" "HalCoGen\source\notification.d" "HalCoGen\source\os_croutine.d" "HalCoGen\source\os_event_groups.d" "HalCoGen\source\os_heap.d" "HalCoGen\source\os_list.d" "HalCoGen\source\os_mpu_wrappers.d" "HalCoGen\source\os_port.d" "HalCoGen\source\os_queue.d" "HalCoGen\source\os_tasks.d" "HalCoGen\source\os_timer.d" "HalCoGen\source\phy_dp83640.d" "HalCoGen\source\pinmux.d" "HalCoGen\source\sys_dma.d" "HalCoGen\source\sys_main.d" "HalCoGen\source\sys_pcr.d" "HalCoGen\source\sys_phantom.d" "HalCoGen\source\sys_pmm.d" "HalCoGen\source\sys_selftest.d" "HalCoGen\source\sys_startup.d" "HalCoGen\source\sys_vim.d" "HalCoGen\source\system.d" "libraries\lwip\src\api\api_lib.d" "libraries\lwip\src\api\api_msg.d" "libraries\lwip\src\api\err.d" 
+	-$(RM) "libraries\lwip\src\api\if_api.d" "libraries\lwip\src\api\netbuf.d" "libraries\lwip\src\api\netdb.d" "libraries\lwip\src\api\netifapi.d" "libraries\lwip\src\api\sockets.d" "libraries\lwip\src\api\tcpip.d" "libraries\lwip\src\apps\mqtt\mqtt.d" "libraries\lwip\src\core\altcp.d" "libraries\lwip\src\core\altcp_alloc.d" "libraries\lwip\src\core\altcp_tcp.d" "libraries\lwip\src\core\def.d" "libraries\lwip\src\core\dns.d" "libraries\lwip\src\core\inet_chksum.d" "libraries\lwip\src\core\init.d" "libraries\lwip\src\core\ip.d" "libraries\lwip\src\core\mem.d" "libraries\lwip\src\core\memp.d" "libraries\lwip\src\core\netif.d" "libraries\lwip\src\core\pbuf.d" "libraries\lwip\src\core\raw.d" "libraries\lwip\src\core\stats.d" "libraries\lwip\src\core\sys.d" "libraries\lwip\src\core\tcp.d" "libraries\lwip\src\core\tcp_in.d" "libraries\lwip\src\core\tcp_out.d" "libraries\lwip\src\core\timeouts.d" "libraries\lwip\src\core\udp.d" "libraries\lwip\src\core\ipv4\acd.d" "libraries\lwip\src\core\ipv4\autoip.d" 
+	-$(RM) "libraries\lwip\src\core\ipv4\dhcp.d" "libraries\lwip\src\core\ipv4\etharp.d" "libraries\lwip\src\core\ipv4\icmp.d" "libraries\lwip\src\core\ipv4\igmp.d" "libraries\lwip\src\core\ipv4\ip4.d" "libraries\lwip\src\core\ipv4\ip4_addr.d" "libraries\lwip\src\core\ipv4\ip4_frag.d" "libraries\lwip\src\core\ipv6\dhcp6.d" "libraries\lwip\src\core\ipv6\ethip6.d" "libraries\lwip\src\core\ipv6\icmp6.d" "libraries\lwip\src\core\ipv6\inet6.d" "libraries\lwip\src\core\ipv6\ip6.d" "libraries\lwip\src\core\ipv6\ip6_addr.d" "libraries\lwip\src\core\ipv6\ip6_frag.d" "libraries\lwip\src\core\ipv6\mld6.d" "libraries\lwip\src\core\ipv6\nd6.d" "libraries\lwip\src\netif\bridgeif.d" "libraries\lwip\src\netif\bridgeif_fdb.d" "libraries\lwip\src\netif\ethernet.d" "libraries\lwip\src\netif\lowpan6.d" "libraries\lwip\src\netif\lowpan6_ble.d" "libraries\lwip\src\netif\lowpan6_common.d" "libraries\lwip\src\netif\slipif.d" "libraries\lwip\src\netif\zepif.d" "libraries\lwip\src\netif\ppp\auth.d" "libraries\lwip\src\netif\ppp\ccp.d" 
+	-$(RM) "libraries\lwip\src\netif\ppp\chap-md5.d" "libraries\lwip\src\netif\ppp\chap-new.d" "libraries\lwip\src\netif\ppp\chap_ms.d" "libraries\lwip\src\netif\ppp\demand.d" "libraries\lwip\src\netif\ppp\eap.d" "libraries\lwip\src\netif\ppp\ecp.d" "libraries\lwip\src\netif\ppp\eui64.d" "libraries\lwip\src\netif\ppp\fsm.d" "libraries\lwip\src\netif\ppp\ipcp.d" "libraries\lwip\src\netif\ppp\ipv6cp.d" "libraries\lwip\src\netif\ppp\lcp.d" "libraries\lwip\src\netif\ppp\magic.d" "libraries\lwip\src\netif\ppp\mppe.d" "libraries\lwip\src\netif\ppp\multilink.d" "libraries\lwip\src\netif\ppp\ppp.d" "libraries\lwip\src\netif\ppp\pppapi.d" "libraries\lwip\src\netif\ppp\pppcrypt.d" "libraries\lwip\src\netif\ppp\pppoe.d" "libraries\lwip\src\netif\ppp\pppol2tp.d" "libraries\lwip\src\netif\ppp\pppos.d" "libraries\lwip\src\netif\ppp\upap.d" "libraries\lwip\src\netif\ppp\utils.d" "libraries\lwip\src\netif\ppp\vj.d" "libraries\lwip\src\netif\ppp\polarssl\arc4.d" "libraries\lwip\src\netif\ppp\polarssl\des.d" "libraries\lwip\src\netif\ppp\polarssl\md4.d" 
+	-$(RM) "libraries\lwip\src\netif\ppp\polarssl\md5.d" "libraries\lwip\src\netif\ppp\polarssl\sha1.d" "libraries\results\Src\results.d" 
+	-$(RM) "HalCoGen\source\dabort.d" "HalCoGen\source\os_portasm.d" "HalCoGen\source\sys_core.d" "HalCoGen\source\sys_intvecs.d" "HalCoGen\source\sys_mpu.d" "HalCoGen\source\sys_pmu.d" 
+	-@echo 'Finished clean'
+	-@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+-include ../makefile.targets
+

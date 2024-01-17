@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SOM_TMS570LS3137_V1.1/Core/Inc/hdkif_driver.h&apos; to &apos;ethernetif.h&apos;" description="Rename resource &apos;hdkif_driver.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/hdkif_driver.h" name="ethernetif.h" stamp="1699361151204" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SOM_TMS570LS3137_V1.1/Core/Src/hdkif_driver.c&apos; to &apos;ethernetif.c&apos;" description="Rename resource &apos;hdkif_driver.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/hdkif_driver.c" name="ethernetif.c" stamp="1699361161045" updateReferences="true"/>
+</session>

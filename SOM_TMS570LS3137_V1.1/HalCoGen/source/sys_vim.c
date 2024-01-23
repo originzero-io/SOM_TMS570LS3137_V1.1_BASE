@@ -46,6 +46,10 @@
 #include "esm.h"
 
 /* USER CODE BEGIN (0) */
+void vPreemptiveTick(void)
+{
+
+}
 /* USER CODE END */
 
 /* Vim Ram Definition */
@@ -146,9 +150,9 @@ static const t_isrFuncPTR s_vim_init[96U] =
     &phantomInterrupt,            /* Channel 74 */
     &phantomInterrupt,            /* Channel 75 */
     &phantomInterrupt,            /* Channel 76 */
-    &emac_tx_int_isr,            /* Channel 77 */
+    &EMACTxIntISR,            /* Channel 77 */
     &phantomInterrupt,            /* Channel 78 */
-    &emac_rx_int_isr,            /* Channel 79 */
+    &EMACRxIntISR,            /* Channel 79 */
     &phantomInterrupt,            /* Channel 80 */
     &phantomInterrupt,            /* Channel 81 */
     &phantomInterrupt,            /* Channel 82 */

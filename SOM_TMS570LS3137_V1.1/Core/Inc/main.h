@@ -8,6 +8,8 @@
 #ifndef CORE_INC_MAIN_H_
 #define CORE_INC_MAIN_H_
 
+#include "core.h"
+
 void user_main(void);
 
 int log_printf(const char *__restrict _format, ...);

@@ -32,6 +32,7 @@ Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570L
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h
+Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/arch.h
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cc.h
@@ -132,7 +133,6 @@ Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570L
 Core/Src/emac_driver.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h
 Core/Src/emac_driver.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/librarys/019-library-results/results/Inc/results.h
-Core/Src/emac_driver.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h
 
 ../Core/Src/emac_driver.c:
 
@@ -197,6 +197,8 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h:
 
@@ -397,6 +399,4 @@ C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h:
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h:
 
 D:/Projects/001-ANAKS/librarys/019-library-results/results/Inc/results.h:
-
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h:
 

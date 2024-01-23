@@ -35,7 +35,6 @@
 #include "cpu.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
 
 typedef int sys_prot_t;
 
@@ -48,43 +47,15 @@ typedef int sys_prot_t;
 
 #endif
 
-/* define compiler specific symbols */
-#if defined(__arm__) && defined(__ARMCC_VERSION)
-    //
-    // Setup PACKing macros for KEIL/RVMDK Tools
-    //
-    #define PACK_STRUCT_BEGIN __packed
-    #define PACK_STRUCT_STRUCT
-    #define PACK_STRUCT_END
-    #define PACK_STRUCT_FIELD(x) x
-#elif defined (__IAR_SYSTEMS_ICC__)
-    //
-    // Setup PACKing macros for IAR Tools
-    //
-    #define PACK_STRUCT_BEGIN
-    #define PACK_STRUCT_STRUCT
-    #define PACK_STRUCT_END
-    #define PACK_STRUCT_FIELD(x) x
-    #define PACK_STRUCT_USE_INCLUDES
-#elif defined (__TMS470__)
-    #define PACK_STRUCT_BEGIN
-    #define PACK_STRUCT_STRUCT
-    #define PACK_STRUCT_END
-    #define PACK_STRUCT_FIELD(x) x
-#else
-    //
-    // Setup PACKing macros for GCC Tools
-    //
-    #define PACK_STRUCT_BEGIN
-    #define PACK_STRUCT_STRUCT __attribute__ ((__packed__))
-    #define PACK_STRUCT_END
-    #define PACK_STRUCT_FIELD(x) x
-#endif
+#define PACK_STRUCT_BEGIN
+#define PACK_STRUCT_STRUCT __attribute__ ((__packed__))
+#define PACK_STRUCT_END
+#define PACK_STRUCT_FIELD(x) x
 
 #define LWIP_PLATFORM_ASSERT(x) do {log_printf("Assertion \"%s\" failed at line %d in %s\n", \
                                      x, __LINE__, __FILE__); } while(0)
 #define LWIP_PLATFORM_DIAG(x) do {log_printf x;} while(0)
 /* Define random number generator function */
-//#define LWIP_RAND() ((uint32_t)rand())
+#define LWIP_RAND() ((uint32_t)rand())
 
 #endif /* __CC_H__ */

@@ -159,7 +159,7 @@ used throughout the whole project.
 #define osFeature_Wait         0       ///< osWait function: 1=available, 0=not available
 #define osFeature_SysTick      1       ///< osKernelSysTick functions: 1=available, 0=not available
 
-#define portEND_SWITCHING_ISR( xSwitchRequired ) if( xSwitchRequired != pdFALSE ) portYIELD()
+#define portEND_SWITCHING_ISR( xSwitchRequired ) //if( xSwitchRequired != pdFALSE ) portYIELD()
 #define portNOP()
 
 #ifdef  __cplusplus

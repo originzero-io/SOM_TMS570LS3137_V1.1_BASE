@@ -44,7 +44,7 @@ struct netif gnetif;
  *
  * \return IP Address.
  */
-extern err_t hdkif_init(struct netif *netif);
+
 results_enum_t lwip_init_sync(uint8_t instance_number, uint8_t *mac_address,
                               uint8_t *ip_address_array,
                               uint8_t *net_mask_array,
@@ -58,23 +58,18 @@ results_enum_t lwip_init_sync(uint8_t instance_number, uint8_t *mac_address,
     {
         ip4_addr_t ipaddr, netmask, gw;
 
-        IP4_ADDR(&ipaddr, ip_address_array[0], ip_address_array[1],
-                 ip_address_array[2], ip_address_array[3]);
-        IP4_ADDR(&netmask, net_mask_array[0], net_mask_array[1],
-                 net_mask_array[2], net_mask_array[3]);
-        IP4_ADDR(&gw, gateway_address_array[0], gateway_address_array[1],
-                 gateway_address_array[2], gateway_address_array[3]);
+        IP4_ADDR(&ipaddr, ip_address_array[0], ip_address_array[1], ip_address_array[2], ip_address_array[3]);
+        IP4_ADDR(&netmask, net_mask_array[0], net_mask_array[1], net_mask_array[2], net_mask_array[3]);
+        IP4_ADDR(&gw, gateway_address_array[0], gateway_address_array[1], gateway_address_array[2], gateway_address_array[3]);
 
         ipadd_p = &ipaddr;
         netmask_p = &netmask;
         gw_p = &gw;
     }
 
-
     ethernetif_set_mac_address(mac_address);
 
-
-     if (NULL_PTR  == netif_add(&gnetif, ipadd_p, netmask_p, gw_p, &hdkif_data[instance_number], ethernetif_init, tcpip_input))
+    if (NULL_PTR  == netif_add(&gnetif, ipadd_p, netmask_p, gw_p, &hdkif_data[instance_number], ethernetif_init, tcpip_input))
     {
         return RESULT_ERR_NETIF;
     }
@@ -85,8 +80,6 @@ results_enum_t lwip_init_sync(uint8_t instance_number, uint8_t *mac_address,
         netif_set_link_up(&gnetif);
     }
 
-    netif_set_default(&gnetif);
-    netif_set_up(&gnetif);
 
     if (ip_mode == IPADDR_USE_DHCP)
     {
@@ -94,7 +87,7 @@ results_enum_t lwip_init_sync(uint8_t instance_number, uint8_t *mac_address,
         err_t dhcp_status = ERR_OK;
 
         dhcp_status = dhcp_start(&gnetif);
-        return RESULT_SUCCESS;
+
         if (ERR_OK != dhcp_status)
         {
             return_value = RESULT_ERR_DHCP;
@@ -118,6 +111,7 @@ results_enum_t lwip_init_sync(uint8_t instance_number, uint8_t *mac_address,
         autoip_start(&gnetif);
         while (gnetif.ip_addr.addr == 0) // Wait for AutoIP to bind
         {
+            osDelay(100);
             // As above, here you would pass time in your application
         }
         return_value = RESULT_SUCCESS;

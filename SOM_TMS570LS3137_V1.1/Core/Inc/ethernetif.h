@@ -47,12 +47,8 @@
 #ifndef __HDKIF_H__
 #define __HDKIF_H__
 err_t ethernetif_init(struct netif *netif);
-void ethernetif_rx_callback(void);
-void ethernetif_tx_callback(void);
+void ethernetif_rx_callback(hdkif_t *hdkif);
+void ethernetif_tx_callback(hdkif_t *hdkif);
 void ethernetif_set_mac_address(uint8_t *mac);
 
-
-
-void ethernetif_init2(struct netif *netif);
-err_t low_level_output(struct netif *netif, struct pbuf *p);
 #endif // _HDKIF_H__

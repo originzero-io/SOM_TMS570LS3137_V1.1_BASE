@@ -979,7 +979,7 @@
  * LWIP_AUTOIP==1: Enable AUTOIP module.
  */
 #if !defined LWIP_AUTOIP || defined __DOXYGEN__
-#define LWIP_AUTOIP                     0
+#define LWIP_AUTOIP                     1
 #endif
 #if !LWIP_IPV4
 /* disable AUTOIP when IPv4 is disabled */

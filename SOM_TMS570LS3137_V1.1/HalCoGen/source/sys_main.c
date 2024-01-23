@@ -50,7 +50,6 @@
 #include "sys_common.h"
 
 /* USER CODE BEGIN (1) */
-#include "main.h"
 /* USER CODE END */
 
 /** @fn void main(void)
@@ -65,7 +64,7 @@
 /* USER CODE END */
 
 uint8	emacAddress[6U] = 	{0x00U, 0x08U, 0xEEU, 0x03U, 0xA6U, 0x6CU};
-uint32 	emacPhyAddress	=	0U;
+uint32 	emacPhyAddress	=	1U;
 
 int main(void)
 {

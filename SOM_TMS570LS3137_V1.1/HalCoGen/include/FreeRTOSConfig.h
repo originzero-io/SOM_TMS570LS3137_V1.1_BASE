@@ -99,7 +99,7 @@
 #define configUSE_16_BIT_TICKS		  0
 #define configCPU_CLOCK_HZ			  ( ( unsigned portLONG ) 90000000 ) /* Timer clock. */
 #define configTICK_RATE_HZ			  ( ( TickType_t ) 1000 )
-#define configMAX_PRIORITIES		  ( 7 )
+#define configMAX_PRIORITIES		  ( 5 )
 #define configMINIMAL_STACK_SIZE	  ( ( unsigned portSHORT ) 128 )
 #define configTOTAL_HEAP_SIZE		  ( ( size_t ) 30720 )
 #define configMAX_TASK_NAME_LEN		  ( 16 )
@@ -108,9 +108,6 @@
 #define configUSE_MALLOC_FAILED_HOOK  0
 
 /* USER CODE BEGIN (1) */
-#define configQUEUE_REGISTRY_SIZE 8U
-#define configUSE_NEWLIB_REENTRANT 0
- #define INCLUDE_xTaskGetCurrentTaskHandle 1
 /* USER CODE END */
 
 #define configSUPPORT_STATIC_ALLOCATION			0
@@ -120,8 +117,6 @@
 #define configUSE_TICKLESS_IDLE					1
 
 /* USER CODE BEGIN (2) */
-//#undef configSUPPORT_STATIC_ALLOCATION
-//#define configSUPPORT_STATIC_ALLOCATION         1
 /* USER CODE END */
 
 /* Co-routine definitions. */
@@ -161,8 +156,7 @@
 #define INCLUDE_xTaskGetIdleTaskHandle      1
 
 /* USER CODE BEGIN (4) */
-#undef INCLUDE_vTaskDelayUntil
-#define INCLUDE_vTaskDelayUntil              0
+#define INCLUDE_xTaskGetCurrentTaskHandle   1
 /* USER CODE END */
 
 

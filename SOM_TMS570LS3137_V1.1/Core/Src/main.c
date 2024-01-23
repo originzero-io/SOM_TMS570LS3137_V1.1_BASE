@@ -8,7 +8,6 @@
 #include "esm.h"
 #include "sys_core.h"
 #include "sys_vim.h"
-#include "sci.h"
 
 /* standart libraries */
 #include <stdio.h>
@@ -27,35 +26,11 @@ static results_enum_t ethernet_lwip_init(bool is_async);
 static void defaultTask(void *pvParameters);
 static void userTask(void *pvParameters);
 
-/*-----------------------------------------------------------*/
-/*
- typedef enum {
- BIG_ENDIAN_,
- LITTLE_ENDIAN_,
- UNKNOWN_ENDIAN_
- } EndianType;
 
- EndianType check_endian() {
- unsigned int testVar = 1; // Using an integer (usually 4 bytes)
- char *bytePtr = (char *)&testVar;
-
- if (bytePtr[0] == 1) {
- return LITTLE_ENDIAN_; // Least significant byte is at lowest address
- } else if (bytePtr[sizeof(testVar) - 1] == 1) {
- return BIG_ENDIAN_; // Most significant byte is at lowest address
- } else {
- return UNKNOWN_ENDIAN_; // Just in case of an unexpected scenario
- }
- }
- */
-/**
- * main.c
- */
+extern uint8 emacAddress[6U];
 void user_main(void)
 {
-    /*
-     EndianType endian = check_endian();
-     */
+
 #if 1
 
     vimInit();
@@ -64,10 +39,7 @@ void user_main(void)
     _enable_interrupt_();
     esmEnableInterrupt(0xffffffff);
 
-    sciInit();
-
-    sys_thread_new("default", defaultTask, NULL, configMINIMAL_STACK_SIZE * 8,
-                   osPriorityIdle);
+    sys_thread_new("default", defaultTask, NULL, configMINIMAL_STACK_SIZE * 2, osPriorityIdle);
 
     vTaskStartScheduler();
 
@@ -99,17 +71,6 @@ void user_main(void)
 #endif
 }
 
-extern uint8 emacAddress[6U];
-
-void user_main2(void)
-{
-
-    while (1)
-    {
-
-    }
-}
-
 static results_enum_t ethernet_lwip_init(bool is_async)
 {
     results_enum_t return_value;
@@ -120,7 +81,7 @@ static results_enum_t ethernet_lwip_init(bool is_async)
     tcpip_init(NULL, NULL);
 #endif
 
-    uint8_t ip_address_array[] = { 192, 168, 1, 150 };
+    uint8_t ip_address_array[] = { 192, 168, 1, 182 };
     uint8_t net_mask_array[] = { 255, 255, 255, 0 };
     uint8_t gateway_address_array[] = { 192, 168, 1, 1 };
 
@@ -133,15 +94,6 @@ static results_enum_t ethernet_lwip_init(bool is_async)
 
 /*-----------------------------------------------------------*/
 
-static void uart_write(uint8_t *string, uint32_t string_len)
-{
-    while (string_len--)
-    {
-        while ((scilinREG->FLR & 0x4) == 4)
-            ; /* wait until busy */
-        sciSendByte(scilinREG, *string++); /* send out text   */
-    }
-}
 volatile uint8_t dhcp_status = 0;
 static void defaultTask(void *pvParameters)
 {
@@ -151,8 +103,8 @@ static void defaultTask(void *pvParameters)
 
     for (;;)
     {
-        // dhcp_status = dhcp_supplied_address(&gnetif);
-        //  log_printf("fatih, %d", i);
+         dhcp_status = dhcp_supplied_address(&gnetif);
+        // log_printf("fatih, %d", i);
         // i++;
         vTaskDelay(1000);
     }
@@ -160,19 +112,10 @@ static void defaultTask(void *pvParameters)
 
 /*-----------------------------------------------------------*/
 
-static void userTask(void *pvParameters)
-{
-    for (;;)
-    {
-
-        vTaskDelay(1);
-    }
-}
-/*-----------------------------------------------------------*/
-
 int log_printf(const char *__restrict _format, ...)
 {
-    char log_buffer[1000];
+/*
+    char log_buffer[3000];
 
     va_list va;
     va_start(va, _format);
@@ -185,7 +128,8 @@ int log_printf(const char *__restrict _format, ...)
 
     va_end(va);
 
-    return size;
+    return size;*/
+    return 0;
 }
 
 

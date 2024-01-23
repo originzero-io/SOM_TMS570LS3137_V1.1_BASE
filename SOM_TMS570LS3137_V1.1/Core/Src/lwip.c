@@ -26,7 +26,6 @@
 #include "emac.h"
 #include "mdio.h"
 #include "phy_dp83640.h"
-#include "sci.h"
 #endif
 
 #include "lwipopts.h"

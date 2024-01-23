@@ -1,6 +1,5 @@
 eclipse.preferences.version=1
 encoding//Core/Src/cmsis_os.c=UTF-8
-encoding//Core/Src/ethernetif.c=UTF-8
 encoding//Core/Src/freertos.c=UTF-8
 encoding//Debug/Core/Src/subdir_rules.mk=UTF-8
 encoding//Debug/Core/Src/subdir_vars.mk=UTF-8
@@ -45,4 +44,3 @@ encoding//Debug/libraries/results/Src/subdir_vars.mk=UTF-8
 encoding//Debug/makefile=UTF-8
 encoding//Debug/objects.mk=UTF-8
 encoding//Debug/sources.mk=UTF-8
-encoding//HalCoGen/source/os_portasm.asm=UTF-8

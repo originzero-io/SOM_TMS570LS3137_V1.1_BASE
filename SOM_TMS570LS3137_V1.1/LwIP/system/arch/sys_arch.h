@@ -44,7 +44,6 @@
 extern "C" {
 #endif
 
-
 #if (osCMSIS < 0x20000U)
 
 #define SYS_MBOX_NULL (osMessageQId)0

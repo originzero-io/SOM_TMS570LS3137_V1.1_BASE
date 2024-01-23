@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="TxPktSemaphore"/>
+		<item key="selection" value="USER"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="TxPktSemaphore"/>
-			<item value="rx_queue"/>
-			<item value="&amp;hdkif_data[0u]"/>
-			<item value="0xD"/>
-			<item value="0xD000003C"/>
-			<item value="0xD00000"/>
-			<item value="init_pbuf_pool"/>
-			<item value="counter[0"/>
-			<item value="init"/>
-			<item value="EMAC_to_pbuf"/>
-			<item value="send"/>
-			<item value="LWIP_MEM_FREE_PROTECT"/>
-			<item value="mem_free"/>
-			<item value="mem"/>
-			<item value="emacreceive"/>
+			<item value="USER"/>
+			<item value="user"/>
+			<item value="MPU_xTaskGetCurrentTaskHandle"/>
+			<item value="INCLUDE_xTaskGetCurrentTaskHandle"/>
+			<item value="MPU_xTaskGet"/>
+			<item value="EMAC_PHYADDRESS"/>
+			<item value="EMACRxIntISR"/>
+			<item value="dma"/>
+			<item value="emac"/>
+			<item value="EMAC_to_pbuf_counter"/>
+			<item value="low_level_init"/>
+			<item value="EMACHWInit"/>
+			<item value="EMAC_LOOPBACK_ENABLE"/>
+			<item value="low_level_output"/>
+			<item value="xSemaphoreGiveFromISR"/>
 		</list>
 		<list key="replacehistory">
 			<item value="gnetif"/>
@@ -42,8 +42,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1442"/>
-		<item key="DIALOG_Y_ORIGIN" value="717"/>
+		<item key="DIALOG_X_ORIGIN" value="1441"/>
+		<item key="DIALOG_Y_ORIGIN" value="709"/>
 		<item key="DIALOG_WIDTH" value="285"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

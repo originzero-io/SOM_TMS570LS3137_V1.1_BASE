@@ -21,27 +21,27 @@ QueueHandle_t rx_queue;
 /* Stack size of the interface thread */
 #define INTERFACE_THREAD_STACK_SIZE ( 350 * 2 )
 
-static uint8_t mac_address[ETH_HWADDR_LEN];
+#define ETHERNETIF_RX_QUEUE_LEN 10
 
-/* Data Type Definitions */
-typedef enum
+typedef struct ethernetif_rx_quiue
 {
-    RX_ALLOC_OK = 0x00, RX_ALLOC_ERROR = 0x01
-} RxAllocStatusTypeDef;
+    uint8_t payload[ETH_MAX_PAYLOAD];
+    uint16_t len;
+    uint8_t is_filled;
+} ethernetif_rx_quiue_t;
 
-/* Variable Definitions */
-static uint8_t RxAllocStatus;
+ethernetif_rx_quiue_t ethernetif_rx_quiue[ETHERNETIF_RX_QUEUE_LEN];
+uint8_t ethernetif_rx_quiue_counter = 0;
+
+static uint8_t mac_address[ETH_HWADDR_LEN];
 
 osSemaphoreId RxPktSemaphore = NULL; /* Semaphore to signal incoming packets */
 osSemaphoreId TxPktSemaphore = NULL; /* Semaphore to signal transmit packet complete */
 
-static void init_pbuf_pool(void);
-static struct pbuf* get_pbuf_from_pool(void);
-static void release_pbuf_to_pool(struct pbuf *p);
-
-static void low_level_init(struct netif *netif);
+static err_t low_level_init(struct netif *netif);
 static struct pbuf* low_level_input(struct netif *netif);
 static void ethernetif_input(void const *argument);
+static err_t low_level_output(struct netif *netif, struct pbuf *p);
 
 pbuf_t* convert_pbuf_to_pbuf_t(const struct pbuf *pbuf_ptr);
 void free_pbuf_t(pbuf_t *pbuf_t_ptr);
@@ -69,18 +69,8 @@ err_t ethernetif_init(struct netif *netif)
     netif->hostname = "lwip";
 #endif /* LWIP_NETIF_HOSTNAME */
 
-    /*
-     * Initialize the snmp variables and counters inside the struct netif.
-     * The last argument should be replaced with your link speed, in units
-     * of bits per second.
-     */
-    // MIB2_INIT_NETIF(netif, snmp_ifType_ethernet_csmacd, LINK_SPEED_OF_YOUR_NETIF_IN_BPS);
     netif->name[0] = IFNAME0;
     netif->name[1] = IFNAME1;
-    /* We directly use etharp_output() here to save a function call.
-     * You can instead declare your own function an call etharp_output()
-     * from it if you have to do some checks before sending (e.g. if link
-     * is available...) */
 
 #if LWIP_IPV4
 #if LWIP_ARP || LWIP_ETHERNET
@@ -100,13 +90,10 @@ err_t ethernetif_init(struct netif *netif)
     netif->linkoutput = low_level_output;
 
     /* initialize the hardware */
-    low_level_init(netif);
+    return low_level_init(netif);
 
-    init_pbuf_pool();
-
-    return ERR_OK; /* todo */
 }
-
+uint32_t EMAC_to_pbuf_counter;
 /**
  * Converts received EMAC data to LwIP pbuf.
  *
@@ -115,194 +102,58 @@ err_t ethernetif_init(struct netif *netif)
  */
 struct pbuf* EMAC_to_pbuf(hdkif_t *hdkif)
 {
-
     struct pbuf *p = NULL;
-    struct pbuf *q = NULL;
-    uint16_t len = 0;
+
     rxch_t *rxch_int = &(hdkif->rxchptr);
     volatile emac_rx_bd_t *curr_bd = rxch_int->active_head;
 
-    uint8_t is_ownew = ((curr_bd->flags_pktlen & 0XFFFF0000)
-            == EMAC_BUF_DESC_OWNER);
-
-    // Loop through buffer descriptors and calculate total length
-
-    while (!is_ownew)
+    while ((curr_bd->flags_pktlen & EMAC_BUF_DESC_OWNER) != EMAC_BUF_DESC_OWNER)
     {
-        len += (curr_bd->bufoff_len & 0xFFFF); // Extract length
-        curr_bd = curr_bd->next;
-
-        is_ownew =
-                ((curr_bd->flags_pktlen & 0XFFFF0000) == EMAC_BUF_DESC_OWNER);
-    }
-
-    // Allocate a pbuf chain of pbufs from the pool
-    p = pbuf_alloc(PBUF_RAW, len, PBUF_POOL);
-
-    if (p == NULL)
-    {
-        return NULL; // Allocation failed
-    }
-
-    // Copy data to the pbuf
-    curr_bd = rxch_int->active_head;
-
-    for (q = p; q != NULL; q = q->next)
-    {
+        if (300 < (curr_bd->bufoff_len & 0xFFFF))
+        {
+            p = NULL;
+        }
 
         // Copy data from buffer descriptor to pbuf
-        uint16_t this_len = (curr_bd->bufoff_len & 0xFFFF);
-        memcpy(q->payload, (void*) curr_bd->bufptr, this_len);
+        ethernetif_rx_quiue[ethernetif_rx_quiue_counter].len =
+                (curr_bd->bufoff_len & 0xFFFF);
+
+        memcpy(&ethernetif_rx_quiue[ethernetif_rx_quiue_counter].payload[0],
+               (void*) curr_bd->bufptr,
+               ethernetif_rx_quiue[ethernetif_rx_quiue_counter].len);
+
+        ethernetif_rx_quiue[ethernetif_rx_quiue_counter].is_filled = 1;
+
+        BaseType_t xHigherPriorityTaskWoken = pdTRUE;
+        BaseType_t xStatus = xQueueSendFromISR(rx_queue,
+                                               &ethernetif_rx_quiue_counter,
+                                               &xHigherPriorityTaskWoken);
+
+        if (ethernetif_rx_quiue_counter >= (ETHERNETIF_RX_QUEUE_LEN - 1))
+        {
+            ethernetif_rx_quiue_counter = 0;
+        }
+        else
+        {
+            ethernetif_rx_quiue_counter++;
+        }
 
         curr_bd = curr_bd->next;
-        if ((curr_bd->flags_pktlen & 0XFFFF0000) == EMAC_BUF_DESC_OWNER)
-        {
-            break; // Last buffer in the chain
-        }
     }
 
     return p;
 }
 
-#define ETHERNET_EMAC_PACKET_CONTROL(curr_bd) ((EMAC_BUF_DESC_EOP == (curr_bd->flags_pktlen & EMAC_BUF_DESC_EOP) || EMAC_BUF_DESC_SOP == (curr_bd->flags_pktlen & EMAC_BUF_DESC_SOP)) && NULL != curr_bd)
-#define ETHERNET_EMAC_PACKET_END_CONTROL(curr_bd) (EMAC_BUF_DESC_EOP == (curr_bd->flags_pktlen & EMAC_BUF_DESC_EOP) && NULL != curr_bd)
-
-void EMAC_to_pbuf2(hdkif_t *hdkif, struct pbuf *p)
+void ethernetif_rx_callback(hdkif_t *hdkif)
 {
-    if (p == NULL)
-    {
-        return NULL; // Allocation failed
-    }
 
-    struct pbuf *q = p;
-    uint16_t len = 0;
-    rxch_t *rxch_int = &(hdkif->rxchptr);
-    volatile emac_rx_bd_t *curr_bd = rxch_int->active_head;
-
-    uint8_t is_received = ETHERNET_EMAC_PACKET_CONTROL(curr_bd);
-
-    while (is_received)
-    {
-
-        if (NULL == curr_bd)
-            break;
-        len += (curr_bd->bufoff_len & 0xFFFF); // Extract length
-        curr_bd = curr_bd->next;
-
-        is_received = ETHERNET_EMAC_PACKET_CONTROL(curr_bd);
-    }
-
-    // Copy data to the pbuf
-    curr_bd = rxch_int->active_head;
-
-    for (q = p; q != NULL; q = q->next)
-    {
-
-        // Copy data from buffer descriptor to pbuf
-        uint16_t this_len = (curr_bd->bufoff_len & 0xFFFF);
-        memcpy(q->payload, (void*) curr_bd->bufptr, this_len);
-
-        q->tot_len = len;
-        q->ref = 1;
-        q->type_internal = 130;
-        q->flags = 0;
-        q->if_idx = 0;
-
-        q->len = this_len;
-
-        len -= q->len;
-
-        curr_bd = curr_bd->next;
-        if (!ETHERNET_EMAC_PACKET_CONTROL(curr_bd))
-        {
-            break; // Last buffer in the chain
-        }
-    }
-
+    EMAC_to_pbuf(hdkif);
+    osSemaphoreRelease(RxPktSemaphore);
 }
 
-#define NUM_PBUFS 3
-struct pbuf *pbuf_pool[NUM_PBUFS];
-SemaphoreHandle_t pbuf_pool_sem;
-
-static void init_pbuf_pool(void)
+void ethernetif_tx_callback(hdkif_t *hdkif)
 {
-    pbuf_pool_sem = xSemaphoreCreateCounting(NUM_PBUFS, NUM_PBUFS);
-    for (int i = 0; i < NUM_PBUFS; i++)
-    {
-        pbuf_pool[i] = pbuf_alloc(PBUF_RAW, ETH_MAX_PAYLOAD, PBUF_POOL);
-    }
-}
-
-static struct pbuf* get_pbuf_from_pool(void)
-{
-    if (xSemaphoreTakeFromISR(pbuf_pool_sem, NULL) == pdTRUE)
-    {
-        for (int i = 0; i < NUM_PBUFS; i++)
-        {
-            if (pbuf_pool[i] != NULL)
-            {
-                struct pbuf *p = pbuf_pool[i];
-                pbuf_pool[i] = NULL;
-                return p;
-            }
-        }
-    }
-    return NULL;
-}
-
-static void release_pbuf_to_pool(struct pbuf *p)
-{
-    for (int i = 0; i < NUM_PBUFS; i++)
-    {
-        if (pbuf_pool[i] == NULL)
-        {
-            pbuf_pool[i] = p;
-            xSemaphoreGive(pbuf_pool_sem);
-            return;
-        }
-    }
-    // Handle error: pool is full
-}
-
-int counter[10];
-void ethernetif_rx_callback(void)
-{
-    counter[0]++;
-    struct pbuf *p = get_pbuf_from_pool();
-    counter[1]++;
-    if (NULL != p)
-    {
-        counter[2]++;
-        EMAC_to_pbuf2(&hdkif_data[0u], p);
-        counter[3]++;
-        BaseType_t xHigherPriorityTaskWoken = pdTRUE;
-        BaseType_t xStatus = xQueueSendFromISR(rx_queue, &p,
-                                               &xHigherPriorityTaskWoken);
-        counter[4]++;
-        if (xStatus == pdPASS)
-        {
-            counter[5]++;
-            portBASE_TYPE taskWoken = pdFALSE;
-            xSemaphoreGiveFromISR(RxPktSemaphore, &taskWoken);
-            counter[6]++;
-        }
-        else
-        {
-            counter[7]++;
-        }
-    }
-    else
-    {
-        counter[8]++;
-    }
-}
-
-void ethernetif_tx_callback(void)
-{
-    //  osSemaphoreRelease(TxPktSemaphore);
-    portBASE_TYPE taskWoken = pdFALSE;
-    xSemaphoreGiveFromISR(TxPktSemaphore, &taskWoken);
+    osSemaphoreRelease(TxPktSemaphore);
 }
 
 void ethernetif_set_mac_address(uint8_t *mac)
@@ -315,23 +166,7 @@ void ethernetif_set_mac_address(uint8_t *mac)
         }
     }
 }
-void ethernetif_init2(struct netif *netif)
-{
-    /* create a binary semaphore used for informing ethernetif of frame reception */
-    RxPktSemaphore = xSemaphoreCreateBinary();
 
-    /* create a binary semaphore used for informing ethernetif of frame transmission */
-    TxPktSemaphore = xSemaphoreCreateBinary();
-
-    /* create the task that handles the ETH_MAC */
-    /* USER CODE BEGIN OS_THREAD_DEF_CREATE_CMSIS_RTOS_V1 */
-
-    osThreadDef(EthIf, ethernetif_input, osPriorityRealtime, 0,
-                INTERFACE_THREAD_STACK_SIZE);
-    osThreadCreate(osThread(EthIf), netif);
-
-    rx_queue = xQueueCreate(10, sizeof(struct pbuf*));
-}
 /*******************************************************************************
  LL Driver Interface ( LwIP stack --> ETH)
  *******************************************************************************/
@@ -342,8 +177,9 @@ void ethernetif_init2(struct netif *netif)
  * @param netif the already initialized lwip network interface structure
  *        for this ethernetif
  */
-static void low_level_init(struct netif *netif)
+static err_t low_level_init(struct netif *netif)
 {
+    err_t return_value = ERR_OK;
     /* Start ETH Init */
 
 #if LWIP_ARP || LWIP_ETHERNET
@@ -368,34 +204,41 @@ static void low_level_init(struct netif *netif)
     netif->flags |= NETIF_FLAG_BROADCAST;
   #endif /* LWIP_ARP */
 
+#endif /* LWIP_ARP || LWIP_ETHERNET */
+
     /* create a binary semaphore used for informing ethernetif of frame reception */
     RxPktSemaphore = xSemaphoreCreateBinary();
-
+    if (NULL == RxPktSemaphore)
+    {
+        return_value = ERR_IF;
+    }
     /* create a binary semaphore used for informing ethernetif of frame transmission */
     TxPktSemaphore = xSemaphoreCreateBinary();
-
+    if (NULL == TxPktSemaphore)
+    {
+        return_value = ERR_IF;
+    }
     /* create the task that handles the ETH_MAC */
-    /* USER CODE BEGIN OS_THREAD_DEF_CREATE_CMSIS_RTOS_V1 */
 
     osThreadDef(EthIf, ethernetif_input, osPriorityRealtime, 0,
                 INTERFACE_THREAD_STACK_SIZE);
-    osThreadCreate(osThread(EthIf), netif);
+    if (NULL == osThreadCreate(osThread(EthIf), netif))
+    {
+        return_value = ERR_IF;
+    }
 
-    rx_queue = xQueueCreate(10, sizeof(struct pbuf*));
+    rx_queue = xQueueCreate(ETHERNETIF_RX_QUEUE_LEN, sizeof(uint8_t));
+    if (NULL == rx_queue)
+    {
+        return_value = ERR_IF;
+    }
 
-    /* USER CODE END OS_THREAD_DEF_CREATE_CMSIS_RTOS_V1 */
+    if (EMAC_ERR_OK != EMACHWInit(&mac_address[0]))
+    {
+        return_value = ERR_IF;
+    }
 
-    /* USER CODE BEGIN PHY_PRE_CONFIG */
-
-    /* USER CODE END PHY_PRE_CONFIG */
-
-    EMACHWInit(&mac_address[0]);
-
-#endif /* LWIP_ARP || LWIP_ETHERNET */
-
-    /* USER CODE BEGIN LOW_LEVEL_INIT */
-
-    /* USER CODE END LOW_LEVEL_INIT */
+    return return_value;
 }
 
 /**
@@ -409,7 +252,21 @@ static void low_level_init(struct netif *netif)
 static struct pbuf* low_level_input(struct netif *netif)
 {
     struct pbuf *p = NULL_PTR;
-    xQueueReceive(rx_queue, &p, 10);
+    ethernetif_rx_quiue_t *quiue_item = NULL;
+    uint8_t index;
+    if (xQueueReceive(rx_queue, &index, 10))
+    {
+        quiue_item = &ethernetif_rx_quiue[index];
+
+        p = pbuf_alloc(PBUF_RAW, quiue_item->len, PBUF_POOL);
+        if (NULL != p)
+        {
+            pbuf_take(p, (void*) &quiue_item->payload[0], quiue_item->len);
+        }
+
+        quiue_item->is_filled = 0;
+    }
+
     return p;
 }
 
@@ -436,11 +293,16 @@ static void ethernetif_input(void const *argument)
                 p = low_level_input(netif);
                 if (p != NULL)
                 {
+                    uint8_t byte = ((uint8_t*) p->payload)[11];
+                    if (byte == 0x6c)
+                    {
+                        EMAC_to_pbuf_counter++;
+                    }
                     if (netif->input(p, netif) != ERR_OK)
                     {
+                        pbuf_free(p);
                     }
 
-                    release_pbuf_to_pool(p);
                 }
             }
             while (p != NULL);
@@ -465,9 +327,17 @@ static void ethernetif_input(void const *argument)
  */
 osThreadId thread_id;
 
-err_t low_level_output(struct netif *netif, struct pbuf *p)
+static err_t low_level_output(struct netif *netif, struct pbuf *p)
 {
 
+    pbuf_ref(p);
+    /*
+     if (p->tot_len < MIN_PKT_LEN)
+     {
+     p->tot_len = MIN_PKT_LEN;
+     p->len = MIN_PKT_LEN;
+     }
+     */
     pbuf_t *emac_pbuf = convert_pbuf_to_pbuf_t(p);
     if (NULL == emac_pbuf)
     {
@@ -477,25 +347,20 @@ err_t low_level_output(struct netif *netif, struct pbuf *p)
     {
         // Reference the pbuf to prevent it from being freed prematurely
 
-        if (p->tot_len < MIN_PKT_LEN)
-        {
-            p->tot_len = MIN_PKT_LEN;
-            p->len = MIN_PKT_LEN;
-        }
-        pbuf_ref(p);
-
         if (false == EMACTransmit(&hdkif_data[0], emac_pbuf))
         {
             pbuf_free(p);
         }
         else
         {
-            while (osSemaphoreWait(TxPktSemaphore, TIME_WAITING_FOR_INPUT)
-                    != osOK)
-            {
+            /*
+             while (osSemaphoreWait(TxPktSemaphore, TIME_WAITING_FOR_INPUT)
+             != osOK)
+             {
 
-            }
-            free_pbuf_t(emac_pbuf);
+             }
+
+             free_pbuf_t(emac_pbuf);*/
         }
     }
     return ERR_OK;
@@ -518,15 +383,7 @@ pbuf_t* convert_pbuf_to_pbuf_t(const struct pbuf *pbuf_ptr)
 
     // Copy data from pbuf to pbuf_t
     pbuf_t_ptr->next = convert_pbuf_to_pbuf_t(pbuf_ptr->next); // Recursive call for linked list
-    pbuf_t_ptr->payload = (uint8_t*) mem_malloc(pbuf_ptr->len);
-    if (NULL != pbuf_t_ptr->payload)
-    {
-        memcpy(pbuf_t_ptr->payload, pbuf_ptr->payload, pbuf_ptr->len);
-    }
-    else
-    {
-        pbuf_t_ptr->payload = pbuf_ptr->payload;
-    }
+    pbuf_t_ptr->payload = pbuf_ptr->payload;
 
     pbuf_t_ptr->tot_len = (uint16) pbuf_ptr->tot_len;
     pbuf_t_ptr->len = (uint16) pbuf_ptr->len;

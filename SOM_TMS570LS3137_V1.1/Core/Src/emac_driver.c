@@ -12,47 +12,18 @@
 #include "emac.h"
 #include "core.h"
 
-volatile uint32_t EMACCore0TxIsr_counter = 0, EMACCore0TxIsr_counter2 = 0;
-volatile uint32_t EMACCore0RxIsr_counter[4];
 
-extern struct netif gnetif;
+volatile uint32_t emacTxNotification_counter = 0, emacRxNotification_counter = 0;
 
-#pragma CODE_STATE(emac_tx_int_isr, 32)
-#pragma INTERRUPT(emac_tx_int_isr, IRQ)
-void emac_tx_int_isr(void)
+void emacTxNotification(hdkif_t *hdkif)
 {
-
-
-    EMACCore0TxIsr_counter++;
-
-    EMACTxIntHandler(&hdkif_data[0U]);
-    EMACCoreIntAck(hdkif_data[0].emac_base, (uint32) EMAC_INT_CORE0_TX);
-
-
-    ethernetif_tx_callback();
-
-
-    EMACCore0TxIsr_counter2++;
+    emacTxNotification_counter++;
+    ethernetif_tx_callback(hdkif);
 }
 
-#pragma CODE_STATE(emac_rx_int_isr, 32)
-#pragma INTERRUPT(emac_rx_int_isr, IRQ)
-void emac_rx_int_isr(void)
+void emacRxNotification(hdkif_t *hdkif)
 {
-
-    EMACCore0RxIsr_counter [0]++;
-
-    ethernetif_rx_callback();
-    EMACCore0RxIsr_counter [1]++;
-
-    //hdkif_rx_inthandler(&gnetif);
-
-    EMACReceive(&hdkif_data[0U]);
-    EMACCore0RxIsr_counter [2]++;
-    EMACCoreIntAck(hdkif_data[0U].emac_base, (uint32) EMAC_INT_CORE0_RX);
-    EMACCore0RxIsr_counter [3]++;
-
-
-
+    emacRxNotification_counter++;
+    ethernetif_rx_callback(hdkif);
 }
 

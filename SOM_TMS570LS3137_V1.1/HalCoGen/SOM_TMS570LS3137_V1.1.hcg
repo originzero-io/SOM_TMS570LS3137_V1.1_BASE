@@ -290,8 +290,7 @@
         <NAME>sci.h</NAME>
       </HDRSCI>
       <SRCSCI>
-        <NAME>sci.c</NAME>
-      </SRCSCI>
+        </SRCSCI>
       <HDRLIN_R>
         <NAME>reg_lin.h</NAME>
       </HDRLIN_R>
@@ -415,7 +414,7 @@
         <NAME>dcc.h</NAME>
       </HDRDCC>
       <SRCDCC>
-</SRCDCC>
+        </SRCDCC>
       <HDRRTP_R>
         <NAME>reg_rtp.h</NAME>
       </HDRRTP_R>
@@ -609,7 +608,7 @@
         <PATH>include\sci.h</PATH>
       </HDRSCI>
       <SRCSCI>
-        <PATH>source\sci.c</PATH>
+        <PATH></PATH>
       </SRCSCI>
     </FILENAMES>
   </SCI>

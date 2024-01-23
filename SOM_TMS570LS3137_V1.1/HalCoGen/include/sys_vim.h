@@ -93,8 +93,8 @@ extern void esmHighInterrupt(void);
 extern void phantomInterrupt(void);
 extern void vPortPreemptiveTick(void);
 extern void vPortYeildWithinAPI(void);
-extern void emac_tx_int_isr(void);
-extern void emac_rx_int_isr(void);
+extern void EMACTxIntISR(void);
+extern void EMACRxIntISR(void);
 
 /* USER CODE BEGIN (3) */
 /* USER CODE END */

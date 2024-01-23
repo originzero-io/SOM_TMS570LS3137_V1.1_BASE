@@ -59,7 +59,7 @@ void selftestFailNotification(uint32 flag)
 {
 
 /* USER CODE BEGIN (1) */
-    /* USER CODE END */
+/* USER CODE END */
 
 }
 
@@ -77,7 +77,7 @@ void selftestFailNotification(uint32 flag)
 void ccmSelfCheck(void)
 {
 /* USER CODE BEGIN (3) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Run a diagnostic check on the CCM-R4F module */
     /* This step ensures that the CCM-R4F can actually indicate an error */
@@ -91,7 +91,7 @@ void ccmSelfCheck(void)
     }/* Wait */
 
 /* USER CODE BEGIN (4) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Check if there was an error during the self-test */
     if ((CCMSR & 0x1U) == 0x1U)
@@ -184,7 +184,7 @@ void ccmSelfCheck(void)
 void memoryInit(uint32 ram)
 {
 /* USER CODE BEGIN (6) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable Memory Hardware Initialization */
     systemREG1->MINITGCR = 0xAU;
@@ -202,7 +202,7 @@ void memoryInit(uint32 ram)
     systemREG1->MINITGCR = 0x5U;
 
 /* USER CODE BEGIN (7) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void stcSelfCheck(void)
@@ -216,7 +216,7 @@ void memoryInit(uint32 ram)
 void stcSelfCheck(void)
 {
 /* USER CODE BEGIN (8) */
-    /* USER CODE END */
+/* USER CODE END */
     volatile uint32 i = 0U;
 
     /* Run a diagnostic check on the CPU self-test controller */
@@ -243,13 +243,13 @@ void stcSelfCheck(void)
     stcREG->STCGCR1 = 0xAU;
 
 /* USER CODE BEGIN (9) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Idle the CPU so that the self-test can start */
     _gotoCPUIdle_();
 
 /* USER CODE BEGIN (10) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void cpuSelfTest(uint32 no_of_intervals, uint32 max_timeout, boolean restart_test)
@@ -268,7 +268,7 @@ void cpuSelfTest(uint32 no_of_intervals, uint32 max_timeout, boolean restart_tes
     volatile uint32 i = 0U;
 
 /* USER CODE BEGIN (11) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Run specified no of test intervals starting from interval 0 */
     /* Start test from interval 0 or continue the test. */
@@ -290,7 +290,7 @@ void cpuSelfTest(uint32 no_of_intervals, uint32 max_timeout, boolean restart_tes
     stcREG->STCGCR1 = 0xAU;
 
 /* USER CODE BEGIN (12) */
-    /* USER CODE END */
+/* USER CODE END */
     /* Idle the CPU so that the self-test can start */
 
     _gotoCPUIdle_();
@@ -314,7 +314,7 @@ void pbistSelfCheck(void)
     volatile uint32 i = 0U;
     uint32 PBIST_wait_done_loop = 0U;
 /* USER CODE BEGIN (13) */
-    /* USER CODE END */
+/* USER CODE END */
     /* Run a diagnostic check on the memory self-test controller */
     /* First set up the PBIST ROM clock as this clock frequency is limited to 90MHz */
 
@@ -343,7 +343,7 @@ void pbistSelfCheck(void)
     for (i=0U; i<(32U + (32U * 1U)); i++){ /* Wait */ }
 
 /* USER CODE BEGIN (14) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable PBIST clocks and ROM clock */
     pbistREG->PACT = 0x3U;
@@ -385,7 +385,7 @@ void pbistSelfCheck(void)
         selftestFailNotification(PBISTSELFCHECK_FAIL1);
 
 /* USER CODE BEGIN (15) */
-        /* USER CODE END */
+/* USER CODE END */
     }
     else
     {
@@ -404,7 +404,7 @@ void pbistSelfCheck(void)
         systemREG1->MSTGCR |= 0x5U;
 
 /* USER CODE BEGIN (16) */
-        /* USER CODE END */
+/* USER CODE END */
     }
 }
 
@@ -423,7 +423,7 @@ void pbistRun(uint32 raminfoL, uint32 algomask)
     volatile uint32 i = 0U;
 
 /* USER CODE BEGIN (17) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* PBIST ROM clock frequency = HCLK frequency /2 */
     /* Disable memory self controller */
@@ -444,7 +444,7 @@ void pbistRun(uint32 raminfoL, uint32 algomask)
     for (i=0U; i<(32U + (32U * 1U)); i++){ /* Wait */ }
 
 /* USER CODE BEGIN (18) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable PBIST clocks and ROM clock */
     pbistREG->PACT = 0x3U;
@@ -468,7 +468,7 @@ void pbistRun(uint32 raminfoL, uint32 algomask)
     pbistREG->DLR = 0x14U;
 
 /* USER CODE BEGIN (19) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void pbistStop(void)
@@ -482,13 +482,13 @@ void pbistRun(uint32 raminfoL, uint32 algomask)
 void pbistStop(void)
 {
 /* USER CODE BEGIN (20) */
-    /* USER CODE END */
+/* USER CODE END */
     /* disable pbist clocks and ROM clock */
     pbistREG->PACT = 0x0U;
     systemREG1->MSTGCR &= 0xFFFFFFF0U;
     systemREG1->MSTGCR |= 0x5U;
 /* USER CODE BEGIN (21) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn boolean pbistIsTestCompleted(void)
@@ -503,11 +503,11 @@ void pbistStop(void)
 boolean pbistIsTestCompleted(void)
 {
 /* USER CODE BEGIN (22) */
-    /* USER CODE END */
+/* USER CODE END */
 
     return ((systemREG1->MSTCGSTAT & 0x1U) != 0U);
 /* USER CODE BEGIN (23) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn boolean pbistIsTestPassed(void)
@@ -522,7 +522,7 @@ boolean pbistIsTestCompleted(void)
 boolean pbistIsTestPassed(void)
 {
 /* USER CODE BEGIN (24) */
-    /* USER CODE END */
+/* USER CODE END */
 	boolean status;
 
     if (pbistREG->FSRF0 == 0U)
@@ -534,7 +534,7 @@ boolean pbistIsTestPassed(void)
 		status = FALSE;
 	}
 /* USER CODE BEGIN (25) */
-    /* USER CODE END */
+/* USER CODE END */
 	return status;
 }
 
@@ -552,7 +552,7 @@ boolean pbistPortTestStatus(uint32 port)
 {
     boolean status;
 /* USER CODE BEGIN (26) */
-    /* USER CODE END */
+/* USER CODE END */
 
     if(port == (uint32)PBIST_PORT0)
     {
@@ -585,13 +585,13 @@ uint32 efcCheck(void)
     uint32 status;
     
 /* USER CODE BEGIN (27) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* read the EFC Error Status Register */
     efcStatus = efcREG->ERROR;
 
 /* USER CODE BEGIN (28) */
-    /* USER CODE END */
+/* USER CODE END */
 
     if (efcStatus == 0x0U)
     {
@@ -641,7 +641,7 @@ uint32 efcCheck(void)
 boolean efcStuckZeroTest(void)
 {
 /* USER CODE BEGIN (29) */
-    /* USER CODE END */
+/* USER CODE END */
 
     uint32 ESM_ESTATUS4, ESM_ESTATUS1;
 
@@ -697,7 +697,7 @@ boolean efcStuckZeroTest(void)
 void efcSelfTest(void)
 {
 /* USER CODE BEGIN (30) */
-    /* USER CODE END */
+/* USER CODE END */
     /* configure self-test cycles */
     efcREG->SELF_TEST_CYCLES = 0x258U;
 
@@ -721,7 +721,7 @@ void efcSelfTest(void)
 boolean checkefcSelfTest(void)
 {
 /* USER CODE BEGIN (31) */
-    /* USER CODE END */
+/* USER CODE END */
     boolean result = FALSE;
 
     uint32 EFC_PINS, EFC_ERROR;
@@ -760,7 +760,7 @@ boolean checkefcSelfTest(void)
 void fmcBus2Check(void)
 {
 /* USER CODE BEGIN (32) */
-    /* USER CODE END */
+/* USER CODE END */
     /* enable ECC logic inside FMC */
     flashWREG->FEDACCTRL1 = 0x000A060AU;
 
@@ -781,7 +781,7 @@ void fmcBus2Check(void)
         fmcECCcheck();
     }
 /* USER CODE BEGIN (33) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void fmcECCcheck(void)
@@ -798,7 +798,7 @@ void fmcECCcheck(void)
     volatile uint32 temp;
 
 /* USER CODE BEGIN (34) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* read location with deliberate 1-bit error */
     otpread = flash1bitError;
@@ -837,7 +837,7 @@ void fmcECCcheck(void)
         selftestFailNotification(FMCECCCHECK_FAIL1);
     }
 /* USER CODE BEGIN (35) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void checkB0RAMECC(void)
@@ -858,7 +858,7 @@ void checkB0RAMECC(void)
     uint64 tcramA2_bk = tcramA2bit;
     volatile uint32 i;
 /* USER CODE BEGIN (36) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* enable writes to ECC RAM, enable ECC error response */
     tcram1REG->RAMCTRL = 0x0005010AU;
@@ -935,7 +935,7 @@ void checkB0RAMECC(void)
     tcramA2bit = tcramA2_bk;
 
 /* USER CODE BEGIN (37) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void checkB1RAMECC(void)
@@ -956,7 +956,7 @@ void checkB1RAMECC(void)
     uint64 tcramB2_bk = tcramB2bit;
     volatile uint32 i;
 /* USER CODE BEGIN (38) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* enable writes to ECC RAM, enable ECC error response */
     tcram1REG->RAMCTRL = 0x0005010AU;
@@ -1033,7 +1033,7 @@ void checkB1RAMECC(void)
     tcramB2bit = tcramB2_bk;
 
 /* USER CODE BEGIN (39) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void checkFlashECC(void)
@@ -1050,7 +1050,7 @@ void checkFlashECC(void)
     volatile uint32 flashread = 0U;
 
 /* USER CODE BEGIN (40) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Flash Module ECC Response enabled */
     flashWREG->FEDACCTRL1 = 0x000A060AU;
@@ -1105,7 +1105,7 @@ void checkFlashECC(void)
     }
 
 /* USER CODE BEGIN (41) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void custom_dabort(void)
@@ -1119,12 +1119,7 @@ void custom_dabort(void)
      * This data abort is not caused due to diagnostic checks of flash and TCRAM ECC logic.
      */
 /* USER CODE BEGIN (42) */
-    volatile uint8_t state = 0xff;
-    while (state)
-    {
-
-    }
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void stcSelfCheckFail(void)
@@ -1135,7 +1130,7 @@ void custom_dabort(void)
 void stcSelfCheckFail(void)
 {
 /* USER CODE BEGIN (43) */
-    /* USER CODE END */
+/* USER CODE END */
     /* CPU self-test controller's own self-test failed.
      * It is not possible to verify that STC is capable of indicating a CPU self-test error.
      * It is not recommended to continue operation.
@@ -1145,7 +1140,7 @@ void stcSelfCheckFail(void)
      * Note: Just removing the for(;;) will take the system to unknown state under ST failure,
      * since it is not handled by HALCoGen driver */
 /* USER CODE BEGIN (44) */
-    /* USER CODE END */
+/* USER CODE END */
     /*SAFETYMCUSW 5 C MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
     /*SAFETYMCUSW 26 S MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
     /*SAFETYMCUSW 28 D MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
@@ -1153,7 +1148,7 @@ void stcSelfCheckFail(void)
     {
     }/* Wait */
 /* USER CODE BEGIN (45) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void cpuSelfTestFail(void)
@@ -1164,12 +1159,12 @@ void stcSelfCheckFail(void)
 void cpuSelfTestFail(void)
 {
 /* USER CODE BEGIN (46) */
-    /* USER CODE END */
+/* USER CODE END */
     /* CPU self-test has failed.
      * CPU operation is not reliable.
      */
 /* USER CODE BEGIN (47) */
-    /* USER CODE END */
+/* USER CODE END */
     /*SAFETYMCUSW 5 C MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
     /*SAFETYMCUSW 26 S MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
     /*SAFETYMCUSW 28 D MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
@@ -1177,7 +1172,7 @@ void cpuSelfTestFail(void)
     {
     }/* Wait */
 /* USER CODE BEGIN (48) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1195,7 +1190,7 @@ void vimParityCheck(void)
     uint32 vimparctl_bk = VIM_PARCTL;
 
 /* USER CODE BEGIN (49) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable parity checking and parity test mode */
     VIM_PARCTL = 0x0000010AU;
@@ -1234,7 +1229,7 @@ void vimParityCheck(void)
     VIM_PARCTL = vimparctl_bk;
 
 /* USER CODE BEGIN (50) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1252,7 +1247,7 @@ void dmaParityCheck(void)
     uint32 dmaparcr_bk = DMA_PARCR;
 
 /* USER CODE BEGIN (51) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable parity checking and parity test mode */
     DMA_PARCR = 0x0000010AU;
@@ -1291,7 +1286,7 @@ void dmaParityCheck(void)
     DMA_PARCR = dmaparcr_bk;
 
 /* USER CODE BEGIN (52) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1309,7 +1304,7 @@ void het1ParityCheck(void)
     uint32 hetpcr_bk = hetREG1->PCR;
 
 /* USER CODE BEGIN (53) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Set TEST mode and enable parity checking */
     hetREG1->PCR = 0x0000010AU;
@@ -1345,7 +1340,7 @@ void het1ParityCheck(void)
     hetREG1->PCR = hetpcr_bk;
 
 /* USER CODE BEGIN (54) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1363,7 +1358,7 @@ void htu1ParityCheck(void)
     uint32 htupcr_bk = htuREG1->PCR;
 
 /* USER CODE BEGIN (55) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable parity and TEST mode */
     htuREG1->PCR = 0x0000010AU;
@@ -1400,7 +1395,7 @@ void htu1ParityCheck(void)
     htuREG1->PCR = htupcr_bk;
 
 /* USER CODE BEGIN (56) */
-    /* USER CODE END */
+/* USER CODE END */
 
 }
 
@@ -1420,7 +1415,7 @@ void het2ParityCheck(void)
 	uint32 esmCh7Stat, esmCh34Stat = 0U;
 	
 /* USER CODE BEGIN (57) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Set TEST mode and enable parity checking */
     hetREG2->PCR = 0x0000010AU;
@@ -1461,7 +1456,7 @@ void het2ParityCheck(void)
     hetREG2->PCR = hetpcr_bk;
 
 /* USER CODE BEGIN (58) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1479,7 +1474,7 @@ void htu2ParityCheck(void)
     uint32 htupcr_bk = htuREG2->PCR;
 
 /* USER CODE BEGIN (59) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Enable parity and TEST mode */
     htuREG2->PCR = 0x0000010AU;
@@ -1516,7 +1511,7 @@ void htu2ParityCheck(void)
     htuREG2->PCR = htupcr_bk;
 
 /* USER CODE BEGIN (60) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1534,7 +1529,7 @@ void adc1ParityCheck(void)
     uint32 adcparcr_bk = adcREG1->PARCR;
 
 /* USER CODE BEGIN (61) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Set the TEST bit in the PARCR and enable parity checking */
     adcREG1->PARCR = 0x10AU;
@@ -1570,7 +1565,7 @@ void adc1ParityCheck(void)
     adcREG1->PARCR = adcparcr_bk;
 
 /* USER CODE BEGIN (62) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1588,7 +1583,7 @@ void adc2ParityCheck(void)
     uint32 adcparcr_bk = adcREG2->PARCR;
 
 /* USER CODE BEGIN (63) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Set the TEST bit in the PARCR and enable parity checking */
     adcREG2->PARCR = 0x10AU;
@@ -1624,7 +1619,7 @@ void adc2ParityCheck(void)
     adcREG2->PARCR = adcparcr_bk;
 
 /* USER CODE BEGIN (64) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void can1ParityCheck(void)
@@ -1642,7 +1637,7 @@ void can1ParityCheck(void)
     uint32 canctl_bk =  canREG1->CTL;
 
 /* USER CODE BEGIN (65) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Disable parity, init mode, TEST mode */
     canREG1->CTL = 0x00001481U;
@@ -1687,7 +1682,7 @@ void can1ParityCheck(void)
     canread = canREG1->ES;
 
 /* USER CODE BEGIN (66) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1706,7 +1701,7 @@ void can2ParityCheck(void)
     uint32 canctl_bk = canREG2->CTL;
 
 /* USER CODE BEGIN (67) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Disable parity, init mode, TEST mode */
     canREG2->CTL = 0x00001481U;
@@ -1751,7 +1746,7 @@ void can2ParityCheck(void)
     canread = canREG2->ES;
 
 /* USER CODE BEGIN (68) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1770,7 +1765,7 @@ void can3ParityCheck(void)
     uint32 canctl_bk = canREG3->CTL;
 
 /* USER CODE BEGIN (69) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* Disable parity, init mode, TEST mode */
     canREG3->CTL = 0x00001481U;
@@ -1815,7 +1810,7 @@ void can3ParityCheck(void)
     canread = canREG3->ES;
 
 /* USER CODE BEGIN (70) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 
@@ -1834,7 +1829,7 @@ void mibspi1ParityCheck(void)
     uint32 mibspictl_bk = mibspiREG1->UERRCTRL;
 
 /* USER CODE BEGIN (71) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* enable multi-buffered mode */
     mibspiREG1->MIBSPIE = 0x1U;
@@ -1880,7 +1875,7 @@ void mibspi1ParityCheck(void)
     mibspiREG1->MIBSPIE = mibspie_bk;
 
 /* USER CODE BEGIN (72) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void mibspi3ParityCheck(void)
@@ -1898,7 +1893,7 @@ void mibspi3ParityCheck(void)
     uint32 mibspictl_bk = mibspiREG3->UERRCTRL;
 
 /* USER CODE BEGIN (73) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* enable multi-buffered mode */
     mibspiREG3->MIBSPIE = 0x1U;
@@ -1944,7 +1939,7 @@ void mibspi3ParityCheck(void)
     mibspiREG3->MIBSPIE = mibspie_bk;
 
 /* USER CODE BEGIN (74) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void mibspi5ParityCheck(void)
@@ -1962,7 +1957,7 @@ void mibspi5ParityCheck(void)
     uint32 mibspictl_bk = mibspiREG5->UERRCTRL;
 
 /* USER CODE BEGIN (75) */
-    /* USER CODE END */
+/* USER CODE END */
 
     /* enable multi-buffered mode */
     mibspiREG5->MIBSPIE = 0x1U;
@@ -2008,7 +2003,7 @@ void mibspi5ParityCheck(void)
     mibspiREG5->MIBSPIE = mibspie_bk;
 
 /* USER CODE BEGIN (76) */
-    /* USER CODE END */
+/* USER CODE END */
 }
 
 /** @fn void checkRAMECC(void)
@@ -2621,7 +2616,7 @@ void pbistFail(void)
     else
     {
 /* USER CODE BEGIN (77) */
-        /* USER CODE END */
+/* USER CODE END */
 /*SAFETYMCUSW 5 C MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
 /*SAFETYMCUSW 26 S MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
 /*SAFETYMCUSW 28 D MR:NA <APPROVED> "for(;;) can be removed by adding "# if 0" and "# endif" in the user codes above and below" */
@@ -2630,7 +2625,7 @@ void pbistFail(void)
         }/* Wait */
 
 /* USER CODE BEGIN (78) */
-        /* USER CODE END */
+/* USER CODE END */
     }
 }
 

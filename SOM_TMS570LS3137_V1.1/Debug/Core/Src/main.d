@@ -1,11 +1,11 @@
 # FIXED
 
 Core/Src/main.obj: ../Core/Src/main.c
-Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/FreeRTOS.h
-Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stddef.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h
+Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h
-Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_stdint40.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/stdint.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h
@@ -13,6 +13,9 @@ Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/includ
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h
+Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/FreeRTOS.h
+Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stddef.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/FreeRTOSConfig.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/os_projdefs.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/os_portable.h
@@ -25,7 +28,6 @@ Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_het.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sys_common.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/hal_stdtypes.h
-Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_gio.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h
 Core/Src/main.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
@@ -41,8 +43,6 @@ Core/Src/main.obj: D:/Projects/001-ANAKS/librarys/019-library-results/results/In
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwiplib.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h
-Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h
-Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/arch.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/system/arch/cc.h
@@ -141,18 +141,21 @@ Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dhcp.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/mqtt_example.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/altcp.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 
 ../Core/Src/main.c:
 
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/FreeRTOS.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h:
 
-C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stddef.h:
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h:
+
+C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h:
 
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h:
 
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h:
-
-C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h:
 
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_stdint40.h:
 
@@ -167,6 +170,12 @@ C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h:
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h:
 
 C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
+
+C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/FreeRTOS.h:
+
+C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stddef.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/FreeRTOSConfig.h:
 
@@ -191,8 +200,6 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sys_common.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/hal_stdtypes.h:
-
-C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_gio.h:
 
@@ -223,10 +230,6 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/lwipopts.h:
-
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/main.h:
-
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/core.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/debug.h:
 
@@ -421,6 +424,12 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dhcp.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/mqtt_example.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/altcp.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 

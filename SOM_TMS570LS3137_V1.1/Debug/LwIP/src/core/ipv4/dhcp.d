@@ -72,13 +72,13 @@ LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS5
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/autoip.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
+LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dns.h
+LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/etharp.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/ethernet.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/ieee.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/etharp.h
-LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dns.h
-LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/dhcp.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 LwIP/src/core/ipv4/dhcp.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/iana.h
@@ -229,6 +229,10 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dns.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
+
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/etharp.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
@@ -238,10 +242,6 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/ieee.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/etharp.h:
-
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dns.h:
-
-D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/dhcp.h:
 

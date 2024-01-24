@@ -238,6 +238,8 @@ static err_t low_level_init(struct netif *netif)
         return_value = ERR_IF;
     }
 
+    EMACTxPrioritySelect(hdkif_data[0].emac_base, 2);
+
     return return_value;
 }
 
@@ -330,14 +332,14 @@ osThreadId thread_id;
 static err_t low_level_output(struct netif *netif, struct pbuf *p)
 {
 
+    if (p->tot_len < MIN_PKT_LEN)
+    {
+        p->tot_len = MIN_PKT_LEN;
+        p->len = MIN_PKT_LEN;
+    }
+
     pbuf_ref(p);
-    /*
-     if (p->tot_len < MIN_PKT_LEN)
-     {
-     p->tot_len = MIN_PKT_LEN;
-     p->len = MIN_PKT_LEN;
-     }
-     */
+
     pbuf_t *emac_pbuf = convert_pbuf_to_pbuf_t(p);
     if (NULL == emac_pbuf)
     {
@@ -353,14 +355,14 @@ static err_t low_level_output(struct netif *netif, struct pbuf *p)
         }
         else
         {
-            /*
-             while (osSemaphoreWait(TxPktSemaphore, TIME_WAITING_FOR_INPUT)
-             != osOK)
-             {
 
-             }
+            while (osSemaphoreWait(TxPktSemaphore, TIME_WAITING_FOR_INPUT)
+                    != osOK)
+            {
 
-             free_pbuf_t(emac_pbuf);*/
+            }
+
+            free_pbuf_t(emac_pbuf);
         }
     }
     return ERR_OK;

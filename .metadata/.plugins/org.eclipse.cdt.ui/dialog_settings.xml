@@ -16,7 +16,6 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
-			<item value="abort"/>
 			<item value="sys_arch_mbox_fetch"/>
 			<item value="xQueueGenericCreate"/>
 			<item value="prvInitialiseMutex"/>

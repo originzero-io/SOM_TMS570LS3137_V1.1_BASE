@@ -72,10 +72,12 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
 /* USER CODE BEGIN Application */
 void vPortDisableInterrupts( void )
 {
+    _disable_IRQ();
 }
 
 void vPortEnableInterrupts( void )
 {
+    _enable_IRQ();
 }
 
 /* USER CODE END Application */

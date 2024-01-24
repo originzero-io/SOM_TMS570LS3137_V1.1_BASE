@@ -11,9 +11,9 @@ C_SRCS += \
 ../Core/Src/emac_driver.c \
 ../Core/Src/ethernetif.c \
 ../Core/Src/freertos.c \
-../Core/Src/lwip.c \
 ../Core/Src/lwiplib.c \
-../Core/Src/main.c 
+../Core/Src/main.c \
+../Core/Src/mqtt_example.c 
 
 C_DEPS += \
 ./Core/Src/cmsis_os.d \
@@ -21,9 +21,9 @@ C_DEPS += \
 ./Core/Src/emac_driver.d \
 ./Core/Src/ethernetif.d \
 ./Core/Src/freertos.d \
-./Core/Src/lwip.d \
 ./Core/Src/lwiplib.d \
-./Core/Src/main.d 
+./Core/Src/main.d \
+./Core/Src/mqtt_example.d 
 
 OBJS += \
 ./Core/Src/cmsis_os.obj \
@@ -31,9 +31,9 @@ OBJS += \
 ./Core/Src/emac_driver.obj \
 ./Core/Src/ethernetif.obj \
 ./Core/Src/freertos.obj \
-./Core/Src/lwip.obj \
 ./Core/Src/lwiplib.obj \
-./Core/Src/main.obj 
+./Core/Src/main.obj \
+./Core/Src/mqtt_example.obj 
 
 OBJS__QUOTED += \
 "Core\Src\cmsis_os.obj" \
@@ -41,9 +41,9 @@ OBJS__QUOTED += \
 "Core\Src\emac_driver.obj" \
 "Core\Src\ethernetif.obj" \
 "Core\Src\freertos.obj" \
-"Core\Src\lwip.obj" \
 "Core\Src\lwiplib.obj" \
-"Core\Src\main.obj" 
+"Core\Src\main.obj" \
+"Core\Src\mqtt_example.obj" 
 
 C_DEPS__QUOTED += \
 "Core\Src\cmsis_os.d" \
@@ -51,9 +51,9 @@ C_DEPS__QUOTED += \
 "Core\Src\emac_driver.d" \
 "Core\Src\ethernetif.d" \
 "Core\Src\freertos.d" \
-"Core\Src\lwip.d" \
 "Core\Src\lwiplib.d" \
-"Core\Src\main.d" 
+"Core\Src\main.d" \
+"Core\Src\mqtt_example.d" 
 
 C_SRCS__QUOTED += \
 "../Core/Src/cmsis_os.c" \
@@ -61,8 +61,8 @@ C_SRCS__QUOTED += \
 "../Core/Src/emac_driver.c" \
 "../Core/Src/ethernetif.c" \
 "../Core/Src/freertos.c" \
-"../Core/Src/lwip.c" \
 "../Core/Src/lwiplib.c" \
-"../Core/Src/main.c" 
+"../Core/Src/main.c" \
+"../Core/Src/mqtt_example.c" 
 
 

@@ -1,10 +1,10 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Tue Jan 23 13:21:04 2024
+>> Linked Wed Jan 24 13:04:22 2024
 
 OUTPUT FILE NAME:   <SOM_TMS570LS3137_V1.1.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 0002dc5c
+ENTRY POINT SYMBOL: "_c_int00"  address: 0002b6d0
 
 
 MEMORY CONFIGURATION
@@ -12,31 +12,31 @@ MEMORY CONFIGURATION
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
   VECTORS               00000000   00000020  00000020  00000000     X
-  KERNEL                00000020   00008000  0000582c  000027d4  R  X
-  FLASH0                00008020   00177fe0  00027dd8  00150208  R  X
+  KERNEL                00000020   00008000  00005798  00002868  R  X
+  FLASH0                00008020   00177fe0  000254bc  00152b24  R  X
   FLASH1                00180000   00180000  00000000  00180000  R  X
   STACKS                08000000   00000800  00000000  00000800  RW  
   KRAM                  08000800   00000800  00000104  000006fc  RW  
-  RAM                   08001000   0003f000  00013722  0002b8de  RW  
+  RAM                   08001000   0003f000  00015ed8  00029128  RW  
 
 
 SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    00005850   00005850    r-x
+00000000    00000000    000057b8   000057b8    r-x
   00000000    00000000    00000020   00000020    r-x .intvecs
-  00000020    00000020    000057b4   000057b4    r-x .kernelTEXT
-  000057d8    000057d8    00000078   00000078    r-- .cinit
-00008020    00008020    00027dd8   00027dd8    r-x
-  00008020    00008020    00027854   00027854    r-x .text
-  0002f874    0002f874    00000584   00000584    r-- .const
+  00000020    00000020    00005728   00005728    r-x .kernelTEXT
+  00005748    00005748    00000070   00000070    r-- .cinit
+00008020    00008020    000254bc   000254bc    r-x
+  00008020    00008020    00024fc0   00024fc0    r-x .text
+  0002cfe0    0002cfe0    000004fc   000004fc    r-- .const
 08000800    08000800    00000104   00000000    rw-
   08000800    08000800    00000104   00000000    rw- .kernelBSS
-08001000    08001000    00013724   00000000    rw-
-  08001000    08001000    0000bed6   00000000    rw- .bss
-  0800ced6    0800ced6    00007800   00000000    rw- .kernelHEAP
-  080146d8    080146d8    0000004c   00000000    rw- .data
+08001000    08001000    00015eda   00000000    rw-
+  08001000    08001000    0000bf82   00000000    rw- .bss
+  0800cf82    0800cf82    00009f10   00000000    rw- .kernelHEAP
+  08016e94    08016e94    00000046   00000000    rw- .data
 
 
 SECTION ALLOCATION MAP
@@ -48,216 +48,209 @@ section   page    origin      length       input sections
                   00000000    00000020     sys_intvecs.obj (.intvecs)
 
 .kernelTEXT 
-*          0    00000020    000057b4     
+*          0    00000020    00005728     
                   00000020    00002f04     os_tasks.obj (.kernelTEXT)
-                  00002f24    0000148c     os_queue.obj (.kernelTEXT)
-                  000043b0    00000818     os_event_groups.obj (.kernelTEXT)
-                  00004bc8    000004b0     os_portasm.obj (.kernelTEXT)
-                  00005078    000003e0     os_port.obj (.kernelTEXT)
-                  00005458    0000037c     os_heap.obj (.kernelTEXT)
+                  00002f24    00001400     os_queue.obj (.kernelTEXT)
+                  00004324    00000818     os_event_groups.obj (.kernelTEXT)
+                  00004b3c    000004b0     os_portasm.obj (.kernelTEXT)
+                  00004fec    000003e0     os_port.obj (.kernelTEXT)
+                  000053cc    0000037c     os_heap.obj (.kernelTEXT)
 
-.cinit     0    000057d8    00000078     
-                  000057d8    0000002a     (.cinit..data.load) [load image, compression = lzss]
-                  00005802    00000002     --HOLE-- [fill = 0]
-                  00005804    0000000c     (__TI_handler_table)
-                  00005810    00000009     (.cinit..kernelBSS.load) [load image, compression = lzss]
-                  00005819    00000007     --HOLE-- [fill = 0]
-                  00005820    00000008     (.cinit..bss.load) [load image, compression = zero_init]
-                  00005828    00000008     (.cinit..kernelHEAP.load) [load image, compression = zero_init]
-                  00005830    00000020     (__TI_cinit_table)
+.cinit     0    00005748    00000070     
+                  00005748    00000024     (.cinit..data.load) [load image, compression = lzss]
+                  0000576c    0000000c     (__TI_handler_table)
+                  00005778    00000009     (.cinit..kernelBSS.load) [load image, compression = lzss]
+                  00005781    00000007     --HOLE-- [fill = 0]
+                  00005788    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00005790    00000008     (.cinit..kernelHEAP.load) [load image, compression = zero_init]
+                  00005798    00000020     (__TI_cinit_table)
 
-.text      0    00008020    00027854     
-                  00008020    000042b0     dhcp.obj (.text)
-                  0000c2d0    0000403c     tcp_in.obj (.text)
-                  0001030c    00003900     tcp_out.obj (.text)
-                  00013c0c    00003800     tcp.obj (.text)
-                  0001740c    00002cdc     sys_selftest.obj (.text)
-                  0001a0e8    000020f8     pbuf.obj (.text)
-                  0001c1e0    00001c20     udp.obj (.text)
-                  0001de00    0000185c     etharp.obj (.text)
-                  0001f65c    0000177c     emac.obj (.text)
-                  00020dd8    00001518     ip4_frag.obj (.text)
-                  000222f0    00001440     cmsis_os.obj (.text)
-                  00023730    00001220     netif.obj (.text)
-                  00024950    00000e8c     autoip.obj (.text)
-                  000257dc    00000e08     mem.obj (.text)
-                  000265e4    00000b64     system.obj (.text)
-                  00027148    00000abc     os_mpu_wrappers.obj (.text)
-                  00027c04    000008e8     ip4.obj (.text)
-                  000284ec    000008a4     tcpip.obj (.text)
-                  00028d90    000008a0     sys_vim.obj (.text)
-                  00029630    00000720     timeouts.obj (.text)
-                  00029d50    000006d0     phy_dp83640.obj (.text)
-                  0002a420    000006c0     ethernetif.obj (.text)
-                  0002aae0    000006a0     ip4_addr.obj (.text)
-                  0002b180    00000664     errata_SSWF021_45.obj (.text)
-                  0002b7e4    00000650     pinmux.obj (.text)
-                  0002be34    000005d4     icmp.obj (.text)
-                  0002c408    000005bc     esm.obj (.text)
-                  0002c9c4    00000500     sys_arch.obj (.text)
-                  0002cec4    000003e8     memp.obj (.text)
-                  0002d2ac    000003a4     def.obj (.text)
-                  0002d650    0000034c     sys_core.obj (.text)
-                  0002d99c    000002c0     ethernet.obj (.text)
-                  0002dc5c    000002a4     sys_startup.obj (.text:retain)
-                  0002df00    00000294     lwiplib.obj (.text)
-                  0002e194    00000290     sys_vim.obj (.text:retain)
-                  0002e424    00000278     os_heap.obj (.text)
-                  0002e69c    00000238     os_list.obj (.text)
-                  0002e8d4    000001c4     mdio.obj (.text)
-                  0002ea98    000001b0     os_port.obj (.text)
-                  0002ec48    00000158     os_tasks.obj (.text)
-                  0002eda0    00000130     main.obj (.text)
-                  0002eed0    00000114     esm.obj (.text:retain)
-                  0002efe4    000000e8     dabort.obj (.text)
-                  0002f0cc    000000e0     sys_pmu.obj (.text)
-                  0002f1ac    000000cc     init.obj (.text)
-                  0002f278    000000cc     emac.obj (.text:retain)
-                  0002f344    0000009c     rtsv7R4_T_be_v3D16_eabi.lib : memcpy_t2.asm.obj (.text)
-                  0002f3e0    0000008c     notification.obj (.text)
-                  0002f46c    0000007a     rtsv7R4_T_be_v3D16_eabi.lib : memset_t2.asm.obj (.text)
-                  0002f4e6    0000006c                                 : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
-                  0002f552    00000002                                 : _lock.c.obj (.text:_nop)
-                  0002f554    0000005c     core.obj (.text)
-                  0002f5b0    00000054     rtsv7R4_T_be_v3D16_eabi.lib : i_div32.asm.obj (.text)
-                  0002f604    00000050                                 : atoi.c.obj (.text:atoi)
-                  0002f654    00000050     emac_driver.obj (.text)
-                  0002f6a4    00000050     rtsv7R4_T_be_v3D16_eabi.lib : u_div32.asm.obj (.text)
-                  0002f6f4    00000044                                 : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
-                  0002f738    00000034                                 : rand.c.obj (.text:rand)
-                  0002f76c    0000002a                                 : strncmp.c.obj (.text:strncmp)
-                  0002f796    00000028                                 : memmov.c.obj (.text:memmove)
-                  0002f7be    00000026                                 : memcmp.c.obj (.text:memcmp)
-                  0002f7e4    00000016                                 : strlen.c.obj (.text:strlen)
-                  0002f7fa    00000002                                 : div0.asm.obj (.text)
-                  0002f7fc    00000010                                 : isdigit.c.obj (.text:isdigit)
-                  0002f80c    00000010                                 : islower.c.obj (.text:islower)
-                  0002f81c    00000010                                 : isspace.c.obj (.text:isspace)
-                  0002f82c    00000010                                 : isxdigit.c.obj (.text:isxdigit)
-                  0002f83c    00000010     sys_main.obj (.text)
-                  0002f84c    0000000e     rtsv7R4_T_be_v3D16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  0002f85a    0000000c                                 : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
-                  0002f866    00000004                                 : exit.c.obj (.text:abort:abort)
-                  0002f86a    00000002     --HOLE-- [fill = 0]
-                  0002f86c    00000004     sys_phantom.obj (.text:retain)
-                  0002f870    00000004     sys_startup.obj (.text)
+.text      0    00008020    00024fc0     
+                  00008020    0000405c     tcp_in.obj (.text)
+                  0000c07c    000037e0     tcp_out.obj (.text)
+                  0000f85c    00003778     tcp.obj (.text)
+                  00012fd4    00003040     dhcp.obj (.text)
+                  00016014    00002cdc     sys_selftest.obj (.text)
+                  00018cf0    000020e8     pbuf.obj (.text)
+                  0001add8    0000177c     emac.obj (.text)
+                  0001c554    0000176c     etharp.obj (.text)
+                  0001dcc0    00001538     ip4_frag.obj (.text)
+                  0001f1f8    000014b4     udp.obj (.text)
+                  000206ac    00001438     cmsis_os.obj (.text)
+                  00021ae4    00000e04     mem.obj (.text)
+                  000228e8    00000de0     netif.obj (.text)
+                  000236c8    00000b64     system.obj (.text)
+                  0002422c    00000a78     os_mpu_wrappers.obj (.text)
+                  00024ca4    000009a4     ip4.obj (.text)
+                  00025648    000008b8     tcpip.obj (.text)
+                  00025f00    0000089c     sys_vim.obj (.text)
+                  0002679c    000007dc     inet_chksum.obj (.text)
+                  00026f78    0000079c     timeouts.obj (.text)
+                  00027714    00000738     ethernetif.obj (.text)
+                  00027e4c    000006d0     phy_dp83640.obj (.text)
+                  0002851c    000006a0     ip4_addr.obj (.text)
+                  00028bbc    00000664     errata_SSWF021_45.obj (.text)
+                  00029220    00000650     pinmux.obj (.text)
+                  00029870    00000614     icmp.obj (.text)
+                  00029e84    000005bc     esm.obj (.text)
+                  0002a440    00000500     sys_arch.obj (.text)
+                  0002a940    000003e8     memp.obj (.text)
+                  0002ad28    000003a4     def.obj (.text)
+                  0002b0cc    0000034c     sys_core.obj (.text)
+                  0002b418    000002b8     ethernet.obj (.text)
+                  0002b6d0    000002a4     sys_startup.obj (.text:retain)
+                  0002b974    00000290     sys_vim.obj (.text:retain)
+                  0002bc04    00000278     os_heap.obj (.text)
+                  0002be7c    00000238     os_list.obj (.text)
+                  0002c0b4    000001c4     mdio.obj (.text)
+                  0002c278    000001b0     os_port.obj (.text)
+                  0002c428    00000140     os_tasks.obj (.text)
+                  0002c568    00000114     esm.obj (.text:retain)
+                  0002c67c    000000e8     dabort.obj (.text)
+                  0002c764    000000e0     sys_pmu.obj (.text)
+                  0002c844    000000d4     main.obj (.text)
+                  0002c918    000000cc     init.obj (.text)
+                  0002c9e4    000000cc     emac.obj (.text:retain)
+                  0002cab0    0000009c     rtsv7R4_T_be_v3D16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  0002cb4c    0000008c     notification.obj (.text)
+                  0002cbd8    0000007a     rtsv7R4_T_be_v3D16_eabi.lib : memset_t2.asm.obj (.text)
+                  0002cc52    0000006c                                 : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  0002ccbe    00000002                                 : _lock.c.obj (.text:_nop)
+                  0002ccc0    0000005c     core.obj (.text)
+                  0002cd1c    00000054     rtsv7R4_T_be_v3D16_eabi.lib : i_div32.asm.obj (.text)
+                  0002cd70    00000050                                 : atoi.c.obj (.text:atoi)
+                  0002cdc0    00000050     emac_driver.obj (.text)
+                  0002ce10    00000050     rtsv7R4_T_be_v3D16_eabi.lib : u_div32.asm.obj (.text)
+                  0002ce60    00000044                                 : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  0002cea4    00000034                                 : rand.c.obj (.text:rand)
+                  0002ced8    0000002a                                 : strncmp.c.obj (.text:strncmp)
+                  0002cf02    00000028                                 : memmov.c.obj (.text:memmove)
+                  0002cf2a    00000026                                 : memcmp.c.obj (.text:memcmp)
+                  0002cf50    00000016                                 : strlen.c.obj (.text:strlen)
+                  0002cf66    00000002                                 : div0.asm.obj (.text)
+                  0002cf68    00000010                                 : isdigit.c.obj (.text:isdigit)
+                  0002cf78    00000010                                 : islower.c.obj (.text:islower)
+                  0002cf88    00000010                                 : isspace.c.obj (.text:isspace)
+                  0002cf98    00000010                                 : isxdigit.c.obj (.text:isxdigit)
+                  0002cfa8    00000010     sys_main.obj (.text)
+                  0002cfb8    0000000e     rtsv7R4_T_be_v3D16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0002cfc6    0000000c                                 : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  0002cfd2    00000004                                 : exit.c.obj (.text:abort:abort)
+                  0002cfd6    00000002     --HOLE-- [fill = 0]
+                  0002cfd8    00000004     sys_phantom.obj (.text:retain)
+                  0002cfdc    00000004     sys_startup.obj (.text)
 
-.const     0    0002f874    00000584     
-                  0002f874    00000180     sys_vim.obj (.const:s_vim_init)
-                  0002f9f4    00000101     rtsv7R4_T_be_v3D16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
-                  0002faf5    00000003     --HOLE-- [fill = 0]
-                  0002faf8    00000098     memp.obj (.const:.string)
-                  0002fb90    00000078     tcp.obj (.const:.string)
-                  0002fc08    00000034     memp.obj (.const:memp_pools)
-                  0002fc3c    00000030     timeouts.obj (.const:lwip_cyclic_timers)
-                  0002fc6c    0000002c     tcp.obj (.const:tcp_state_str)
-                  0002fc98    00000014     ethernetif.obj (.const:$P$T0$1)
-                  0002fcac    00000014     sys_arch.obj (.const:$P$T3$4)
-                  0002fcc0    00000010     memp.obj (.const:memp_FRAG_PBUF)
-                  0002fcd0    00000010     memp.obj (.const:memp_NETBUF)
-                  0002fce0    00000010     memp.obj (.const:memp_NETCONN)
-                  0002fcf0    00000010     memp.obj (.const:memp_PBUF)
-                  0002fd00    00000010     memp.obj (.const:memp_PBUF_POOL)
-                  0002fd10    00000010     memp.obj (.const:memp_REASSDATA)
-                  0002fd20    00000010     memp.obj (.const:memp_SYS_TIMEOUT)
-                  0002fd30    00000010     memp.obj (.const:memp_TCPIP_MSG_API)
-                  0002fd40    00000010     memp.obj (.const:memp_TCPIP_MSG_INPKT)
-                  0002fd50    00000010     memp.obj (.const:memp_TCP_PCB)
-                  0002fd60    00000010     memp.obj (.const:memp_TCP_PCB_LISTEN)
-                  0002fd70    00000010     memp.obj (.const:memp_TCP_SEG)
-                  0002fd80    00000010     memp.obj (.const:memp_UDP_PCB)
-                  0002fd90    00000010     tcp.obj (.const:tcp_pcb_lists)
-                  0002fda0    0000000d     tcp.obj (.const:.string:tcp_backoff)
-                  0002fdad    00000003     --HOLE-- [fill = 0]
-                  0002fdb0    0000000c     cmsis_os.obj (.const:$P$T0$1)
-                  0002fdbc    00000008     sys_arch.obj (.const:$P$T0$1)
-                  0002fdc4    00000007     tcp.obj (.const:.string:tcp_persist_backoff)
-                  0002fdcb    00000006     ethernet.obj (.const:ethbroadcast)
-                  0002fdd1    00000006     ethernet.obj (.const:ethzero)
-                  0002fdd7    00000001     --HOLE-- [fill = 0]
-                  0002fdd8    00000004     sys_arch.obj (.const:$P$T1$2)
-                  0002fddc    00000004     sys_arch.obj (.const:$P$T2$3)
-                  0002fde0    00000004     main.obj (.const:.string:$P$T0$1)
-                  0002fde4    00000004     main.obj (.const:.string:$P$T1$2)
-                  0002fde8    00000004     main.obj (.const:.string:$P$T2$3)
-                  0002fdec    00000004     ip4_addr.obj (.const:ip_addr_any)
-                  0002fdf0    00000004     ip4_addr.obj (.const:ip_addr_broadcast)
-                  0002fdf4    00000004     sys_arch.obj (.const:os_mutex_def_lwip_sys_mutex)
+.const     0    0002cfe0    000004fc     
+                  0002cfe0    00000180     sys_vim.obj (.const:s_vim_init)
+                  0002d160    00000101     rtsv7R4_T_be_v3D16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  0002d261    00000003     --HOLE-- [fill = 0]
+                  0002d264    00000078     tcp.obj (.const:.string)
+                  0002d2dc    00000044     timeouts.obj (.const:.string)
+                  0002d320    0000003c     timeouts.obj (.const:lwip_cyclic_timers)
+                  0002d35c    00000034     memp.obj (.const:memp_pools)
+                  0002d390    0000002c     tcp.obj (.const:tcp_state_str)
+                  0002d3bc    00000014     ethernetif.obj (.const:$P$T0$1)
+                  0002d3d0    00000014     sys_arch.obj (.const:$P$T3$4)
+                  0002d3e4    00000010     tcp.obj (.const:tcp_pcb_lists)
+                  0002d3f4    0000000d     tcp.obj (.const:.string:tcp_backoff)
+                  0002d401    00000003     --HOLE-- [fill = 0]
+                  0002d404    0000000c     cmsis_os.obj (.const:$P$T0$1)
+                  0002d410    0000000c     memp.obj (.const:memp_FRAG_PBUF)
+                  0002d41c    0000000c     memp.obj (.const:memp_NETBUF)
+                  0002d428    0000000c     memp.obj (.const:memp_NETCONN)
+                  0002d434    0000000c     memp.obj (.const:memp_PBUF)
+                  0002d440    0000000c     memp.obj (.const:memp_PBUF_POOL)
+                  0002d44c    0000000c     memp.obj (.const:memp_REASSDATA)
+                  0002d458    0000000c     memp.obj (.const:memp_SYS_TIMEOUT)
+                  0002d464    0000000c     memp.obj (.const:memp_TCPIP_MSG_API)
+                  0002d470    0000000c     memp.obj (.const:memp_TCPIP_MSG_INPKT)
+                  0002d47c    0000000c     memp.obj (.const:memp_TCP_PCB)
+                  0002d488    0000000c     memp.obj (.const:memp_TCP_PCB_LISTEN)
+                  0002d494    0000000c     memp.obj (.const:memp_TCP_SEG)
+                  0002d4a0    0000000c     memp.obj (.const:memp_UDP_PCB)
+                  0002d4ac    00000008     sys_arch.obj (.const:$P$T0$1)
+                  0002d4b4    00000007     tcp.obj (.const:.string:tcp_persist_backoff)
+                  0002d4bb    00000006     ethernet.obj (.const:ethbroadcast)
+                  0002d4c1    00000006     ethernet.obj (.const:ethzero)
+                  0002d4c7    00000001     --HOLE-- [fill = 0]
+                  0002d4c8    00000004     sys_arch.obj (.const:$P$T1$2)
+                  0002d4cc    00000004     sys_arch.obj (.const:$P$T2$3)
+                  0002d4d0    00000004     ip4_addr.obj (.const:ip_addr_any)
+                  0002d4d4    00000004     ip4_addr.obj (.const:ip_addr_broadcast)
+                  0002d4d8    00000004     sys_arch.obj (.const:os_mutex_def_lwip_sys_mutex)
 
 .kernelBSS 
 *          0    08000800    00000104     UNINITIALIZED
                   08000800    000000d0     os_tasks.obj (.kernelBSS:uninit)
                   080008d0    00000034     os_tasks.obj (.kernelBSS:init)
 
-.bss       0    08001000    0000bed6     UNINITIALIZED
+.bss       0    08001000    0000bf82     UNINITIALIZED
                   08001000    00003b4c     (.common:ethernetif_rx_quiue)
                   08004b4c    00003b24     emac.obj (.bss:pbuf_array)
                   08008670    00002604     (.common:memp_memory_PBUF_POOL_base)
                   0800ac74    00001414     (.common:ram_heap)
                   0800c088    000003b0     (.common:memp_memory_TCP_PCB_base)
-                  0800c438    0000016c     (.common:memp_memory_FRAG_PBUF_base)
-                  0800c5a4    00000144     (.common:memp_memory_TCP_SEG_base)
-                  0800c6e8    00000104     (.common:memp_memory_PBUF_base)
-                  0800c7ec    000000f0     etharp.obj (.bss:arp_table)
-                  0800c8dc    000000e4     (.common:memp_memory_TCP_PCB_LISTEN_base)
-                  0800c9c0    000000a4     (.common:memp_memory_NETCONN_base)
-                  0800ca64    000000a4     (.common:memp_memory_REASSDATA_base)
-                  0800cb08    00000084     (.common:memp_memory_TCPIP_MSG_API_base)
-                  0800cb8c    00000084     (.common:memp_memory_TCPIP_MSG_INPKT_base)
-                  0800cc10    00000084     (.common:memp_memory_UDP_PCB_base)
-                  0800cc94    00000064     (.common:memp_memory_SYS_TIMEOUT_base)
-                  0800ccf8    00000040     (.common:gnetif)
-                  0800cd38    0000003c     (.common:hdkif_data)
-                  0800cd74    00000034     memp.obj (.bss)
-                  0800cda8    00000024     tcp_in.obj (.bss)
-                  0800cdcc    00000024     (.common:memp_memory_NETBUF_base)
-                  0800cdf0    00000020     (.common:dhcp_rx_options_val)
-                  0800ce10    00000018     (.common:ip_data)
-                  0800ce28    00000014     tcp_in.obj (.bss:inseg)
-                  0800ce3c    00000010     mem.obj (.bss)
-                  0800ce4c    00000010     ip4_addr.obj (.bss:str$1)
-                  0800ce5c    0000000c     dhcp.obj (.bss)
-                  0800ce68    0000000c     tcpip.obj (.bss)
-                  0800ce74    0000000c     timeouts.obj (.bss)
-                  0800ce80    00000008     ethernetif.obj (.bss:mac_address)
-                  0800ce88    00000008     os_heap.obj (.bss:xStart)
-                  0800ce90    00000008     (.common:dhcp_rx_options_given)
-                  0800ce98    00000006     ip4_frag.obj (.bss)
-                  0800ce9e    00000002     ip4.obj (.bss)
-                  0800cea0    00000004     (.common:EMAC_to_pbuf_counter)
-                  0800cea4    00000004     (.common:lock_tcpip_core)
-                  0800cea8    00000004     (.common:lwip_sys_mutex)
-                  0800ceac    00000004     (.common:netif_default)
-                  0800ceb0    00000004     (.common:rx_queue)
-                  0800ceb4    00000004     (.common:tcp_active_pcbs)
-                  0800ceb8    00000004     (.common:tcp_bound_pcbs)
-                  0800cebc    00000004     (.common:tcp_input_pcb)
-                  0800cec0    00000004     (.common:tcp_listen_pcbs)
-                  0800cec4    00000004     (.common:tcp_ticks)
-                  0800cec8    00000004     (.common:tcp_tw_pcbs)
-                  0800cecc    00000004     (.common:udp_pcbs)
-                  0800ced0    00000002     tcp.obj (.bss)
-                  0800ced2    00000001     etharp.obj (.bss)
-                  0800ced3    00000001     netif.obj (.bss)
-                  0800ced4    00000001     (.common:pbuf_free_ooseq_pending)
-                  0800ced5    00000001     (.common:tcp_active_pcbs_changed)
+                  0800c438    00000194     (.common:memp_memory_SYS_TIMEOUT_base)
+                  0800c5cc    0000016c     (.common:memp_memory_FRAG_PBUF_base)
+                  0800c738    00000104     (.common:memp_memory_PBUF_base)
+                  0800c83c    00000104     (.common:memp_memory_TCP_SEG_base)
+                  0800c940    000000f0     etharp.obj (.bss:arp_table)
+                  0800ca30    000000e4     (.common:memp_memory_TCP_PCB_LISTEN_base)
+                  0800cb14    000000a4     (.common:memp_memory_NETCONN_base)
+                  0800cbb8    000000a4     (.common:memp_memory_REASSDATA_base)
+                  0800cc5c    00000084     (.common:memp_memory_TCPIP_MSG_API_base)
+                  0800cce0    00000084     (.common:memp_memory_TCPIP_MSG_INPKT_base)
+                  0800cd64    00000084     (.common:memp_memory_UDP_PCB_base)
+                  0800cde8    0000003c     (.common:hdkif_data)
+                  0800ce24    00000034     memp.obj (.bss)
+                  0800ce58    00000024     tcp_in.obj (.bss)
+                  0800ce7c    00000024     (.common:memp_memory_NETBUF_base)
+                  0800cea0    00000020     (.common:dhcp_rx_options_val)
+                  0800cec0    00000018     (.common:ip_data)
+                  0800ced8    00000010     tcp_in.obj (.bss:inseg)
+                  0800cee8    00000010     mem.obj (.bss)
+                  0800cef8    00000010     ip4_addr.obj (.bss:str$1)
+                  0800cf08    0000000c     dhcp.obj (.bss)
+                  0800cf14    0000000c     tcpip.obj (.bss)
+                  0800cf20    0000000c     timeouts.obj (.bss)
+                  0800cf2c    00000008     ethernetif.obj (.bss:mac_address)
+                  0800cf34    00000008     os_heap.obj (.bss:xStart)
+                  0800cf3c    00000008     (.common:dhcp_rx_options_given)
+                  0800cf44    00000006     ip4_frag.obj (.bss)
+                  0800cf4a    00000002     ip4.obj (.bss)
+                  0800cf4c    00000004     (.common:EMAC_to_pbuf_counter)
+                  0800cf50    00000004     (.common:lock_tcpip_core)
+                  0800cf54    00000004     (.common:lwip_sys_mutex)
+                  0800cf58    00000004     (.common:netif_default)
+                  0800cf5c    00000004     (.common:rx_queue)
+                  0800cf60    00000004     (.common:tcp_active_pcbs)
+                  0800cf64    00000004     (.common:tcp_bound_pcbs)
+                  0800cf68    00000004     (.common:tcp_input_pcb)
+                  0800cf6c    00000004     (.common:tcp_listen_pcbs)
+                  0800cf70    00000004     (.common:tcp_ticks)
+                  0800cf74    00000004     (.common:tcp_tw_pcbs)
+                  0800cf78    00000004     (.common:udp_pcbs)
+                  0800cf7c    00000002     tcp.obj (.bss)
+                  0800cf7e    00000001     etharp.obj (.bss)
+                  0800cf7f    00000001     netif.obj (.bss)
+                  0800cf80    00000001     (.common:pbuf_free_ooseq_pending)
+                  0800cf81    00000001     (.common:tcp_active_pcbs_changed)
 
 .kernelHEAP 
-*          0    0800ced6    00007800     UNINITIALIZED
-                  0800ced6    00007800     os_heap.obj (.kernelHEAP)
+*          0    0800cf82    00009f10     UNINITIALIZED
+                  0800cf82    00009f10     os_heap.obj (.kernelHEAP)
 
-.data      0    080146d8    0000004c     UNINITIALIZED
-                  080146d8    00000010     os_heap.obj (.data)
-                  080146e8    0000000c     ethernetif.obj (.data)
-                  080146f4    00000008     rtsv7R4_T_be_v3D16_eabi.lib : _lock.c.obj (.data:$O1$$)
-                  080146fc    00000008     emac_driver.obj (.data)
-                  08014704    00000008     os_port.obj (.data)
-                  0801470c    00000008     tcp.obj (.data)
-                  08014714    00000006     sys_main.obj (.data:emacAddress)
-                  0801471a    00000002     udp.obj (.data)
-                  0801471c    00000004     rtsv7R4_T_be_v3D16_eabi.lib : rand.c.obj (.data)
-                  08014720    00000003     dhcp.obj (.data:dhcp_discover_request_options)
-                  08014723    00000001     main.obj (.data)
+.data      0    08016e94    00000046     UNINITIALIZED
+                  08016e94    00000010     os_heap.obj (.data)
+                  08016ea4    0000000c     ethernetif.obj (.data)
+                  08016eb0    00000008     rtsv7R4_T_be_v3D16_eabi.lib : _lock.c.obj (.data:$O1$$)
+                  08016eb8    00000008     emac_driver.obj (.data)
+                  08016ec0    00000008     os_port.obj (.data)
+                  08016ec8    00000008     tcp.obj (.data)
+                  08016ed0    00000004     rtsv7R4_T_be_v3D16_eabi.lib : rand.c.obj (.data)
+                  08016ed4    00000003     dhcp.obj (.data:dhcp_discover_request_options)
+                  08016ed7    00000001     --HOLE--
+                  08016ed8    00000002     udp.obj (.data)
 
 __llvm_prf_cnts 
 *          0    08001000    00000000     UNINITIALIZED
@@ -267,24 +260,23 @@ MODULE SUMMARY
        Module                       code     ro data   rw data
        ------                       ----     -------   -------
     .\Core\Src\
-       ethernetif.obj               1728     20        15208  
-       cmsis_os.obj                 5184     12        0      
-       lwiplib.obj                  660      0         64     
-       main.obj                     304      12        1      
+       ethernetif.obj               1848     20        15208  
+       cmsis_os.obj                 5176     12        0      
+       main.obj                     212      0         0      
        core.obj                     92       0         0      
        emac_driver.obj              80       0         8      
     +--+----------------------------+--------+---------+---------+
-       Total:                       8048     44        15281  
+       Total:                       7408     32        15216  
                                                               
     .\HalCoGen\source\
-       os_heap.obj                  1524     0         30744  
+       os_heap.obj                  1524     0         40744  
        emac.obj                     6216     0         15200  
-       os_tasks.obj                 12380    0         260    
+       os_tasks.obj                 12356    0         260    
        sys_selftest.obj             11484    0         0      
-       os_queue.obj                 5260     0         0      
-       sys_vim.obj                  2864     384       0      
+       os_queue.obj                 5120     0         0      
+       sys_vim.obj                  2860     384       0      
        system.obj                   2916     0         0      
-       os_mpu_wrappers.obj          2748     0         0      
+       os_mpu_wrappers.obj          2680     0         0      
        os_event_groups.obj          2072     0         0      
        esm.obj                      1744     0         0      
        phy_dp83640.obj              1744     0         0      
@@ -300,47 +292,47 @@ MODULE SUMMARY
        sys_pmu.obj                  224      0         0      
        notification.obj             140      0         0      
        sys_intvecs.obj              32       0         0      
-       sys_main.obj                 16       0         6      
+       sys_main.obj                 16       0         0      
        sys_phantom.obj              4        0         0      
     +--+----------------------------+--------+---------+---------+
-       Total:                       60020    384       46218  
+       Total:                       59784    384       56212  
                                                               
     .\LwIP\src\api\
-       tcpip.obj                    2212     0         16     
+       tcpip.obj                    2232     0         16     
     +--+----------------------------+--------+---------+---------+
-       Total:                       2212     0         16     
+       Total:                       2232     0         16     
                                                               
     .\LwIP\src\core\
-       tcp_in.obj                   16444    0         60     
-       tcp_out.obj                  14592    0         0      
-       tcp.obj                      14336    200       31     
-       memp.obj                     1000     412       12764  
-       mem.obj                      3592     0         5156   
-       pbuf.obj                     8440     0         1      
-       udp.obj                      7200     0         6      
-       netif.obj                    4640     0         5      
-       timeouts.obj                 1824     48        12     
+       tcp_in.obj                   16476    0         56     
+       tcp.obj                      14200    200       31     
+       tcp_out.obj                  14304    0         0      
+       memp.obj                     1000     208       13004  
+       mem.obj                      3588     0         5156   
+       pbuf.obj                     8424     0         1      
+       udp.obj                      5300     0         6      
+       netif.obj                    3552     0         5      
+       timeouts.obj                 1948     128       12     
+       inet_chksum.obj              2012     0         0      
        def.obj                      932      0         0      
        init.obj                     204      0         0      
        ip.obj                       0        0         24     
     +--+----------------------------+--------+---------+---------+
-       Total:                       73204    660       18059  
+       Total:                       71940    536       18295  
                                                               
     .\LwIP\src\core\ipv4\
-       dhcp.obj                     17072    0         55     
-       etharp.obj                   6236     0         241    
-       ip4_frag.obj                 5400     0         6      
-       autoip.obj                   3724     0         0      
-       ip4.obj                      2280     0         2      
+       dhcp.obj                     12352    0         55     
+       etharp.obj                   5996     0         241    
+       ip4_frag.obj                 5432     0         6      
+       ip4.obj                      2468     0         2      
        ip4_addr.obj                 1696     8         16     
-       icmp.obj                     1492     0         0      
+       icmp.obj                     1556     0         0      
     +--+----------------------------+--------+---------+---------+
-       Total:                       37900    8         320    
+       Total:                       29500    8         320    
                                                               
     .\LwIP\src\netif\
-       ethernet.obj                 704      12        0      
+       ethernet.obj                 696      12        0      
     +--+----------------------------+--------+---------+---------+
-       Total:                       704      12        0      
+       Total:                       696      12        0      
                                                               
     .\LwIP\system\OS\
        sys_arch.obj                 1280     40        4      
@@ -373,23 +365,23 @@ MODULE SUMMARY
     +--+----------------------------+--------+---------+---------+
        Total:                       990      257       12     
                                                               
-       Linker Generated:            0        111       0      
+       Linker Generated:            0        105       0      
     +--+----------------------------+--------+---------+---------+
-       Grand Total:                 184358   1516      79910  
+       Grand Total:                 173830   1374      90075  
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00005830 records: 4, size/record: 8, table size: 32
-	.data: load addr=000057d8, load size=0000002a bytes, run addr=080146d8, run size=0000004c bytes, compression=lzss
-	.kernelBSS: load addr=00005810, load size=00000009 bytes, run addr=08000800, run size=00000104 bytes, compression=lzss
-	.bss: load addr=00005820, load size=00000008 bytes, run addr=08001000, run size=0000bed6 bytes, compression=zero_init
-	.kernelHEAP: load addr=00005828, load size=00000008 bytes, run addr=0800ced6, run size=00007800 bytes, compression=zero_init
+__TI_cinit_table @ 00005798 records: 4, size/record: 8, table size: 32
+	.data: load addr=00005748, load size=00000024 bytes, run addr=08016e94, run size=00000046 bytes, compression=lzss
+	.kernelBSS: load addr=00005778, load size=00000009 bytes, run addr=08000800, run size=00000104 bytes, compression=lzss
+	.bss: load addr=00005788, load size=00000008 bytes, run addr=08001000, run size=0000bf82 bytes, compression=zero_init
+	.kernelHEAP: load addr=00005790, load size=00000008 bytes, run addr=0800cf82, run size=00009f10 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00005804 records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 0000576c records: 3, size/record: 4, table size: 12
 	index: 0, handler: __TI_decompress_lzss
 	index: 1, handler: __TI_decompress_none
 	index: 2, handler: __TI_zero_init
@@ -399,726 +391,717 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 
 address   name                                  
 -------   ----                                  
-0002f867  C$$EXIT                               
-00029ea4  Dp83640AutoNegotiate                  
-0002a150  Dp83640DisableLoopback                
-0002a0c0  Dp83640EnableLoopback                 
-0002a1d4  Dp83640GetTimeStamp                   
-00029d50  Dp83640IDGet                          
-00029dc8  Dp83640LinkStatusGet                  
-0002a034  Dp83640PartnerAbilityGet              
-0002a3f8  Dp83640PartnerSpdGet                  
-0002a05c  Dp83640Reset                          
-0001fb84  EMACCoreIntAck                        
-0002030c  EMACDMAInit                           
-00020030  EMACDisableIdleState                  
-000200bc  EMACDisableLoopback                   
-0001f854  EMACDuplexSet                         
-0002000c  EMACEnableIdleState                   
-00020054  EMACEnableLoopback                    
-0001ff34  EMACFrameSelect                       
-00020c1c  EMACGetConfigValue                    
-000204e4  EMACHWInit                            
-0001f95c  EMACInit                              
-0001fda0  EMACInstConfig                        
-0001fd88  EMACIntVectorGet                      
-0001fe04  EMACLinkSetup                         
-0001fafc  EMACMACAddrSet                        
-0001fa98  EMACMACSrcAddrSet                     
-0001f830  EMACMIIDisable                        
-0001f80c  EMACMIIEnable                         
-0001fd5c  EMACNumFreeBufSet                     
-0001f7cc  EMACRMIISpeedSet                      
-00020208  EMACReadNetStatRegisters              
-00020ac0  EMACReceive                           
-0001fc40  EMACRxBroadCastDisable                
-0001fbfc  EMACRxBroadCastEnable                 
-0001fbd0  EMACRxCPWrite                         
-0001f8e8  EMACRxDisable                         
-0001f8cc  EMACRxEnable                          
-00020190  EMACRxFlowControlDisable              
-0002016c  EMACRxFlowControlEnable               
-0001f930  EMACRxHdrDescPtrWrite                 
-0002f2dc  EMACRxIntISR                          
-0001f770  EMACRxIntPulseDisable                 
-0001f714  EMACRxIntPulseEnable                  
-0002027c  EMACRxIntStat                         
-0001fcc0  EMACRxMultiCastDisable                
-0001fc7c  EMACRxMultiCastEnable                 
-000201b4  EMACRxSetFlowThreshold                
-0001ff08  EMACRxTeardown                        
-0001fd2c  EMACRxUnicastClear                    
-0001fcfc  EMACRxUnicastSet                      
-0001ffc0  EMACSoftReset                         
-000207e0  EMACTransmit                          
-0001fba4  EMACTxCPWrite                         
-0001f8b0  EMACTxDisable                         
-0001f894  EMACTxEnable                          
-00020148  EMACTxFlowControlDisable              
-00020124  EMACTxFlowControlEnable               
-0001f904  EMACTxHdrDescPtrWrite                 
-000209cc  EMACTxIntHandler                      
-0002f278  EMACTxIntISR                          
-0001f6b8  EMACTxIntPulseDisable                 
-0001f65c  EMACTxIntPulseEnable                  
-0002022c  EMACTxIntStat                         
-0001ff60  EMACTxPrioritySelect                  
-0001fedc  EMACTxTeardown                        
-0002a490  EMAC_to_pbuf                          
-0800cea0  EMAC_to_pbuf_counter                  
-0002ea70  MDIODisable                           
-0002ea4c  MDIOEnable                            
-0002ea04  MDIOInit                              
-0002e9d4  MDIOPhyAliveStatusGet                 
-0002e9ec  MDIOPhyLinkStatusGet                  
-0002e8d4  MDIOPhyRegRead                        
-0002e96c  MDIOPhyRegWrite                       
-00027318  MPU_eTaskGetState                     
-00027480  MPU_pcTaskGetName                     
-00027560  MPU_pvTaskGetThreadLocalStoragePointer
-00027678  MPU_ulTaskNotifyTake                  
-00027860  MPU_uxQueueMessagesWaiting            
-00027894  MPU_uxQueueSpacesAvailable            
-00027454  MPU_uxTaskGetNumberOfTasks            
-000274e8  MPU_uxTaskGetStackHighWaterMark       
-000272e4  MPU_uxTaskPriorityGet                 
-00027bd8  MPU_vEventGroupDelete                 
-000278c8  MPU_vQueueDelete                      
-000271f0  MPU_vTaskAllocateMPURegions           
-00027250  MPU_vTaskDelay                        
-0002727c  MPU_vTaskDelayUntil                   
-00027224  MPU_vTaskDelete                       
-0002734c  MPU_vTaskPrioritySet                  
-000273ac  MPU_vTaskResume                       
-0002751c  MPU_vTaskSetThreadLocalStoragePointer 
-0002771c  MPU_vTaskSetTimeOutState              
-00027380  MPU_vTaskSuspend                      
-000273d8  MPU_vTaskSuspendAll                   
-00027afc  MPU_xEventGroupClearBits              
-00027a74  MPU_xEventGroupCreate                 
-00027b40  MPU_xEventGroupSetBits                
-00027b84  MPU_xEventGroupSync                   
-00027aa0  MPU_xEventGroupWaitBits               
-00027928  MPU_xQueueCreateCountingSemaphore     
-000278f4  MPU_xQueueCreateMutex                 
-000279e4  MPU_xQueueGenericCreate               
-0002780c  MPU_xQueueGenericReceive              
-00027a30  MPU_xQueueGenericReset                
-000277b8  MPU_xQueueGenericSend                 
-000279b0  MPU_xQueueGiveMutexRecursive          
-0002796c  MPU_xQueueTakeMutexRecursive          
-000272b0  MPU_xTaskAbortDelay                   
-00027748  MPU_xTaskCheckForTimeOut              
-00027148  MPU_xTaskCreate                       
-000271ac  MPU_xTaskCreateRestricted             
-000275d0  MPU_xTaskGenericNotify                
-000276f0  MPU_xTaskGetCurrentTaskHandle         
-000274b4  MPU_xTaskGetHandle                    
-000275a4  MPU_xTaskGetIdleTaskHandle            
-0002778c  MPU_xTaskGetSchedulerState            
-00027428  MPU_xTaskGetTickCount                 
-000276bc  MPU_xTaskNotifyStateClear             
-00027624  MPU_xTaskNotifyWait                   
-000273fc  MPU_xTaskResumeAll                    
-080146ec  RxPktSemaphore                        
+0002cfd3  C$$EXIT                               
+00027fa0  Dp83640AutoNegotiate                  
+0002824c  Dp83640DisableLoopback                
+000281bc  Dp83640EnableLoopback                 
+000282d0  Dp83640GetTimeStamp                   
+00027e4c  Dp83640IDGet                          
+00027ec4  Dp83640LinkStatusGet                  
+00028130  Dp83640PartnerAbilityGet              
+000284f4  Dp83640PartnerSpdGet                  
+00028158  Dp83640Reset                          
+0001b300  EMACCoreIntAck                        
+0001ba88  EMACDMAInit                           
+0001b7ac  EMACDisableIdleState                  
+0001b838  EMACDisableLoopback                   
+0001afd0  EMACDuplexSet                         
+0001b788  EMACEnableIdleState                   
+0001b7d0  EMACEnableLoopback                    
+0001b6b0  EMACFrameSelect                       
+0001c398  EMACGetConfigValue                    
+0001bc60  EMACHWInit                            
+0001b0d8  EMACInit                              
+0001b51c  EMACInstConfig                        
+0001b504  EMACIntVectorGet                      
+0001b580  EMACLinkSetup                         
+0001b278  EMACMACAddrSet                        
+0001b214  EMACMACSrcAddrSet                     
+0001afac  EMACMIIDisable                        
+0001af88  EMACMIIEnable                         
+0001b4d8  EMACNumFreeBufSet                     
+0001af48  EMACRMIISpeedSet                      
+0001b984  EMACReadNetStatRegisters              
+0001c23c  EMACReceive                           
+0001b3bc  EMACRxBroadCastDisable                
+0001b378  EMACRxBroadCastEnable                 
+0001b34c  EMACRxCPWrite                         
+0001b064  EMACRxDisable                         
+0001b048  EMACRxEnable                          
+0001b90c  EMACRxFlowControlDisable              
+0001b8e8  EMACRxFlowControlEnable               
+0001b0ac  EMACRxHdrDescPtrWrite                 
+0002ca48  EMACRxIntISR                          
+0001aeec  EMACRxIntPulseDisable                 
+0001ae90  EMACRxIntPulseEnable                  
+0001b9f8  EMACRxIntStat                         
+0001b43c  EMACRxMultiCastDisable                
+0001b3f8  EMACRxMultiCastEnable                 
+0001b930  EMACRxSetFlowThreshold                
+0001b684  EMACRxTeardown                        
+0001b4a8  EMACRxUnicastClear                    
+0001b478  EMACRxUnicastSet                      
+0001b73c  EMACSoftReset                         
+0001bf5c  EMACTransmit                          
+0001b320  EMACTxCPWrite                         
+0001b02c  EMACTxDisable                         
+0001b010  EMACTxEnable                          
+0001b8c4  EMACTxFlowControlDisable              
+0001b8a0  EMACTxFlowControlEnable               
+0001b080  EMACTxHdrDescPtrWrite                 
+0001c148  EMACTxIntHandler                      
+0002c9e4  EMACTxIntISR                          
+0001ae34  EMACTxIntPulseDisable                 
+0001add8  EMACTxIntPulseEnable                  
+0001b9a8  EMACTxIntStat                         
+0001b6dc  EMACTxPrioritySelect                  
+0001b658  EMACTxTeardown                        
+00027784  EMAC_to_pbuf                          
+0800cf4c  EMAC_to_pbuf_counter                  
+0002c250  MDIODisable                           
+0002c22c  MDIOEnable                            
+0002c1e4  MDIOInit                              
+0002c1b4  MDIOPhyAliveStatusGet                 
+0002c1cc  MDIOPhyLinkStatusGet                  
+0002c0b4  MDIOPhyRegRead                        
+0002c14c  MDIOPhyRegWrite                       
+000243fc  MPU_eTaskGetState                     
+00024564  MPU_pcTaskGetName                     
+00024644  MPU_pvTaskGetThreadLocalStoragePointer
+0002475c  MPU_ulTaskNotifyTake                  
+00024944  MPU_uxQueueMessagesWaiting            
+00024978  MPU_uxQueueSpacesAvailable            
+00024538  MPU_uxTaskGetNumberOfTasks            
+000245cc  MPU_uxTaskGetStackHighWaterMark       
+000243c8  MPU_uxTaskPriorityGet                 
+00024c78  MPU_vEventGroupDelete                 
+000249ac  MPU_vQueueDelete                      
+000242d4  MPU_vTaskAllocateMPURegions           
+00024334  MPU_vTaskDelay                        
+00024360  MPU_vTaskDelayUntil                   
+00024308  MPU_vTaskDelete                       
+00024430  MPU_vTaskPrioritySet                  
+00024490  MPU_vTaskResume                       
+00024600  MPU_vTaskSetThreadLocalStoragePointer 
+00024800  MPU_vTaskSetTimeOutState              
+00024464  MPU_vTaskSuspend                      
+000244bc  MPU_vTaskSuspendAll                   
+00024b9c  MPU_xEventGroupClearBits              
+00024b14  MPU_xEventGroupCreate                 
+00024be0  MPU_xEventGroupSetBits                
+00024c24  MPU_xEventGroupSync                   
+00024b40  MPU_xEventGroupWaitBits               
+000249d8  MPU_xQueueCreateMutex                 
+00024a84  MPU_xQueueGenericCreate               
+000248f0  MPU_xQueueGenericReceive              
+00024ad0  MPU_xQueueGenericReset                
+0002489c  MPU_xQueueGenericSend                 
+00024a50  MPU_xQueueGiveMutexRecursive          
+00024a0c  MPU_xQueueTakeMutexRecursive          
+00024394  MPU_xTaskAbortDelay                   
+0002482c  MPU_xTaskCheckForTimeOut              
+0002422c  MPU_xTaskCreate                       
+00024290  MPU_xTaskCreateRestricted             
+000246b4  MPU_xTaskGenericNotify                
+000247d4  MPU_xTaskGetCurrentTaskHandle         
+00024598  MPU_xTaskGetHandle                    
+00024688  MPU_xTaskGetIdleTaskHandle            
+00024870  MPU_xTaskGetSchedulerState            
+0002450c  MPU_xTaskGetTickCount                 
+000247a0  MPU_xTaskNotifyStateClear             
+00024708  MPU_xTaskNotifyWait                   
+000244e0  MPU_xTaskResumeAll                    
+08016ea8  RxPktSemaphore                        
 UNDEFED   SHT$$INIT_ARRAY$$Base                 
 UNDEFED   SHT$$INIT_ARRAY$$Limit                
-080146f0  TxPktSemaphore                        
-00005830  __TI_CINIT_Base                       
-00005850  __TI_CINIT_Limit                      
-00005804  __TI_Handler_Table_Base               
-00005810  __TI_Handler_Table_Limit              
-0002d994  __TI_PINIT_Base                       
-0002d998  __TI_PINIT_Limit                      
-0002f6f5  __TI_auto_init_nobinit_nopinit        
-0002f4e7  __TI_decompress_lzss                  
-0002f84d  __TI_decompress_none                  
+08016eac  TxPktSemaphore                        
+00005798  __TI_CINIT_Base                       
+000057b8  __TI_CINIT_Limit                      
+0000576c  __TI_Handler_Table_Base               
+00005778  __TI_Handler_Table_Limit              
+0002b410  __TI_PINIT_Base                       
+0002b414  __TI_PINIT_Limit                      
+0002ce61  __TI_auto_init_nobinit_nopinit        
+0002cc53  __TI_decompress_lzss                  
+0002cfb9  __TI_decompress_none                  
 ffffffff  __TI_pprof_out_hndl                   
 ffffffff  __TI_prof_data_size                   
 ffffffff  __TI_prof_data_start                  
 00000000  __TI_static_base__                    
-0002f85b  __TI_zero_init                        
-0002f5b0  __aeabi_idiv                          
-0002f7fb  __aeabi_idiv0                         
-0002f5b0  __aeabi_idivmod                       
-0002f7fb  __aeabi_ldiv0                         
-0002f46d  __aeabi_memclr                        
-0002f46d  __aeabi_memclr4                       
-0002f46d  __aeabi_memclr8                       
-0002f345  __aeabi_memcpy                        
-0002f345  __aeabi_memcpy4                       
-0002f345  __aeabi_memcpy8                       
-0002f46f  __aeabi_memset                        
-0002f46f  __aeabi_memset4                       
-0002f46f  __aeabi_memset8                       
-0002f6a4  __aeabi_uidiv                         
-0002f6a4  __aeabi_uidivmod                      
+0002cfc7  __TI_zero_init                        
+0002cd1c  __aeabi_idiv                          
+0002cf67  __aeabi_idiv0                         
+0002cd1c  __aeabi_idivmod                       
+0002cf67  __aeabi_ldiv0                         
+0002cbd9  __aeabi_memclr                        
+0002cbd9  __aeabi_memclr4                       
+0002cbd9  __aeabi_memclr8                       
+0002cab1  __aeabi_memcpy                        
+0002cab1  __aeabi_memcpy4                       
+0002cab1  __aeabi_memcpy8                       
+0002cbdb  __aeabi_memset                        
+0002cbdb  __aeabi_memset4                       
+0002cbdb  __aeabi_memset8                       
+0002ce10  __aeabi_uidiv                         
+0002ce10  __aeabi_uidivmod                      
 ffffffff  __binit__                             
 ffffffff  __c_args__                            
 08001000  __start___llvm_prf_cnts               
 08001000  __stop___llvm_prf_cnts                
-0002dc5c  _c_int00                              
-0002d8ac  _coreClearAuxiliaryDataFault_         
-0002d8c0  _coreClearAuxiliaryInstructionFault_  
-0002d884  _coreClearDataFaultAddress_           
-0002d85c  _coreClearDataFault_                  
-0002d898  _coreClearInstructionFaultAddress_    
-0002d870  _coreClearInstructionFault_           
-0002d7f0  _coreDisableEventBusExport_           
-0002d834  _coreDisableFlashEcc_                 
-0002d810  _coreDisableRamEcc_                   
-0002d7e0  _coreEnableEventBusExport_            
-0002d820  _coreEnableFlashEcc_                  
-0002d844  _coreEnableIrqVicOffset_              
-0002d800  _coreEnableRamEcc_                    
-0002d7c8  _coreEnableVfp_                       
-0002d8a4  _coreGetAuxiliaryDataFault_           
-0002d8b8  _coreGetAuxiliaryInstructionFault_    
-0002d87c  _coreGetDataFaultAddress_             
-0002d854  _coreGetDataFault_                    
-0002d890  _coreGetInstructionFaultAddress_      
-0002d868  _coreGetInstructionFault_             
-0002d650  _coreInitRegisters_                   
-0002d75c  _coreInitStackPointer_                
-0002f9f4  _ctypes_                              
-0002efe4  _dabort                               
-0002d8d4  _disable_FIQ_interrupt_               
-0002d8dc  _disable_IRQ_interrupt_               
-0002d8cc  _disable_interrupt_                   
-0002d8e4  _enable_interrupt_                    
-0002d974  _errata_CORTEXR4_57_                  
-0002d984  _errata_CORTEXR4_66_                  
-0002b180  _errata_SSWF021_45_both_plls          
-0002b374  _errata_SSWF021_45_pll1               
-0002b4ec  _errata_SSWF021_45_pll2               
-0002d8ec  _esmCcmErrorsClear_                   
-0002d7a8  _getCPSRValue_                        
-0002d7b0  _gotoCPUIdle_                         
-080146f4  _lock                                 
-0002f553  _nop                                  
-0002f128  _pmuDisableCountersGlobal_            
-0002f118  _pmuEnableCountersGlobal_             
-0002f184  _pmuGetCycleCount_                    
-0002f18c  _pmuGetEventCount_                    
-0002f198  _pmuGetOverflow_                      
-0002f0cc  _pmuInit_                             
-0002f158  _pmuResetCounters_                    
-0002f138  _pmuResetCycleCounter_                
-0002f148  _pmuResetEventCounters_               
-0002f178  _pmuSetCountEvent_                    
-0002f168  _pmuStartCounters_                    
-0002f170  _pmuStopCounters_                     
+0002b6d0  _c_int00                              
+0002b328  _coreClearAuxiliaryDataFault_         
+0002b33c  _coreClearAuxiliaryInstructionFault_  
+0002b300  _coreClearDataFaultAddress_           
+0002b2d8  _coreClearDataFault_                  
+0002b314  _coreClearInstructionFaultAddress_    
+0002b2ec  _coreClearInstructionFault_           
+0002b26c  _coreDisableEventBusExport_           
+0002b2b0  _coreDisableFlashEcc_                 
+0002b28c  _coreDisableRamEcc_                   
+0002b25c  _coreEnableEventBusExport_            
+0002b29c  _coreEnableFlashEcc_                  
+0002b2c0  _coreEnableIrqVicOffset_              
+0002b27c  _coreEnableRamEcc_                    
+0002b244  _coreEnableVfp_                       
+0002b320  _coreGetAuxiliaryDataFault_           
+0002b334  _coreGetAuxiliaryInstructionFault_    
+0002b2f8  _coreGetDataFaultAddress_             
+0002b2d0  _coreGetDataFault_                    
+0002b30c  _coreGetInstructionFaultAddress_      
+0002b2e4  _coreGetInstructionFault_             
+0002b0cc  _coreInitRegisters_                   
+0002b1d8  _coreInitStackPointer_                
+0002d160  _ctypes_                              
+0002c67c  _dabort                               
+0002b350  _disable_FIQ_interrupt_               
+0002b358  _disable_IRQ_interrupt_               
+0002b348  _disable_interrupt_                   
+0002b360  _enable_interrupt_                    
+0002b3f0  _errata_CORTEXR4_57_                  
+0002b400  _errata_CORTEXR4_66_                  
+00028bbc  _errata_SSWF021_45_both_plls          
+00028db0  _errata_SSWF021_45_pll1               
+00028f28  _errata_SSWF021_45_pll2               
+0002b368  _esmCcmErrorsClear_                   
+0002b224  _getCPSRValue_                        
+0002b22c  _gotoCPUIdle_                         
+08016eb0  _lock                                 
+0002ccbf  _nop                                  
+0002c7c0  _pmuDisableCountersGlobal_            
+0002c7b0  _pmuEnableCountersGlobal_             
+0002c81c  _pmuGetCycleCount_                    
+0002c824  _pmuGetEventCount_                    
+0002c830  _pmuGetOverflow_                      
+0002c764  _pmuInit_                             
+0002c7f0  _pmuResetCounters_                    
+0002c7d0  _pmuResetCycleCounter_                
+0002c7e0  _pmuResetEventCounters_               
+0002c810  _pmuSetCountEvent_                    
+0002c800  _pmuStartCounters_                    
+0002c808  _pmuStopCounters_                     
 UNDEFED   _system_post_cinit                    
-080146f8  _unlock                               
-0002f867  abort                                 
-00018658  adc1ParityCheck                       
-00018744  adc2ParityCheck                       
-0002f605  atoi                                  
-00025638  autoip_accept_packet                  
-0002546c  autoip_arp_reply                      
-0002504c  autoip_network_changed                
-00024950  autoip_set_struct                     
-00024d88  autoip_start                          
-00025088  autoip_stop                           
-000255a4  autoip_supplied_address               
-000251ec  autoip_tmr                            
+08016eb4  _unlock                               
+0002cfd3  abort                                 
+00017260  adc1ParityCheck                       
+0001734c  adc2ParityCheck                       
+0002cd71  atoi                                  
 ffffffff  binit                                 
-000187fc  can1ParityCheck                       
-000188d4  can2ParityCheck                       
-0001899c  can3ParityCheck                       
-0001741c  ccmSelfCheck                          
-00019ae8  ccmr4GetConfigValue                   
-00017d24  checkB0RAMECC                         
-00017f14  checkB1RAMECC                         
-00019004  checkClockMonitor                     
-00018104  checkFlashECC                         
-000190e0  checkFlashEEPROMECC                   
-00019278  checkPLL1Slip                         
-00019378  checkPLL2Slip                         
-0001943c  checkRAMAddrParity                    
-00018dbc  checkRAMECC                           
-00019548  checkRAMUERRTest                      
-00017ba8  checkefcSelfTest                      
-0002a9d4  convert_pbuf_to_pbuf_t                
-00017620  cpuSelfTest                           
-000181e8  cpuSelfTestFail                       
-0002706c  customTrimLPO                         
-000181e0  custom_dabort                         
-00009628  dhcp_arp_reply                        
-0000904c  dhcp_cleanup                          
-000087f0  dhcp_coarse_tmr                       
-00008958  dhcp_fine_tmr                         
-000092b8  dhcp_inform                           
-00009418  dhcp_network_changed                  
-0000aa78  dhcp_release                          
-0000a8b4  dhcp_release_and_stop                 
-0000a15c  dhcp_renew                            
-0800ce90  dhcp_rx_options_given                 
-0800cdf0  dhcp_rx_options_val                   
-00008fb8  dhcp_set_struct                       
-000090dc  dhcp_start                            
-08014723  dhcp_status                           
-0000aa90  dhcp_stop                             
-0000c17c  dhcp_supplied_address                 
-00019f44  disableParity                         
-0002f438  dmaGroupANotification                 
-00018298  dmaParityCheck                        
+00017404  can1ParityCheck                       
+000174dc  can2ParityCheck                       
+000175a4  can3ParityCheck                       
+00016024  ccmSelfCheck                          
+000186f0  ccmr4GetConfigValue                   
+0001692c  checkB0RAMECC                         
+00016b1c  checkB1RAMECC                         
+00017c0c  checkClockMonitor                     
+00016d0c  checkFlashECC                         
+00017ce8  checkFlashEEPROMECC                   
+00017e80  checkPLL1Slip                         
+00017f80  checkPLL2Slip                         
+00018044  checkRAMAddrParity                    
+000179c4  checkRAMECC                           
+00018150  checkRAMUERRTest                      
+000167b0  checkefcSelfTest                      
+00027d40  convert_pbuf_to_pbuf_t                
+00016228  cpuSelfTest                           
+00016df0  cpuSelfTestFail                       
+00024150  customTrimLPO                         
+00016de8  custom_dabort                         
+00013ec4  dhcp_arp_reply                        
+00013af8  dhcp_cleanup                          
+00013558  dhcp_coarse_tmr                       
+00013648  dhcp_fine_tmr                         
+00013cc8  dhcp_inform                           
+00013dd0  dhcp_network_changed                  
+00014cfc  dhcp_release                          
+00014b54  dhcp_release_and_stop                 
+00014588  dhcp_renew                            
+0800cf3c  dhcp_rx_options_given                 
+0800cea0  dhcp_rx_options_val                   
+00013a68  dhcp_set_struct                       
+00013b4c  dhcp_start                            
+00014d14  dhcp_stop                             
+00015ef8  dhcp_supplied_address                 
+00018b4c  disableParity                         
+0002cba4  dmaGroupANotification                 
+00016ea0  dmaParityCheck                        
 00001f3c  eTaskConfirmSleepModeStatus           
 000008a0  eTaskGetState                         
-00017a4c  efcCheck                              
-00019a4c  efcGetConfigValue                     
-00017b80  efcSelfTest                           
-00017ad4  efcStuckZeroTest                      
-08014714  emacAddress                           
-0002f678  emacRxNotification                    
-08014700  emacRxNotification_counter            
-0002f654  emacTxNotification                    
-080146fc  emacTxNotification_counter            
-00019ebc  enableParity                          
-00019b58  errata_PBIST_4                        
-0002c58c  esmActivateNormalOperation            
-0002c660  esmClearStatus                        
-0002c6a0  esmClearStatusBuffer                  
-0002c554  esmDisableError                       
-0002c5c4  esmDisableInterrupt                   
-0002c52c  esmEnableError                        
-0002c59c  esmEnableInterrupt                    
-0002c798  esmEnterSelfTest                      
-0002c510  esmError                              
-0002c870  esmGetConfigValue                     
-0002c6dc  esmGetStatus                          
-0002c760  esmGetStatusBuffer                    
-0002f3e0  esmGroup1Notification                 
-0002f3f0  esmGroup2Notification                 
-0002eed0  esmHighInterrupt                      
-0002c408  esmInit                               
-0002c820  esmSelfTestStatus                     
-0002c6bc  esmSetCounterPreloadValue             
-0002c5ec  esmSetInterruptLevel                  
-0002c57c  esmTriggerErrorPinReset               
-0001e648  etharp_cleanup_netif                  
-0001e6f8  etharp_find_addr                      
-0001e814  etharp_get_entry                      
-0001e91c  etharp_input                          
-0001ecf4  etharp_output                         
-0001efbc  etharp_query                          
-0001f590  etharp_request                        
-0001ded8  etharp_tmr                            
-0002fdcb  ethbroadcast                          
-0002d99c  ethernet_input                        
-0002db24  ethernet_output                       
-0002a420  ethernetif_init                       
-0002a5e4  ethernetif_rx_callback                
+00016654  efcCheck                              
+00018654  efcGetConfigValue                     
+00016788  efcSelfTest                           
+000166dc  efcStuckZeroTest                      
+0002cde4  emacRxNotification                    
+08016ebc  emacRxNotification_counter            
+0002cdc0  emacTxNotification                    
+08016eb8  emacTxNotification_counter            
+00018ac4  enableParity                          
+00018760  errata_PBIST_4                        
+0002a008  esmActivateNormalOperation            
+0002a0dc  esmClearStatus                        
+0002a11c  esmClearStatusBuffer                  
+00029fd0  esmDisableError                       
+0002a040  esmDisableInterrupt                   
+00029fa8  esmEnableError                        
+0002a018  esmEnableInterrupt                    
+0002a214  esmEnterSelfTest                      
+00029f8c  esmError                              
+0002a2ec  esmGetConfigValue                     
+0002a158  esmGetStatus                          
+0002a1dc  esmGetStatusBuffer                    
+0002cb4c  esmGroup1Notification                 
+0002cb5c  esmGroup2Notification                 
+0002c568  esmHighInterrupt                      
+00029e84  esmInit                               
+0002a29c  esmSelfTestStatus                     
+0002a138  esmSetCounterPreloadValue             
+0002a068  esmSetInterruptLevel                  
+00029ff8  esmTriggerErrorPinReset               
+0001cd28  etharp_cleanup_netif                  
+0001cdd8  etharp_find_addr                      
+0001cef4  etharp_get_entry                      
+0001cffc  etharp_input                          
+0001d384  etharp_output                         
+0001d660  etharp_query                          
+0001dbf0  etharp_request                        
+0001c5c4  etharp_tmr                            
+0002d4bb  ethbroadcast                          
+0002b418  ethernet_input                        
+0002b598  ethernet_output                       
+00027714  ethernetif_init                       
+000278c4  ethernetif_rx_callback                
 08001000  ethernetif_rx_quiue                   
-080146e8  ethernetif_rx_quiue_counter           
-0002a61c  ethernetif_set_mac_address            
-0002a604  ethernetif_tx_callback                
-0002fdd1  ethzero                               
-000196b0  fmcBus1ParityCheck                    
-00017c48  fmcBus2Check                          
-00017c84  fmcECCcheck                           
-0002aa5c  free_pbuf_t                           
-0002f554  get_processor_mode                    
-0800ccf8  gnetif                                
-0002f870  handlePLLLockFail                     
-0800cd38  hdkif_data                            
-00018344  het1ParityCheck                       
-000184ac  het2ParityCheck                       
-000183f0  htu1ParityCheck                       
-000185a8  htu2ParityCheck                       
-0002c1a8  icmp_dest_unreach                     
-0002be34  icmp_input                            
-0002c1c8  icmp_time_exceeded                    
-0002aae0  ip4_addr_isbroadcast_u32              
-0002abb0  ip4_addr_netmask_valid                
-00021ec4  ip4_frag                              
-00027d48  ip4_input                             
-000283bc  ip4_output                            
-0002813c  ip4_output_if                         
-000281c0  ip4_output_if_src                     
-000218e0  ip4_reass                             
-00027c04  ip4_route                             
-0002ac70  ip4addr_aton                          
-0002af94  ip4addr_ntoa                          
-0002afb0  ip4addr_ntoa_r                        
-0002fdec  ip_addr_any                           
-0002fdf0  ip_addr_broadcast                     
-0800ce10  ip_data                               
-00020dd8  ip_reass_tmr                          
-0002ac44  ipaddr_addr                           
-0002f570  is_processor_in_isr                   
-0002f7fd  isdigit                               
-0002f80d  islower                               
-0002f81d  isspace                               
-0002f82d  isxdigit                              
-0800cea4  lock_tcpip_core                       
-0002ee88  log_printf                            
-0002fc3c  lwip_cyclic_timers                    
-0002e160  lwip_get_hdkNetIF_p                   
-0002f1ac  lwip_init                             
-0002df00  lwip_init_sync                        
-0002d4d0  lwip_itoa                             
-0002d36c  lwip_stricmp                          
-0002d410  lwip_strnicmp                         
-0002d2ac  lwip_strnstr                          
-0800cea8  lwip_sys_mutex                        
-0002f83c  main                                  
-0002674c  mapClocks                             
-000264c4  mem_calloc                            
-00025c24  mem_free                              
-00028cfc  mem_free_callback                     
-000259f0  mem_init                              
-000261c0  mem_malloc                            
-00025e40  mem_trim                              
-0002f7bf  memcmp                                
-0002f345  memcpy                                
-0002f797  memmove                               
-00017560  memoryInit                            
-0002f400  memoryPort0TestFailNotification       
-0002f41c  memoryPort1TestFailNotification       
-0002fcc0  memp_FRAG_PBUF                        
-0002fcd0  memp_NETBUF                           
-0002fce0  memp_NETCONN                          
-0002fcf0  memp_PBUF                             
-0002fd00  memp_PBUF_POOL                        
-0002fd10  memp_REASSDATA                        
-0002fd20  memp_SYS_TIMEOUT                      
-0002fd30  memp_TCPIP_MSG_API                    
-0002fd40  memp_TCPIP_MSG_INPKT                  
-0002fd50  memp_TCP_PCB                          
-0002fd60  memp_TCP_PCB_LISTEN                   
-0002fd70  memp_TCP_SEG                          
-0002fd80  memp_UDP_PCB                          
-0002d180  memp_free                             
-0002d128  memp_free_pool                        
-0002cf5c  memp_init                             
-0002cec4  memp_init_pool                        
-0002d068  memp_malloc                           
-0002d020  memp_malloc_pool                      
-0800c438  memp_memory_FRAG_PBUF_base            
-0800cdcc  memp_memory_NETBUF_base               
-0800c9c0  memp_memory_NETCONN_base              
+08016ea4  ethernetif_rx_quiue_counter           
+000278fc  ethernetif_set_mac_address            
+000278e4  ethernetif_tx_callback                
+0002d4c1  ethzero                               
+000182b8  fmcBus1ParityCheck                    
+00016850  fmcBus2Check                          
+0001688c  fmcECCcheck                           
+00027dc8  free_pbuf_t                           
+0002ccc0  get_processor_mode                    
+0002cfdc  handlePLLLockFail                     
+0800cde8  hdkif_data                            
+00016f4c  het1ParityCheck                       
+000170b4  het2ParityCheck                       
+00016ff8  htu1ParityCheck                       
+000171b0  htu2ParityCheck                       
+00029c14  icmp_dest_unreach                     
+00029870  icmp_input                            
+00029c34  icmp_time_exceeded                    
+00026de8  inet_chksum                           
+00026e0c  inet_chksum_pbuf                      
+00026a2c  inet_chksum_pseudo                    
+00026ce0  inet_chksum_pseudo_partial            
+0002851c  ip4_addr_isbroadcast_u32              
+000285ec  ip4_addr_netmask_valid                
+0001edb8  ip4_frag                              
+00024dc8  ip4_input                             
+00025518  ip4_output                            
+000251a4  ip4_output_if                         
+00025228  ip4_output_if_src                     
+0001e7c8  ip4_reass                             
+00024ca4  ip4_route                             
+000286ac  ip4addr_aton                          
+000289d0  ip4addr_ntoa                          
+000289ec  ip4addr_ntoa_r                        
+0002d4d0  ip_addr_any                           
+0002d4d4  ip_addr_broadcast                     
+00026ae8  ip_chksum_pseudo                      
+00026da4  ip_chksum_pseudo_partial              
+0800cec0  ip_data                               
+0001dcc0  ip_reass_tmr                          
+00028680  ipaddr_addr                           
+0002ccdc  is_processor_in_isr                   
+0002cf69  isdigit                               
+0002cf79  islower                               
+0002cf89  isspace                               
+0002cf99  isxdigit                              
+0800cf50  lock_tcpip_core                       
+0002c8dc  log_printf                            
+0002d320  lwip_cyclic_timers                    
+0002c918  lwip_init                             
+0002af4c  lwip_itoa                             
+0002679c  lwip_standard_chksum                  
+0002ade8  lwip_stricmp                          
+0002ae8c  lwip_strnicmp                         
+0002ad28  lwip_strnstr                          
+0800cf54  lwip_sys_mutex                        
+0002cfa8  main                                  
+00023830  mapClocks                             
+000227c8  mem_calloc                            
+00021f2c  mem_free                              
+00025e6c  mem_free_callback                     
+00021cf8  mem_init                              
+000224c4  mem_malloc                            
+00022144  mem_trim                              
+0002cf2b  memcmp                                
+0002cab1  memcpy                                
+0002cf03  memmove                               
+00016168  memoryInit                            
+0002cb6c  memoryPort0TestFailNotification       
+0002cb88  memoryPort1TestFailNotification       
+0002d410  memp_FRAG_PBUF                        
+0002d41c  memp_NETBUF                           
+0002d428  memp_NETCONN                          
+0002d434  memp_PBUF                             
+0002d440  memp_PBUF_POOL                        
+0002d44c  memp_REASSDATA                        
+0002d458  memp_SYS_TIMEOUT                      
+0002d464  memp_TCPIP_MSG_API                    
+0002d470  memp_TCPIP_MSG_INPKT                  
+0002d47c  memp_TCP_PCB                          
+0002d488  memp_TCP_PCB_LISTEN                   
+0002d494  memp_TCP_SEG                          
+0002d4a0  memp_UDP_PCB                          
+0002abfc  memp_free                             
+0002aba4  memp_free_pool                        
+0002a9d8  memp_init                             
+0002a940  memp_init_pool                        
+0002aae4  memp_malloc                           
+0002aa9c  memp_malloc_pool                      
+0800c5cc  memp_memory_FRAG_PBUF_base            
+0800ce7c  memp_memory_NETBUF_base               
+0800cb14  memp_memory_NETCONN_base              
 08008670  memp_memory_PBUF_POOL_base            
-0800c6e8  memp_memory_PBUF_base                 
-0800ca64  memp_memory_REASSDATA_base            
-0800cc94  memp_memory_SYS_TIMEOUT_base          
-0800cb08  memp_memory_TCPIP_MSG_API_base        
-0800cb8c  memp_memory_TCPIP_MSG_INPKT_base      
-0800c8dc  memp_memory_TCP_PCB_LISTEN_base       
+0800c738  memp_memory_PBUF_base                 
+0800cbb8  memp_memory_REASSDATA_base            
+0800c438  memp_memory_SYS_TIMEOUT_base          
+0800cc5c  memp_memory_TCPIP_MSG_API_base        
+0800cce0  memp_memory_TCPIP_MSG_INPKT_base      
+0800ca30  memp_memory_TCP_PCB_LISTEN_base       
 0800c088  memp_memory_TCP_PCB_base              
-0800c5a4  memp_memory_TCP_SEG_base              
-0800cc10  memp_memory_UDP_PCB_base              
-0002fc08  memp_pools                            
-0002f475  memset                                
-00018a70  mibspi1ParityCheck                    
-00018b78  mibspi3ParityCheck                    
-00018c9c  mibspi5ParityCheck                    
-0002b7e4  muxInit                               
-00023878  netif_add                             
-000237b0  netif_add_noaddr                      
-0800ceac  netif_default                         
-000247fc  netif_find                            
-00024758  netif_get_by_index                    
-000246ec  netif_index_to_name                   
-00023730  netif_init                            
-00023734  netif_input                           
-00024694  netif_name_to_index                   
-000241a4  netif_remove                          
-000240b0  netif_set_addr                        
-0002422c  netif_set_default                     
-00024448  netif_set_down                        
-00023fe8  netif_set_gw                          
-00023d60  netif_set_ipaddr                      
-00024624  netif_set_link_callback               
-00024590  netif_set_link_down                   
-00024500  netif_set_link_up                     
-00023ebc  netif_set_netmask                     
-000244d4  netif_set_status_callback             
-000242e8  netif_set_up                          
-000234c8  osAbortDelay                          
-000224b0  osDelay                               
-0002348c  osDelayUntil                          
-0002237c  osKernelRunning                       
-0002236c  osKernelStart                         
-0002239c  osKernelSysTick                       
-00023090  osMailAlloc                           
-000230c8  osMailCAlloc                          
-00022f68  osMailCreate                          
-000232ec  osMailFree                            
-000231cc  osMailGet                             
-00023140  osMailPut                             
-000235f4  osMessageAvailableSpace               
-00022d88  osMessageCreate                       
-00023608  osMessageDelete                       
-00022e48  osMessageGet                          
-000234f4  osMessagePeek                         
-00022db0  osMessagePut                          
-000235c8  osMessageWaiting                      
-0002270c  osMutexCreate                         
-0002285c  osMutexDelete                         
-000227f0  osMutexRelease                        
-00022720  osMutexWait                           
-00022b88  osPoolAlloc                           
-00022c80  osPoolCAlloc                          
-00022a54  osPoolCreate                          
-00022cb8  osPoolFree                            
-00023634  osRecursiveMutexCreate                
-00023648  osRecursiveMutexRelease               
-00023678  osRecursiveMutexWait                  
-00022888  osSemaphoreCreate                     
-00022a28  osSemaphoreDelete                     
-00023704  osSemaphoreGetCount                   
-000229bc  osSemaphoreRelease                    
-000228ec  osSemaphoreWait                       
-00022570  osSignalSet                           
-0002261c  osSignalWait                          
-00023320  osSystickHandler                      
-000223bc  osThreadCreate                        
-00022420  osThreadGetId                         
-0002247c  osThreadGetPriority                   
-00023338  osThreadGetState                      
-000233d0  osThreadIsSuspended                   
-000234e0  osThreadList                          
-00023410  osThreadResume                        
-0002346c  osThreadResumeAll                     
-00022454  osThreadSetPriority                   
-000233f8  osThreadSuspend                       
-0002345c  osThreadSuspendAll                    
-0002242c  osThreadTerminate                     
-00022444  osThreadYield                         
-000224e4  osTimerCreate                         
-0002254c  osTimerDelete                         
-00022500  osTimerStart                          
-00022528  osTimerStop                           
-0002fdf4  os_mutex_def_lwip_sys_mutex           
-000197d8  pbistFail                             
-0001985c  pbistGetConfigValue                   
-00017994  pbistIsTestCompleted                  
-000179c0  pbistIsTestPassed                     
-000179f4  pbistPortTestStatus                   
-00017898  pbistRun                              
-000176b8  pbistSelfCheck                        
-00017964  pbistStop                             
-0001aa74  pbuf_add_header                       
-0001aa94  pbuf_add_header_force                 
-0001a250  pbuf_alloc                            
-0001a53c  pbuf_alloc_reference                  
-0001a5cc  pbuf_alloced_custom                   
-0001afc8  pbuf_cat                              
-0001b0c8  pbuf_chain                            
-0001aef4  pbuf_clen                             
-0001bd74  pbuf_clone                            
-0001bd18  pbuf_coalesce                         
-0001b2c4  pbuf_copy                             
-0001b594  pbuf_copy_partial                     
-0001b108  pbuf_dechain                          
-0001ad40  pbuf_free                             
-00028ce4  pbuf_free_callback                    
-0001ac84  pbuf_free_header                      
-0800ced4  pbuf_free_ooseq_pending               
-0001be1c  pbuf_get_at                           
-0001b76c  pbuf_get_contiguous                   
-0001ac28  pbuf_header                           
-0001ac48  pbuf_header_force                     
-0001bf7c  pbuf_memcmp                           
-0001c0a4  pbuf_memfind                          
-0001bee8  pbuf_put_at                           
-0001a720  pbuf_realloc                          
-0001af60  pbuf_ref                              
-0001aacc  pbuf_remove_header                    
-0001b950  pbuf_skip                             
-0001c14c  pbuf_strstr                           
-0001b9d0  pbuf_take                             
-0001bbe0  pbuf_take_at                          
-0001be74  pbuf_try_get_at                       
+0800c83c  memp_memory_TCP_SEG_base              
+0800cd64  memp_memory_UDP_PCB_base              
+0002d35c  memp_pools                            
+0002cbe1  memset                                
+00017678  mibspi1ParityCheck                    
+00017780  mibspi3ParityCheck                    
+000178a4  mibspi5ParityCheck                    
+00029220  muxInit                               
+000229b4  netif_add                             
+00022968  netif_add_noaddr                      
+0800cf58  netif_default                         
+000235b4  netif_find                            
+00023538  netif_get_by_index                    
+000234b0  netif_index_to_name                   
+000228e8  netif_init                            
+000228ec  netif_input                           
+00023474  netif_name_to_index                   
+00023078  netif_remove                          
+00022f84  netif_set_addr                        
+000230f4  netif_set_default                     
+0002325c  netif_set_down                        
+00022f0c  netif_set_gw                          
+00022d08  netif_set_ipaddr                      
+0002342c  netif_set_link_callback               
+000233b8  netif_set_link_down                   
+00023330  netif_set_link_up                     
+00022e34  netif_set_netmask                     
+000232e8  netif_set_status_callback             
+00023130  netif_set_up                          
+0002187c  osAbortDelay                          
+0002086c  osDelay                               
+00021840  osDelayUntil                          
+00020738  osKernelRunning                       
+00020728  osKernelStart                         
+00020758  osKernelSysTick                       
+00021444  osMailAlloc                           
+0002147c  osMailCAlloc                          
+0002131c  osMailCreate                          
+000216a0  osMailFree                            
+00021580  osMailGet                             
+000214f4  osMailPut                             
+000219a8  osMessageAvailableSpace               
+0002113c  osMessageCreate                       
+000219bc  osMessageDelete                       
+000211fc  osMessageGet                          
+000218a8  osMessagePeek                         
+00021164  osMessagePut                          
+0002197c  osMessageWaiting                      
+00020ac8  osMutexCreate                         
+00020c18  osMutexDelete                         
+00020bac  osMutexRelease                        
+00020adc  osMutexWait                           
+00020f3c  osPoolAlloc                           
+00021034  osPoolCAlloc                          
+00020e08  osPoolCreate                          
+0002106c  osPoolFree                            
+000219e8  osRecursiveMutexCreate                
+000219fc  osRecursiveMutexRelease               
+00021a2c  osRecursiveMutexWait                  
+00020c44  osSemaphoreCreate                     
+00020ddc  osSemaphoreDelete                     
+00021ab8  osSemaphoreGetCount                   
+00020d70  osSemaphoreRelease                    
+00020ca0  osSemaphoreWait                       
+0002092c  osSignalSet                           
+000209d8  osSignalWait                          
+000216d4  osSystickHandler                      
+00020778  osThreadCreate                        
+000207dc  osThreadGetId                         
+00020838  osThreadGetPriority                   
+000216ec  osThreadGetState                      
+00021784  osThreadIsSuspended                   
+00021894  osThreadList                          
+000217c4  osThreadResume                        
+00021820  osThreadResumeAll                     
+00020810  osThreadSetPriority                   
+000217ac  osThreadSuspend                       
+00021810  osThreadSuspendAll                    
+000207e8  osThreadTerminate                     
+00020800  osThreadYield                         
+000208a0  osTimerCreate                         
+00020908  osTimerDelete                         
+000208bc  osTimerStart                          
+000208e4  osTimerStop                           
+0002d4d8  os_mutex_def_lwip_sys_mutex           
+000183e0  pbistFail                             
+00018464  pbistGetConfigValue                   
+0001659c  pbistIsTestCompleted                  
+000165c8  pbistIsTestPassed                     
+000165fc  pbistPortTestStatus                   
+000164a0  pbistRun                              
+000162c0  pbistSelfCheck                        
+0001656c  pbistStop                             
+0001967c  pbuf_add_header                       
+0001969c  pbuf_add_header_force                 
+00018e58  pbuf_alloc                            
+00019144  pbuf_alloc_reference                  
+000191d4  pbuf_alloced_custom                   
+00019bd0  pbuf_cat                              
+00019cd0  pbuf_chain                            
+00019afc  pbuf_clen                             
+0001a96c  pbuf_clone                            
+0001a910  pbuf_coalesce                         
+00019ebc  pbuf_copy                             
+0001a18c  pbuf_copy_partial                     
+00019d0c  pbuf_dechain                          
+00019948  pbuf_free                             
+00025e54  pbuf_free_callback                    
+0001988c  pbuf_free_header                      
+0800cf80  pbuf_free_ooseq_pending               
+0001aa14  pbuf_get_at                           
+0001a364  pbuf_get_contiguous                   
+00019830  pbuf_header                           
+00019850  pbuf_header_force                     
+0001ab74  pbuf_memcmp                           
+0001ac9c  pbuf_memfind                          
+0001aae0  pbuf_put_at                           
+00019328  pbuf_realloc                          
+00019b68  pbuf_ref                              
+000196d4  pbuf_remove_header                    
+0001a548  pbuf_skip                             
+0001ad44  pbuf_strstr                           
+0001a5c8  pbuf_take                             
+0001a7d8  pbuf_take_at                          
+0001aa6c  pbuf_try_get_at                       
 00001380  pcTaskGetName                         
-000266f8  periphInit                            
-0002f86c  phantomInterrupt                      
-0002bb64  pinmuxGetConfigValue                  
-00005050  prvMpuDisable                         
-00005038  prvMpuEnable                          
-00005020  prvMpuSetRegion                       
-00005458  pvPortMalloc                          
+000237dc  periphInit                            
+0002cfd8  phantomInterrupt                      
+000295a0  pinmuxGetConfigValue                  
+00004fc4  prvMpuDisable                         
+00004fac  prvMpuEnable                          
+00004f94  prvMpuSetRegion                       
+000053cc  pvPortMalloc                          
 0000201c  pvTaskGetThreadLocalStoragePointer    
 00002690  pvTaskIncrementMutexHeldCount         
 080008d0  pxCurrentTCB                          
-00005078  pxPortInitialiseStack                 
+00004fec  pxPortInitialiseStack                 
 0800ac74  ram_heap                              
-0002f739  rand                                  
+0002cea5  rand                                  
 00000000  resetEntry                            
-0800ceb0  rx_queue                              
-0001740c  selftestFailNotification              
-000266b8  setupFlash                            
-000265e4  setupPLL                              
-00026f30  sramGetConfigValue                    
-000199a8  stcGetConfigValue                     
-000175a4  stcSelfCheck                          
-000181e4  stcSelfCheckFail                      
-0002f7e5  strlen                                
-0002f76d  strncmp                               
-0002cad0  sys_arch_mbox_fetch                   
-0002cb70  sys_arch_mbox_tryfetch                
-0002ce6c  sys_arch_protect                      
-0002cc70  sys_arch_sem_wait                     
-0002ce88  sys_arch_unprotect                    
-00029b08  sys_check_timeouts                    
-0002cd60  sys_init                              
-0002ca20  sys_mbox_free                         
-0002c9c4  sys_mbox_new                          
-0002ca44  sys_mbox_post                         
-0002cbec  sys_mbox_set_invalid                  
-0002ca70  sys_mbox_trypost                      
-0002cab4  sys_mbox_trypost_fromisr              
-0002cbc0  sys_mbox_valid                        
-0002cdbc  sys_mutex_free                        
-0002cdd4  sys_mutex_lock                        
-0002cd78  sys_mutex_new                         
-0002cdf0  sys_mutex_unlock                      
-0002cea0  sys_now                               
-00029bc4  sys_restart_timeouts                  
-0002cd00  sys_sem_free                          
-0002cc08  sys_sem_new                           
-0002cd44  sys_sem_set_invalid                   
-0002cce8  sys_sem_signal                        
-0002cd18  sys_sem_valid                         
-0002ce08  sys_thread_new                        
-00029958  sys_timeout                           
-00029904  sys_timeouts_init                     
-00029c44  sys_timeouts_sleeptime                
-000299b4  sys_untimeout                         
-00026970  systemGetConfigValue                  
-00026874  systemInit                            
-00026940  systemPowerDown                       
-00026d84  tcmflashGetConfigValue                
-00014424  tcp_abandon                           
-00014688  tcp_abort                             
-00016ac4  tcp_accept                            
-0800ceb4  tcp_active_pcbs                       
-0800ced5  tcp_active_pcbs_changed               
-00016800  tcp_alloc                             
-0001699c  tcp_arg                               
-00014724  tcp_bind                              
-00014920  tcp_bind_netif                        
-0800ceb8  tcp_bound_pcbs                        
-0001429c  tcp_close                             
-00015060  tcp_connect                           
-000171e8  tcp_debug_state_str                   
-00016f64  tcp_eff_send_mss_netif                
-00011ca8  tcp_enqueue_flags                     
-00016a78  tcp_err                               
-00015f50  tcp_fasttmr                           
-00013c28  tcp_free                              
-00017320  tcp_free_ooseq                        
-00013c0c  tcp_init                              
-0000c3a0  tcp_input                             
-0800cebc  tcp_input_pcb                         
-000138e0  tcp_keepalive                         
-0800cec0  tcp_listen_pcbs                       
-000149a4  tcp_listen_with_backlog               
-00014a0c  tcp_listen_with_backlog_and_err       
-00017128  tcp_netif_ip_addr_changed             
-00016970  tcp_new                               
-00016980  tcp_new_ip_type                       
-00016ec0  tcp_next_iss                          
-00012344  tcp_output                            
-0002fd90  tcp_pcb_lists                         
-00016b7c  tcp_pcb_purge                         
-00016cd4  tcp_pcb_remove                        
-00016b08  tcp_poll                              
-00016128  tcp_process_refused_data              
-000169dc  tcp_recv                              
-000163e8  tcp_recv_null                         
-00014df4  tcp_recved                            
-00012ee8  tcp_rexmit                            
-00013054  tcp_rexmit_fast                       
-00012ea4  tcp_rexmit_rto                        
-00012e50  tcp_rexmit_rto_commit                 
-00012cfc  tcp_rexmit_rto_prepare                
-000135ec  tcp_rst                               
-00016374  tcp_seg_copy                          
-000162f4  tcp_seg_free                          
-000162b4  tcp_segs_free                         
-00013728  tcp_send_empty_ack                    
-00011bdc  tcp_send_fin                          
-00016a2c  tcp_sent                              
-00016334  tcp_setprio                           
-0001431c  tcp_shutdown                          
-00015474  tcp_slowtmr                           
-00011788  tcp_split_unsent_seg                  
-0001726c  tcp_tcp_get_tcp_addrinfo              
-0800cec4  tcp_ticks                             
-00029680  tcp_timer_needed                      
-00013ca0  tcp_tmr                               
-0000ffb4  tcp_trigger_input_pcb_close           
-0800cec8  tcp_tw_pcbs                           
-00016080  tcp_txnow                             
-00014c50  tcp_update_rcv_ann_wnd                
-00010aa4  tcp_write                             
-000139e8  tcp_zero_window_probe                 
-00028b08  tcpip_api_call                        
-00028820  tcpip_callback                        
-00028ba4  tcpip_callbackmsg_delete              
-00028b4c  tcpip_callbackmsg_new                 
-00028bbc  tcpip_callbackmsg_trycallback         
-00028bf8  tcpip_callbackmsg_trycallback_fromisr 
-00028c34  tcpip_init                            
-00028720  tcpip_inpkt                           
-000287dc  tcpip_input                           
-00028ad4  tcpip_send_msg_wait_sem               
-000289ac  tcpip_timeout                         
-000288a8  tcpip_try_callback                    
-00028a4c  tcpip_untimeout                       
-00026644  trimLPO                               
-0001d450  udp_bind                              
-0001d724  udp_bind_netif                        
-0001d7a8  udp_connect                           
-0001dcac  udp_debug_print                       
-0001d978  udp_disconnect                        
-0001c1e0  udp_init                              
-0001c4d8  udp_input                             
-0001dc08  udp_netif_ip_addr_changed             
-0001db5c  udp_new                               
-0001db9c  udp_new_ip_type                       
-0800cecc  udp_pcbs                              
-0001d9e0  udp_recv                              
-0001da8c  udp_remove                            
-0001ca20  udp_send                              
-0001caa4  udp_sendto                            
-0001cc88  udp_sendto_if                         
-0001cf00  udp_sendto_if_src                     
-08014704  ulCriticalNesting                     
-00004f48  ulPortCountLeadingZeros               
-08014708  ulTaskHasFPUContext                   
+0800cf5c  rx_queue                              
+00016014  selftestFailNotification              
+0002379c  setupFlash                            
+000236c8  setupPLL                              
+00024014  sramGetConfigValue                    
+000185b0  stcGetConfigValue                     
+000161ac  stcSelfCheck                          
+00016dec  stcSelfCheckFail                      
+0002cf51  strlen                                
+0002ced9  strncmp                               
+0002a54c  sys_arch_mbox_fetch                   
+0002a5ec  sys_arch_mbox_tryfetch                
+0002a8e8  sys_arch_protect                      
+0002a6ec  sys_arch_sem_wait                     
+0002a904  sys_arch_unprotect                    
+000274b8  sys_check_timeouts                    
+0002a7dc  sys_init                              
+0002a49c  sys_mbox_free                         
+0002a440  sys_mbox_new                          
+0002a4c0  sys_mbox_post                         
+0002a668  sys_mbox_set_invalid                  
+0002a4ec  sys_mbox_trypost                      
+0002a530  sys_mbox_trypost_fromisr              
+0002a63c  sys_mbox_valid                        
+0002a838  sys_mutex_free                        
+0002a850  sys_mutex_lock                        
+0002a7f4  sys_mutex_new                         
+0002a86c  sys_mutex_unlock                      
+0002a91c  sys_now                               
+00027574  sys_restart_timeouts                  
+0002a77c  sys_sem_free                          
+0002a684  sys_sem_new                           
+0002a7c0  sys_sem_set_invalid                   
+0002a764  sys_sem_signal                        
+0002a794  sys_sem_valid                         
+0002a884  sys_thread_new                        
+000272f0  sys_timeout_debug                     
+00027288  sys_timeouts_init                     
+000275f4  sys_timeouts_sleeptime                
+000273e8  sys_untimeout                         
+00023a54  systemGetConfigValue                  
+00023958  systemInit                            
+00023a24  systemPowerDown                       
+00023e68  tcmflashGetConfigValue                
+00010074  tcp_abandon                           
+000102d8  tcp_abort                             
+000126fc  tcp_accept                            
+0800cf60  tcp_active_pcbs                       
+0800cf81  tcp_active_pcbs_changed               
+00012438  tcp_alloc                             
+000125d8  tcp_arg                               
+00010374  tcp_bind                              
+00010570  tcp_bind_netif                        
+0800cf64  tcp_bound_pcbs                        
+0000feec  tcp_close                             
+00010ca8  tcp_connect                           
+00012ddc  tcp_debug_state_str                   
+00012b7c  tcp_eff_send_mss_netif                
+0000d8d8  tcp_enqueue_flags                     
+000126b0  tcp_err                               
+00011b88  tcp_fasttmr                           
+0000f878  tcp_free                              
+00012f14  tcp_free_ooseq                        
+0000f85c  tcp_init                              
+00008074  tcp_input                             
+0800cf68  tcp_input_pcb                         
+0000f538  tcp_keepalive                         
+0800cf6c  tcp_listen_pcbs                       
+000105f4  tcp_listen_with_backlog               
+0001065c  tcp_listen_with_backlog_and_err       
+00012d1c  tcp_netif_ip_addr_changed             
+000125a8  tcp_new                               
+000125b8  tcp_new_ip_type                       
+00012ad8  tcp_next_iss                          
+0000df74  tcp_output                            
+0002d3e4  tcp_pcb_lists                         
+000127b4  tcp_pcb_purge                         
+000128c4  tcp_pcb_remove                        
+00012740  tcp_poll                              
+00011d60  tcp_process_refused_data              
+00012614  tcp_recv                              
+00012020  tcp_recv_null                         
+00010a44  tcp_recved                            
+0000eb30  tcp_rexmit                            
+0000ec64  tcp_rexmit_fast                       
+0000ead8  tcp_rexmit_rto                        
+0000ea84  tcp_rexmit_rto_commit                 
+0000e950  tcp_rexmit_rto_prepare                
+0000f27c  tcp_rst                               
+00011fac  tcp_seg_copy                          
+00011f2c  tcp_seg_free                          
+00011eec  tcp_segs_free                         
+0000f380  tcp_send_empty_ack                    
+0000d80c  tcp_send_fin                          
+00012664  tcp_sent                              
+00011f6c  tcp_setprio                           
+0000ff6c  tcp_shutdown                          
+000110e8  tcp_slowtmr                           
+0000d3c8  tcp_split_unsent_seg                  
+00012e60  tcp_tcp_get_tcp_addrinfo              
+0800cf70  tcp_ticks                             
+00026fcc  tcp_timer_needed                      
+0000f8f0  tcp_tmr                               
+0000bd24  tcp_trigger_input_pcb_close           
+0800cf74  tcp_tw_pcbs                           
+00011cb8  tcp_txnow                             
+000108a0  tcp_update_rcv_ann_wnd                
+0000c7d8  tcp_write                             
+0000f63c  tcp_zero_window_probe                 
+00025c78  tcpip_api_call                        
+00025980  tcpip_callback                        
+00025d14  tcpip_callbackmsg_delete              
+00025cbc  tcpip_callbackmsg_new                 
+00025d2c  tcpip_callbackmsg_trycallback         
+00025d68  tcpip_callbackmsg_trycallback_fromisr 
+00025da4  tcpip_init                            
+00025880  tcpip_inpkt                           
+0002593c  tcpip_input                           
+00025c44  tcpip_send_msg_wait_sem               
+00025b0c  tcpip_timeout                         
+00025a08  tcpip_try_callback                    
+00025bbc  tcpip_untimeout                       
+00023728  trimLPO                               
+0001ffc4  udp_bind                              
+000201a4  udp_bind_netif                        
+00020224  udp_connect                           
+00020374  udp_disconnect                        
+0001f1f8  udp_init                              
+0001f490  udp_input                             
+00020574  udp_netif_ip_addr_changed             
+00020518  udp_new                               
+00020558  udp_new_ip_type                       
+0800cf78  udp_pcbs                              
+000203f4  udp_recv                              
+00020448  udp_remove                            
+0001f83c  udp_send                              
+0001f8ec  udp_sendto                            
+0001f9e4  udp_sendto_if                         
+0001fc40  udp_sendto_if_src                     
+08016ec0  ulCriticalNesting                     
+00004ebc  ulPortCountLeadingZeros               
+08016ec4  ulTaskHasFPUContext                   
 000026c4  ulTaskNotifyTake                      
-0002eda0  user_main                             
-0002e848  uxListRemove                          
-00003ebc  uxQueueMessagesWaiting                
-00003f40  uxQueueMessagesWaitingFromISR         
-00003ef4  uxQueueSpacesAvailable                
+0002c844  user_main                             
+0002c028  uxListRemove                          
+00003e30  uxQueueMessagesWaiting                
+00003eb4  uxQueueMessagesWaitingFromISR         
+00003e68  uxQueueSpacesAvailable                
 00001374  uxTaskGetNumberOfTasks                
 00002260  uxTaskGetStackHighWaterMark           
 000009a4  uxTaskPriorityGet                     
 000009e8  uxTaskPriorityGetFromISR              
 00002654  uxTaskResetEventItemValue             
-00004b40  vEventGroupClearBitsCallback          
-00004aa0  vEventGroupDelete                     
-00004b24  vEventGroupSetBitsCallback            
-0002e69c  vListInitialise                       
-0002e6f4  vListInitialiseItem                   
-0002e784  vListInsert                           
-0002e710  vListInsertEnd                        
-00005424  vPortEndScheduler                     
-000056ac  vPortFree                             
-000057bc  vPortInitialiseBlocks                 
-00004f3c  vPortInitialiseFPSCR                  
-00004e3c  vPortPreemptiveTick                   
-00004f50  vPortSWI                              
-00004bcc  vPortStartFirstTask                   
-0000518c  vPortStoreTaskMPUSettings             
-00004d48  vPortYeildWithinAPI                   
-00004c5c  vPortYieldProcessor                   
-00028d90  vPreemptiveTick                       
-00003f70  vQueueDelete                          
+00004ab4  vEventGroupClearBitsCallback          
+00004a14  vEventGroupDelete                     
+00004a98  vEventGroupSetBitsCallback            
+0002be7c  vListInitialise                       
+0002bed4  vListInitialiseItem                   
+0002bf64  vListInsert                           
+0002bef0  vListInsertEnd                        
+00005398  vPortEndScheduler                     
+00005620  vPortFree                             
+00005730  vPortInitialiseBlocks                 
+00004eb0  vPortInitialiseFPSCR                  
+00004db0  vPortPreemptiveTick                   
+00004ec4  vPortSWI                              
+00004b40  vPortStartFirstTask                   
+00005100  vPortStoreTaskMPUSettings             
+00004cbc  vPortYeildWithinAPI                   
+00004bd0  vPortYieldProcessor                   
+00003ee4  vQueueDelete                          
 00002088  vTaskAllocateMPURegions               
 0000081c  vTaskDelay                            
 000006b0  vTaskDelayUntil                       
@@ -1138,36 +1121,35 @@ ffffffff  binit
 00000c4c  vTaskSuspend                          
 000010cc  vTaskSuspendAll                       
 00001a14  vTaskSwitchContext                    
-00028e68  vimChannelMap                         
-00029064  vimDisableInterrupt                   
-00028f0c  vimEnableInterrupt                    
-000290e8  vimGetConfigValue                     
-00028d94  vimInit                               
-000181ec  vimParityCheck                        
-0002e194  vimParityErrorHandler                 
-0000483c  xEventGroupClearBits                  
-000043b0  xEventGroupCreate                     
-000048c0  xEventGroupGetBitsFromISR             
-000048f0  xEventGroupSetBits                    
-000043ec  xEventGroupSync                       
-000045ec  xEventGroupWaitBits                   
-000057a4  xPortGetFreeHeapSize                  
-000057b0  xPortGetMinimumEverFreeHeapSize       
-00005400  xPortStartScheduler                   
-00023718  xPortSysTickHandler                   
-00003324  xQueueCreateCountingSemaphore         
+00025fd4  vimChannelMap                         
+000261d0  vimDisableInterrupt                   
+00026078  vimEnableInterrupt                    
+00026254  vimGetConfigValue                     
+00025f00  vimInit                               
+00016df4  vimParityCheck                        
+0002b974  vimParityErrorHandler                 
+000047b0  xEventGroupClearBits                  
+00004324  xEventGroupCreate                     
+00004834  xEventGroupGetBitsFromISR             
+00004864  xEventGroupSetBits                    
+00004360  xEventGroupSync                       
+00004560  xEventGroupWaitBits                   
+00005718  xPortGetFreeHeapSize                  
+00005724  xPortGetMinimumEverFreeHeapSize       
+00005374  xPortStartScheduler                   
+00021acc  xPortSysTickHandler                   
 000031bc  xQueueCreateMutex                     
 0000304c  xQueueGenericCreate                   
-0000396c  xQueueGenericReceive                  
+000038e0  xQueueGenericReceive                  
 00002f24  xQueueGenericReset                    
-000033b0  xQueueGenericSend                     
-00003670  xQueueGenericSendFromISR              
-00003800  xQueueGiveFromISR                     
+00003324  xQueueGenericSend                     
+000035e4  xQueueGenericSendFromISR              
+00003774  xQueueGiveFromISR                     
 00003200  xQueueGiveMutexRecursive              
-000042d4  xQueueIsQueueEmptyFromISR             
-00004360  xQueueIsQueueFullFromISR              
-00003dc8  xQueuePeekFromISR                     
-00003c80  xQueueReceiveFromISR                  
+00004248  xQueueIsQueueEmptyFromISR             
+000042d4  xQueueIsQueueFullFromISR              
+00003d3c  xQueuePeekFromISR                     
+00003bf4  xQueueReceiveFromISR                  
 00003288  xQueueTakeMutexRecursive              
 000016f0  xTaskAbortDelay                       
 00001df4  xTaskCheckForTimeOut                  
@@ -1182,7 +1164,7 @@ ffffffff  binit
 00001334  xTaskGetTickCount                     
 00001350  xTaskGetTickCountFromISR              
 000017ec  xTaskIncrementTick                    
-0002ed24  xTaskNotifyStateClear                 
+0002c4f0  xTaskNotifyStateClear                 
 0000279c  xTaskNotifyWait                       
 000024f0  xTaskPriorityDisinherit               
 00001bbc  xTaskRemoveFromEventList              
@@ -1251,683 +1233,676 @@ address   name
 000031bc  xQueueCreateMutex                     
 00003200  xQueueGiveMutexRecursive              
 00003288  xQueueTakeMutexRecursive              
-00003324  xQueueCreateCountingSemaphore         
-000033b0  xQueueGenericSend                     
-00003670  xQueueGenericSendFromISR              
-00003800  xQueueGiveFromISR                     
-0000396c  xQueueGenericReceive                  
-00003c80  xQueueReceiveFromISR                  
-00003dc8  xQueuePeekFromISR                     
-00003ebc  uxQueueMessagesWaiting                
-00003ef4  uxQueueSpacesAvailable                
-00003f40  uxQueueMessagesWaitingFromISR         
-00003f70  vQueueDelete                          
-000042d4  xQueueIsQueueEmptyFromISR             
-00004360  xQueueIsQueueFullFromISR              
-000043b0  xEventGroupCreate                     
-000043ec  xEventGroupSync                       
-000045ec  xEventGroupWaitBits                   
-0000483c  xEventGroupClearBits                  
-000048c0  xEventGroupGetBitsFromISR             
-000048f0  xEventGroupSetBits                    
-00004aa0  vEventGroupDelete                     
-00004b24  vEventGroupSetBitsCallback            
-00004b40  vEventGroupClearBitsCallback          
-00004bcc  vPortStartFirstTask                   
-00004c5c  vPortYieldProcessor                   
-00004d48  vPortYeildWithinAPI                   
-00004e3c  vPortPreemptiveTick                   
-00004f3c  vPortInitialiseFPSCR                  
-00004f48  ulPortCountLeadingZeros               
-00004f50  vPortSWI                              
-00005020  prvMpuSetRegion                       
-00005038  prvMpuEnable                          
-00005050  prvMpuDisable                         
-00005078  pxPortInitialiseStack                 
-0000518c  vPortStoreTaskMPUSettings             
-00005400  xPortStartScheduler                   
-00005424  vPortEndScheduler                     
-00005458  pvPortMalloc                          
-000056ac  vPortFree                             
-000057a4  xPortGetFreeHeapSize                  
-000057b0  xPortGetMinimumEverFreeHeapSize       
-000057bc  vPortInitialiseBlocks                 
-00005804  __TI_Handler_Table_Base               
-00005810  __TI_Handler_Table_Limit              
-00005830  __TI_CINIT_Base                       
-00005850  __TI_CINIT_Limit                      
-000087f0  dhcp_coarse_tmr                       
-00008958  dhcp_fine_tmr                         
-00008fb8  dhcp_set_struct                       
-0000904c  dhcp_cleanup                          
-000090dc  dhcp_start                            
-000092b8  dhcp_inform                           
-00009418  dhcp_network_changed                  
-00009628  dhcp_arp_reply                        
-0000a15c  dhcp_renew                            
-0000a8b4  dhcp_release_and_stop                 
-0000aa78  dhcp_release                          
-0000aa90  dhcp_stop                             
-0000c17c  dhcp_supplied_address                 
-0000c3a0  tcp_input                             
-0000ffb4  tcp_trigger_input_pcb_close           
-00010aa4  tcp_write                             
-00011788  tcp_split_unsent_seg                  
-00011bdc  tcp_send_fin                          
-00011ca8  tcp_enqueue_flags                     
-00012344  tcp_output                            
-00012cfc  tcp_rexmit_rto_prepare                
-00012e50  tcp_rexmit_rto_commit                 
-00012ea4  tcp_rexmit_rto                        
-00012ee8  tcp_rexmit                            
-00013054  tcp_rexmit_fast                       
-000135ec  tcp_rst                               
-00013728  tcp_send_empty_ack                    
-000138e0  tcp_keepalive                         
-000139e8  tcp_zero_window_probe                 
-00013c0c  tcp_init                              
-00013c28  tcp_free                              
-00013ca0  tcp_tmr                               
-0001429c  tcp_close                             
-0001431c  tcp_shutdown                          
-00014424  tcp_abandon                           
-00014688  tcp_abort                             
-00014724  tcp_bind                              
-00014920  tcp_bind_netif                        
-000149a4  tcp_listen_with_backlog               
-00014a0c  tcp_listen_with_backlog_and_err       
-00014c50  tcp_update_rcv_ann_wnd                
-00014df4  tcp_recved                            
-00015060  tcp_connect                           
-00015474  tcp_slowtmr                           
-00015f50  tcp_fasttmr                           
-00016080  tcp_txnow                             
-00016128  tcp_process_refused_data              
-000162b4  tcp_segs_free                         
-000162f4  tcp_seg_free                          
-00016334  tcp_setprio                           
-00016374  tcp_seg_copy                          
-000163e8  tcp_recv_null                         
-00016800  tcp_alloc                             
-00016970  tcp_new                               
-00016980  tcp_new_ip_type                       
-0001699c  tcp_arg                               
-000169dc  tcp_recv                              
-00016a2c  tcp_sent                              
-00016a78  tcp_err                               
-00016ac4  tcp_accept                            
-00016b08  tcp_poll                              
-00016b7c  tcp_pcb_purge                         
-00016cd4  tcp_pcb_remove                        
-00016ec0  tcp_next_iss                          
-00016f64  tcp_eff_send_mss_netif                
-00017128  tcp_netif_ip_addr_changed             
-000171e8  tcp_debug_state_str                   
-0001726c  tcp_tcp_get_tcp_addrinfo              
-00017320  tcp_free_ooseq                        
-0001740c  selftestFailNotification              
-0001741c  ccmSelfCheck                          
-00017560  memoryInit                            
-000175a4  stcSelfCheck                          
-00017620  cpuSelfTest                           
-000176b8  pbistSelfCheck                        
-00017898  pbistRun                              
-00017964  pbistStop                             
-00017994  pbistIsTestCompleted                  
-000179c0  pbistIsTestPassed                     
-000179f4  pbistPortTestStatus                   
-00017a4c  efcCheck                              
-00017ad4  efcStuckZeroTest                      
-00017b80  efcSelfTest                           
-00017ba8  checkefcSelfTest                      
-00017c48  fmcBus2Check                          
-00017c84  fmcECCcheck                           
-00017d24  checkB0RAMECC                         
-00017f14  checkB1RAMECC                         
-00018104  checkFlashECC                         
-000181e0  custom_dabort                         
-000181e4  stcSelfCheckFail                      
-000181e8  cpuSelfTestFail                       
-000181ec  vimParityCheck                        
-00018298  dmaParityCheck                        
-00018344  het1ParityCheck                       
-000183f0  htu1ParityCheck                       
-000184ac  het2ParityCheck                       
-000185a8  htu2ParityCheck                       
-00018658  adc1ParityCheck                       
-00018744  adc2ParityCheck                       
-000187fc  can1ParityCheck                       
-000188d4  can2ParityCheck                       
-0001899c  can3ParityCheck                       
-00018a70  mibspi1ParityCheck                    
-00018b78  mibspi3ParityCheck                    
-00018c9c  mibspi5ParityCheck                    
-00018dbc  checkRAMECC                           
-00019004  checkClockMonitor                     
-000190e0  checkFlashEEPROMECC                   
-00019278  checkPLL1Slip                         
-00019378  checkPLL2Slip                         
-0001943c  checkRAMAddrParity                    
-00019548  checkRAMUERRTest                      
-000196b0  fmcBus1ParityCheck                    
-000197d8  pbistFail                             
-0001985c  pbistGetConfigValue                   
-000199a8  stcGetConfigValue                     
-00019a4c  efcGetConfigValue                     
-00019ae8  ccmr4GetConfigValue                   
-00019b58  errata_PBIST_4                        
-00019ebc  enableParity                          
-00019f44  disableParity                         
-0001a250  pbuf_alloc                            
-0001a53c  pbuf_alloc_reference                  
-0001a5cc  pbuf_alloced_custom                   
-0001a720  pbuf_realloc                          
-0001aa74  pbuf_add_header                       
-0001aa94  pbuf_add_header_force                 
-0001aacc  pbuf_remove_header                    
-0001ac28  pbuf_header                           
-0001ac48  pbuf_header_force                     
-0001ac84  pbuf_free_header                      
-0001ad40  pbuf_free                             
-0001aef4  pbuf_clen                             
-0001af60  pbuf_ref                              
-0001afc8  pbuf_cat                              
-0001b0c8  pbuf_chain                            
-0001b108  pbuf_dechain                          
-0001b2c4  pbuf_copy                             
-0001b594  pbuf_copy_partial                     
-0001b76c  pbuf_get_contiguous                   
-0001b950  pbuf_skip                             
-0001b9d0  pbuf_take                             
-0001bbe0  pbuf_take_at                          
-0001bd18  pbuf_coalesce                         
-0001bd74  pbuf_clone                            
-0001be1c  pbuf_get_at                           
-0001be74  pbuf_try_get_at                       
-0001bee8  pbuf_put_at                           
-0001bf7c  pbuf_memcmp                           
-0001c0a4  pbuf_memfind                          
-0001c14c  pbuf_strstr                           
-0001c1e0  udp_init                              
-0001c4d8  udp_input                             
-0001ca20  udp_send                              
-0001caa4  udp_sendto                            
-0001cc88  udp_sendto_if                         
-0001cf00  udp_sendto_if_src                     
-0001d450  udp_bind                              
-0001d724  udp_bind_netif                        
-0001d7a8  udp_connect                           
-0001d978  udp_disconnect                        
-0001d9e0  udp_recv                              
-0001da8c  udp_remove                            
-0001db5c  udp_new                               
-0001db9c  udp_new_ip_type                       
-0001dc08  udp_netif_ip_addr_changed             
-0001dcac  udp_debug_print                       
-0001ded8  etharp_tmr                            
-0001e648  etharp_cleanup_netif                  
-0001e6f8  etharp_find_addr                      
-0001e814  etharp_get_entry                      
-0001e91c  etharp_input                          
-0001ecf4  etharp_output                         
-0001efbc  etharp_query                          
-0001f590  etharp_request                        
-0001f65c  EMACTxIntPulseEnable                  
-0001f6b8  EMACTxIntPulseDisable                 
-0001f714  EMACRxIntPulseEnable                  
-0001f770  EMACRxIntPulseDisable                 
-0001f7cc  EMACRMIISpeedSet                      
-0001f80c  EMACMIIEnable                         
-0001f830  EMACMIIDisable                        
-0001f854  EMACDuplexSet                         
-0001f894  EMACTxEnable                          
-0001f8b0  EMACTxDisable                         
-0001f8cc  EMACRxEnable                          
-0001f8e8  EMACRxDisable                         
-0001f904  EMACTxHdrDescPtrWrite                 
-0001f930  EMACRxHdrDescPtrWrite                 
-0001f95c  EMACInit                              
-0001fa98  EMACMACSrcAddrSet                     
-0001fafc  EMACMACAddrSet                        
-0001fb84  EMACCoreIntAck                        
-0001fba4  EMACTxCPWrite                         
-0001fbd0  EMACRxCPWrite                         
-0001fbfc  EMACRxBroadCastEnable                 
-0001fc40  EMACRxBroadCastDisable                
-0001fc7c  EMACRxMultiCastEnable                 
-0001fcc0  EMACRxMultiCastDisable                
-0001fcfc  EMACRxUnicastSet                      
-0001fd2c  EMACRxUnicastClear                    
-0001fd5c  EMACNumFreeBufSet                     
-0001fd88  EMACIntVectorGet                      
-0001fda0  EMACInstConfig                        
-0001fe04  EMACLinkSetup                         
-0001fedc  EMACTxTeardown                        
-0001ff08  EMACRxTeardown                        
-0001ff34  EMACFrameSelect                       
-0001ff60  EMACTxPrioritySelect                  
-0001ffc0  EMACSoftReset                         
-0002000c  EMACEnableIdleState                   
-00020030  EMACDisableIdleState                  
-00020054  EMACEnableLoopback                    
-000200bc  EMACDisableLoopback                   
-00020124  EMACTxFlowControlEnable               
-00020148  EMACTxFlowControlDisable              
-0002016c  EMACRxFlowControlEnable               
-00020190  EMACRxFlowControlDisable              
-000201b4  EMACRxSetFlowThreshold                
-00020208  EMACReadNetStatRegisters              
-0002022c  EMACTxIntStat                         
-0002027c  EMACRxIntStat                         
-0002030c  EMACDMAInit                           
-000204e4  EMACHWInit                            
-000207e0  EMACTransmit                          
-000209cc  EMACTxIntHandler                      
-00020ac0  EMACReceive                           
-00020c1c  EMACGetConfigValue                    
-00020dd8  ip_reass_tmr                          
-000218e0  ip4_reass                             
-00021ec4  ip4_frag                              
-0002236c  osKernelStart                         
-0002237c  osKernelRunning                       
-0002239c  osKernelSysTick                       
-000223bc  osThreadCreate                        
-00022420  osThreadGetId                         
-0002242c  osThreadTerminate                     
-00022444  osThreadYield                         
-00022454  osThreadSetPriority                   
-0002247c  osThreadGetPriority                   
-000224b0  osDelay                               
-000224e4  osTimerCreate                         
-00022500  osTimerStart                          
-00022528  osTimerStop                           
-0002254c  osTimerDelete                         
-00022570  osSignalSet                           
-0002261c  osSignalWait                          
-0002270c  osMutexCreate                         
-00022720  osMutexWait                           
-000227f0  osMutexRelease                        
-0002285c  osMutexDelete                         
-00022888  osSemaphoreCreate                     
-000228ec  osSemaphoreWait                       
-000229bc  osSemaphoreRelease                    
-00022a28  osSemaphoreDelete                     
-00022a54  osPoolCreate                          
-00022b88  osPoolAlloc                           
-00022c80  osPoolCAlloc                          
-00022cb8  osPoolFree                            
-00022d88  osMessageCreate                       
-00022db0  osMessagePut                          
-00022e48  osMessageGet                          
-00022f68  osMailCreate                          
-00023090  osMailAlloc                           
-000230c8  osMailCAlloc                          
-00023140  osMailPut                             
-000231cc  osMailGet                             
-000232ec  osMailFree                            
-00023320  osSystickHandler                      
-00023338  osThreadGetState                      
-000233d0  osThreadIsSuspended                   
-000233f8  osThreadSuspend                       
-00023410  osThreadResume                        
-0002345c  osThreadSuspendAll                    
-0002346c  osThreadResumeAll                     
-0002348c  osDelayUntil                          
-000234c8  osAbortDelay                          
-000234e0  osThreadList                          
-000234f4  osMessagePeek                         
-000235c8  osMessageWaiting                      
-000235f4  osMessageAvailableSpace               
-00023608  osMessageDelete                       
-00023634  osRecursiveMutexCreate                
-00023648  osRecursiveMutexRelease               
-00023678  osRecursiveMutexWait                  
-00023704  osSemaphoreGetCount                   
-00023718  xPortSysTickHandler                   
-00023730  netif_init                            
-00023734  netif_input                           
-000237b0  netif_add_noaddr                      
-00023878  netif_add                             
-00023d60  netif_set_ipaddr                      
-00023ebc  netif_set_netmask                     
-00023fe8  netif_set_gw                          
-000240b0  netif_set_addr                        
-000241a4  netif_remove                          
-0002422c  netif_set_default                     
-000242e8  netif_set_up                          
-00024448  netif_set_down                        
-000244d4  netif_set_status_callback             
-00024500  netif_set_link_up                     
-00024590  netif_set_link_down                   
-00024624  netif_set_link_callback               
-00024694  netif_name_to_index                   
-000246ec  netif_index_to_name                   
-00024758  netif_get_by_index                    
-000247fc  netif_find                            
-00024950  autoip_set_struct                     
-00024d88  autoip_start                          
-0002504c  autoip_network_changed                
-00025088  autoip_stop                           
-000251ec  autoip_tmr                            
-0002546c  autoip_arp_reply                      
-000255a4  autoip_supplied_address               
-00025638  autoip_accept_packet                  
-000259f0  mem_init                              
-00025c24  mem_free                              
-00025e40  mem_trim                              
-000261c0  mem_malloc                            
-000264c4  mem_calloc                            
-000265e4  setupPLL                              
-00026644  trimLPO                               
-000266b8  setupFlash                            
-000266f8  periphInit                            
-0002674c  mapClocks                             
-00026874  systemInit                            
-00026940  systemPowerDown                       
-00026970  systemGetConfigValue                  
-00026d84  tcmflashGetConfigValue                
-00026f30  sramGetConfigValue                    
-0002706c  customTrimLPO                         
-00027148  MPU_xTaskCreate                       
-000271ac  MPU_xTaskCreateRestricted             
-000271f0  MPU_vTaskAllocateMPURegions           
-00027224  MPU_vTaskDelete                       
-00027250  MPU_vTaskDelay                        
-0002727c  MPU_vTaskDelayUntil                   
-000272b0  MPU_xTaskAbortDelay                   
-000272e4  MPU_uxTaskPriorityGet                 
-00027318  MPU_eTaskGetState                     
-0002734c  MPU_vTaskPrioritySet                  
-00027380  MPU_vTaskSuspend                      
-000273ac  MPU_vTaskResume                       
-000273d8  MPU_vTaskSuspendAll                   
-000273fc  MPU_xTaskResumeAll                    
-00027428  MPU_xTaskGetTickCount                 
-00027454  MPU_uxTaskGetNumberOfTasks            
-00027480  MPU_pcTaskGetName                     
-000274b4  MPU_xTaskGetHandle                    
-000274e8  MPU_uxTaskGetStackHighWaterMark       
-0002751c  MPU_vTaskSetThreadLocalStoragePointer 
-00027560  MPU_pvTaskGetThreadLocalStoragePointer
-000275a4  MPU_xTaskGetIdleTaskHandle            
-000275d0  MPU_xTaskGenericNotify                
-00027624  MPU_xTaskNotifyWait                   
-00027678  MPU_ulTaskNotifyTake                  
-000276bc  MPU_xTaskNotifyStateClear             
-000276f0  MPU_xTaskGetCurrentTaskHandle         
-0002771c  MPU_vTaskSetTimeOutState              
-00027748  MPU_xTaskCheckForTimeOut              
-0002778c  MPU_xTaskGetSchedulerState            
-000277b8  MPU_xQueueGenericSend                 
-0002780c  MPU_xQueueGenericReceive              
-00027860  MPU_uxQueueMessagesWaiting            
-00027894  MPU_uxQueueSpacesAvailable            
-000278c8  MPU_vQueueDelete                      
-000278f4  MPU_xQueueCreateMutex                 
-00027928  MPU_xQueueCreateCountingSemaphore     
-0002796c  MPU_xQueueTakeMutexRecursive          
-000279b0  MPU_xQueueGiveMutexRecursive          
-000279e4  MPU_xQueueGenericCreate               
-00027a30  MPU_xQueueGenericReset                
-00027a74  MPU_xEventGroupCreate                 
-00027aa0  MPU_xEventGroupWaitBits               
-00027afc  MPU_xEventGroupClearBits              
-00027b40  MPU_xEventGroupSetBits                
-00027b84  MPU_xEventGroupSync                   
-00027bd8  MPU_vEventGroupDelete                 
-00027c04  ip4_route                             
-00027d48  ip4_input                             
-0002813c  ip4_output_if                         
-000281c0  ip4_output_if_src                     
-000283bc  ip4_output                            
-00028720  tcpip_inpkt                           
-000287dc  tcpip_input                           
-00028820  tcpip_callback                        
-000288a8  tcpip_try_callback                    
-000289ac  tcpip_timeout                         
-00028a4c  tcpip_untimeout                       
-00028ad4  tcpip_send_msg_wait_sem               
-00028b08  tcpip_api_call                        
-00028b4c  tcpip_callbackmsg_new                 
-00028ba4  tcpip_callbackmsg_delete              
-00028bbc  tcpip_callbackmsg_trycallback         
-00028bf8  tcpip_callbackmsg_trycallback_fromisr 
-00028c34  tcpip_init                            
-00028ce4  pbuf_free_callback                    
-00028cfc  mem_free_callback                     
-00028d90  vPreemptiveTick                       
-00028d94  vimInit                               
-00028e68  vimChannelMap                         
-00028f0c  vimEnableInterrupt                    
-00029064  vimDisableInterrupt                   
-000290e8  vimGetConfigValue                     
-00029680  tcp_timer_needed                      
-00029904  sys_timeouts_init                     
-00029958  sys_timeout                           
-000299b4  sys_untimeout                         
-00029b08  sys_check_timeouts                    
-00029bc4  sys_restart_timeouts                  
-00029c44  sys_timeouts_sleeptime                
-00029d50  Dp83640IDGet                          
-00029dc8  Dp83640LinkStatusGet                  
-00029ea4  Dp83640AutoNegotiate                  
-0002a034  Dp83640PartnerAbilityGet              
-0002a05c  Dp83640Reset                          
-0002a0c0  Dp83640EnableLoopback                 
-0002a150  Dp83640DisableLoopback                
-0002a1d4  Dp83640GetTimeStamp                   
-0002a3f8  Dp83640PartnerSpdGet                  
-0002a420  ethernetif_init                       
-0002a490  EMAC_to_pbuf                          
-0002a5e4  ethernetif_rx_callback                
-0002a604  ethernetif_tx_callback                
-0002a61c  ethernetif_set_mac_address            
-0002a9d4  convert_pbuf_to_pbuf_t                
-0002aa5c  free_pbuf_t                           
-0002aae0  ip4_addr_isbroadcast_u32              
-0002abb0  ip4_addr_netmask_valid                
-0002ac44  ipaddr_addr                           
-0002ac70  ip4addr_aton                          
-0002af94  ip4addr_ntoa                          
-0002afb0  ip4addr_ntoa_r                        
-0002b180  _errata_SSWF021_45_both_plls          
-0002b374  _errata_SSWF021_45_pll1               
-0002b4ec  _errata_SSWF021_45_pll2               
-0002b7e4  muxInit                               
-0002bb64  pinmuxGetConfigValue                  
-0002be34  icmp_input                            
-0002c1a8  icmp_dest_unreach                     
-0002c1c8  icmp_time_exceeded                    
-0002c408  esmInit                               
-0002c510  esmError                              
-0002c52c  esmEnableError                        
-0002c554  esmDisableError                       
-0002c57c  esmTriggerErrorPinReset               
-0002c58c  esmActivateNormalOperation            
-0002c59c  esmEnableInterrupt                    
-0002c5c4  esmDisableInterrupt                   
-0002c5ec  esmSetInterruptLevel                  
-0002c660  esmClearStatus                        
-0002c6a0  esmClearStatusBuffer                  
-0002c6bc  esmSetCounterPreloadValue             
-0002c6dc  esmGetStatus                          
-0002c760  esmGetStatusBuffer                    
-0002c798  esmEnterSelfTest                      
-0002c820  esmSelfTestStatus                     
-0002c870  esmGetConfigValue                     
-0002c9c4  sys_mbox_new                          
-0002ca20  sys_mbox_free                         
-0002ca44  sys_mbox_post                         
-0002ca70  sys_mbox_trypost                      
-0002cab4  sys_mbox_trypost_fromisr              
-0002cad0  sys_arch_mbox_fetch                   
-0002cb70  sys_arch_mbox_tryfetch                
-0002cbc0  sys_mbox_valid                        
-0002cbec  sys_mbox_set_invalid                  
-0002cc08  sys_sem_new                           
-0002cc70  sys_arch_sem_wait                     
-0002cce8  sys_sem_signal                        
-0002cd00  sys_sem_free                          
-0002cd18  sys_sem_valid                         
-0002cd44  sys_sem_set_invalid                   
-0002cd60  sys_init                              
-0002cd78  sys_mutex_new                         
-0002cdbc  sys_mutex_free                        
-0002cdd4  sys_mutex_lock                        
-0002cdf0  sys_mutex_unlock                      
-0002ce08  sys_thread_new                        
-0002ce6c  sys_arch_protect                      
-0002ce88  sys_arch_unprotect                    
-0002cea0  sys_now                               
-0002cec4  memp_init_pool                        
-0002cf5c  memp_init                             
-0002d020  memp_malloc_pool                      
-0002d068  memp_malloc                           
-0002d128  memp_free_pool                        
-0002d180  memp_free                             
-0002d2ac  lwip_strnstr                          
-0002d36c  lwip_stricmp                          
-0002d410  lwip_strnicmp                         
-0002d4d0  lwip_itoa                             
-0002d650  _coreInitRegisters_                   
-0002d75c  _coreInitStackPointer_                
-0002d7a8  _getCPSRValue_                        
-0002d7b0  _gotoCPUIdle_                         
-0002d7c8  _coreEnableVfp_                       
-0002d7e0  _coreEnableEventBusExport_            
-0002d7f0  _coreDisableEventBusExport_           
-0002d800  _coreEnableRamEcc_                    
-0002d810  _coreDisableRamEcc_                   
-0002d820  _coreEnableFlashEcc_                  
-0002d834  _coreDisableFlashEcc_                 
-0002d844  _coreEnableIrqVicOffset_              
-0002d854  _coreGetDataFault_                    
-0002d85c  _coreClearDataFault_                  
-0002d868  _coreGetInstructionFault_             
-0002d870  _coreClearInstructionFault_           
-0002d87c  _coreGetDataFaultAddress_             
-0002d884  _coreClearDataFaultAddress_           
-0002d890  _coreGetInstructionFaultAddress_      
-0002d898  _coreClearInstructionFaultAddress_    
-0002d8a4  _coreGetAuxiliaryDataFault_           
-0002d8ac  _coreClearAuxiliaryDataFault_         
-0002d8b8  _coreGetAuxiliaryInstructionFault_    
-0002d8c0  _coreClearAuxiliaryInstructionFault_  
-0002d8cc  _disable_interrupt_                   
-0002d8d4  _disable_FIQ_interrupt_               
-0002d8dc  _disable_IRQ_interrupt_               
-0002d8e4  _enable_interrupt_                    
-0002d8ec  _esmCcmErrorsClear_                   
-0002d974  _errata_CORTEXR4_57_                  
-0002d984  _errata_CORTEXR4_66_                  
-0002d994  __TI_PINIT_Base                       
-0002d998  __TI_PINIT_Limit                      
-0002d99c  ethernet_input                        
-0002db24  ethernet_output                       
-0002dc5c  _c_int00                              
-0002df00  lwip_init_sync                        
-0002e160  lwip_get_hdkNetIF_p                   
-0002e194  vimParityErrorHandler                 
-0002e69c  vListInitialise                       
-0002e6f4  vListInitialiseItem                   
-0002e710  vListInsertEnd                        
-0002e784  vListInsert                           
-0002e848  uxListRemove                          
-0002e8d4  MDIOPhyRegRead                        
-0002e96c  MDIOPhyRegWrite                       
-0002e9d4  MDIOPhyAliveStatusGet                 
-0002e9ec  MDIOPhyLinkStatusGet                  
-0002ea04  MDIOInit                              
-0002ea4c  MDIOEnable                            
-0002ea70  MDIODisable                           
-0002ed24  xTaskNotifyStateClear                 
-0002eda0  user_main                             
-0002ee88  log_printf                            
-0002eed0  esmHighInterrupt                      
-0002efe4  _dabort                               
-0002f0cc  _pmuInit_                             
-0002f118  _pmuEnableCountersGlobal_             
-0002f128  _pmuDisableCountersGlobal_            
-0002f138  _pmuResetCycleCounter_                
-0002f148  _pmuResetEventCounters_               
-0002f158  _pmuResetCounters_                    
-0002f168  _pmuStartCounters_                    
-0002f170  _pmuStopCounters_                     
-0002f178  _pmuSetCountEvent_                    
-0002f184  _pmuGetCycleCount_                    
-0002f18c  _pmuGetEventCount_                    
-0002f198  _pmuGetOverflow_                      
-0002f1ac  lwip_init                             
-0002f278  EMACTxIntISR                          
-0002f2dc  EMACRxIntISR                          
-0002f345  __aeabi_memcpy                        
-0002f345  __aeabi_memcpy4                       
-0002f345  __aeabi_memcpy8                       
-0002f345  memcpy                                
-0002f3e0  esmGroup1Notification                 
-0002f3f0  esmGroup2Notification                 
-0002f400  memoryPort0TestFailNotification       
-0002f41c  memoryPort1TestFailNotification       
-0002f438  dmaGroupANotification                 
-0002f46d  __aeabi_memclr                        
-0002f46d  __aeabi_memclr4                       
-0002f46d  __aeabi_memclr8                       
-0002f46f  __aeabi_memset                        
-0002f46f  __aeabi_memset4                       
-0002f46f  __aeabi_memset8                       
-0002f475  memset                                
-0002f4e7  __TI_decompress_lzss                  
-0002f553  _nop                                  
-0002f554  get_processor_mode                    
-0002f570  is_processor_in_isr                   
-0002f5b0  __aeabi_idiv                          
-0002f5b0  __aeabi_idivmod                       
-0002f605  atoi                                  
-0002f654  emacTxNotification                    
-0002f678  emacRxNotification                    
-0002f6a4  __aeabi_uidiv                         
-0002f6a4  __aeabi_uidivmod                      
-0002f6f5  __TI_auto_init_nobinit_nopinit        
-0002f739  rand                                  
-0002f76d  strncmp                               
-0002f797  memmove                               
-0002f7bf  memcmp                                
-0002f7e5  strlen                                
-0002f7fb  __aeabi_idiv0                         
-0002f7fb  __aeabi_ldiv0                         
-0002f7fd  isdigit                               
-0002f80d  islower                               
-0002f81d  isspace                               
-0002f82d  isxdigit                              
-0002f83c  main                                  
-0002f84d  __TI_decompress_none                  
-0002f85b  __TI_zero_init                        
-0002f867  C$$EXIT                               
-0002f867  abort                                 
-0002f86c  phantomInterrupt                      
-0002f870  handlePLLLockFail                     
-0002f9f4  _ctypes_                              
-0002fc08  memp_pools                            
-0002fc3c  lwip_cyclic_timers                    
-0002fcc0  memp_FRAG_PBUF                        
-0002fcd0  memp_NETBUF                           
-0002fce0  memp_NETCONN                          
-0002fcf0  memp_PBUF                             
-0002fd00  memp_PBUF_POOL                        
-0002fd10  memp_REASSDATA                        
-0002fd20  memp_SYS_TIMEOUT                      
-0002fd30  memp_TCPIP_MSG_API                    
-0002fd40  memp_TCPIP_MSG_INPKT                  
-0002fd50  memp_TCP_PCB                          
-0002fd60  memp_TCP_PCB_LISTEN                   
-0002fd70  memp_TCP_SEG                          
-0002fd80  memp_UDP_PCB                          
-0002fd90  tcp_pcb_lists                         
-0002fdcb  ethbroadcast                          
-0002fdd1  ethzero                               
-0002fdec  ip_addr_any                           
-0002fdf0  ip_addr_broadcast                     
-0002fdf4  os_mutex_def_lwip_sys_mutex           
+00003324  xQueueGenericSend                     
+000035e4  xQueueGenericSendFromISR              
+00003774  xQueueGiveFromISR                     
+000038e0  xQueueGenericReceive                  
+00003bf4  xQueueReceiveFromISR                  
+00003d3c  xQueuePeekFromISR                     
+00003e30  uxQueueMessagesWaiting                
+00003e68  uxQueueSpacesAvailable                
+00003eb4  uxQueueMessagesWaitingFromISR         
+00003ee4  vQueueDelete                          
+00004248  xQueueIsQueueEmptyFromISR             
+000042d4  xQueueIsQueueFullFromISR              
+00004324  xEventGroupCreate                     
+00004360  xEventGroupSync                       
+00004560  xEventGroupWaitBits                   
+000047b0  xEventGroupClearBits                  
+00004834  xEventGroupGetBitsFromISR             
+00004864  xEventGroupSetBits                    
+00004a14  vEventGroupDelete                     
+00004a98  vEventGroupSetBitsCallback            
+00004ab4  vEventGroupClearBitsCallback          
+00004b40  vPortStartFirstTask                   
+00004bd0  vPortYieldProcessor                   
+00004cbc  vPortYeildWithinAPI                   
+00004db0  vPortPreemptiveTick                   
+00004eb0  vPortInitialiseFPSCR                  
+00004ebc  ulPortCountLeadingZeros               
+00004ec4  vPortSWI                              
+00004f94  prvMpuSetRegion                       
+00004fac  prvMpuEnable                          
+00004fc4  prvMpuDisable                         
+00004fec  pxPortInitialiseStack                 
+00005100  vPortStoreTaskMPUSettings             
+00005374  xPortStartScheduler                   
+00005398  vPortEndScheduler                     
+000053cc  pvPortMalloc                          
+00005620  vPortFree                             
+00005718  xPortGetFreeHeapSize                  
+00005724  xPortGetMinimumEverFreeHeapSize       
+00005730  vPortInitialiseBlocks                 
+0000576c  __TI_Handler_Table_Base               
+00005778  __TI_Handler_Table_Limit              
+00005798  __TI_CINIT_Base                       
+000057b8  __TI_CINIT_Limit                      
+00008074  tcp_input                             
+0000bd24  tcp_trigger_input_pcb_close           
+0000c7d8  tcp_write                             
+0000d3c8  tcp_split_unsent_seg                  
+0000d80c  tcp_send_fin                          
+0000d8d8  tcp_enqueue_flags                     
+0000df74  tcp_output                            
+0000e950  tcp_rexmit_rto_prepare                
+0000ea84  tcp_rexmit_rto_commit                 
+0000ead8  tcp_rexmit_rto                        
+0000eb30  tcp_rexmit                            
+0000ec64  tcp_rexmit_fast                       
+0000f27c  tcp_rst                               
+0000f380  tcp_send_empty_ack                    
+0000f538  tcp_keepalive                         
+0000f63c  tcp_zero_window_probe                 
+0000f85c  tcp_init                              
+0000f878  tcp_free                              
+0000f8f0  tcp_tmr                               
+0000feec  tcp_close                             
+0000ff6c  tcp_shutdown                          
+00010074  tcp_abandon                           
+000102d8  tcp_abort                             
+00010374  tcp_bind                              
+00010570  tcp_bind_netif                        
+000105f4  tcp_listen_with_backlog               
+0001065c  tcp_listen_with_backlog_and_err       
+000108a0  tcp_update_rcv_ann_wnd                
+00010a44  tcp_recved                            
+00010ca8  tcp_connect                           
+000110e8  tcp_slowtmr                           
+00011b88  tcp_fasttmr                           
+00011cb8  tcp_txnow                             
+00011d60  tcp_process_refused_data              
+00011eec  tcp_segs_free                         
+00011f2c  tcp_seg_free                          
+00011f6c  tcp_setprio                           
+00011fac  tcp_seg_copy                          
+00012020  tcp_recv_null                         
+00012438  tcp_alloc                             
+000125a8  tcp_new                               
+000125b8  tcp_new_ip_type                       
+000125d8  tcp_arg                               
+00012614  tcp_recv                              
+00012664  tcp_sent                              
+000126b0  tcp_err                               
+000126fc  tcp_accept                            
+00012740  tcp_poll                              
+000127b4  tcp_pcb_purge                         
+000128c4  tcp_pcb_remove                        
+00012ad8  tcp_next_iss                          
+00012b7c  tcp_eff_send_mss_netif                
+00012d1c  tcp_netif_ip_addr_changed             
+00012ddc  tcp_debug_state_str                   
+00012e60  tcp_tcp_get_tcp_addrinfo              
+00012f14  tcp_free_ooseq                        
+00013558  dhcp_coarse_tmr                       
+00013648  dhcp_fine_tmr                         
+00013a68  dhcp_set_struct                       
+00013af8  dhcp_cleanup                          
+00013b4c  dhcp_start                            
+00013cc8  dhcp_inform                           
+00013dd0  dhcp_network_changed                  
+00013ec4  dhcp_arp_reply                        
+00014588  dhcp_renew                            
+00014b54  dhcp_release_and_stop                 
+00014cfc  dhcp_release                          
+00014d14  dhcp_stop                             
+00015ef8  dhcp_supplied_address                 
+00016014  selftestFailNotification              
+00016024  ccmSelfCheck                          
+00016168  memoryInit                            
+000161ac  stcSelfCheck                          
+00016228  cpuSelfTest                           
+000162c0  pbistSelfCheck                        
+000164a0  pbistRun                              
+0001656c  pbistStop                             
+0001659c  pbistIsTestCompleted                  
+000165c8  pbistIsTestPassed                     
+000165fc  pbistPortTestStatus                   
+00016654  efcCheck                              
+000166dc  efcStuckZeroTest                      
+00016788  efcSelfTest                           
+000167b0  checkefcSelfTest                      
+00016850  fmcBus2Check                          
+0001688c  fmcECCcheck                           
+0001692c  checkB0RAMECC                         
+00016b1c  checkB1RAMECC                         
+00016d0c  checkFlashECC                         
+00016de8  custom_dabort                         
+00016dec  stcSelfCheckFail                      
+00016df0  cpuSelfTestFail                       
+00016df4  vimParityCheck                        
+00016ea0  dmaParityCheck                        
+00016f4c  het1ParityCheck                       
+00016ff8  htu1ParityCheck                       
+000170b4  het2ParityCheck                       
+000171b0  htu2ParityCheck                       
+00017260  adc1ParityCheck                       
+0001734c  adc2ParityCheck                       
+00017404  can1ParityCheck                       
+000174dc  can2ParityCheck                       
+000175a4  can3ParityCheck                       
+00017678  mibspi1ParityCheck                    
+00017780  mibspi3ParityCheck                    
+000178a4  mibspi5ParityCheck                    
+000179c4  checkRAMECC                           
+00017c0c  checkClockMonitor                     
+00017ce8  checkFlashEEPROMECC                   
+00017e80  checkPLL1Slip                         
+00017f80  checkPLL2Slip                         
+00018044  checkRAMAddrParity                    
+00018150  checkRAMUERRTest                      
+000182b8  fmcBus1ParityCheck                    
+000183e0  pbistFail                             
+00018464  pbistGetConfigValue                   
+000185b0  stcGetConfigValue                     
+00018654  efcGetConfigValue                     
+000186f0  ccmr4GetConfigValue                   
+00018760  errata_PBIST_4                        
+00018ac4  enableParity                          
+00018b4c  disableParity                         
+00018e58  pbuf_alloc                            
+00019144  pbuf_alloc_reference                  
+000191d4  pbuf_alloced_custom                   
+00019328  pbuf_realloc                          
+0001967c  pbuf_add_header                       
+0001969c  pbuf_add_header_force                 
+000196d4  pbuf_remove_header                    
+00019830  pbuf_header                           
+00019850  pbuf_header_force                     
+0001988c  pbuf_free_header                      
+00019948  pbuf_free                             
+00019afc  pbuf_clen                             
+00019b68  pbuf_ref                              
+00019bd0  pbuf_cat                              
+00019cd0  pbuf_chain                            
+00019d0c  pbuf_dechain                          
+00019ebc  pbuf_copy                             
+0001a18c  pbuf_copy_partial                     
+0001a364  pbuf_get_contiguous                   
+0001a548  pbuf_skip                             
+0001a5c8  pbuf_take                             
+0001a7d8  pbuf_take_at                          
+0001a910  pbuf_coalesce                         
+0001a96c  pbuf_clone                            
+0001aa14  pbuf_get_at                           
+0001aa6c  pbuf_try_get_at                       
+0001aae0  pbuf_put_at                           
+0001ab74  pbuf_memcmp                           
+0001ac9c  pbuf_memfind                          
+0001ad44  pbuf_strstr                           
+0001add8  EMACTxIntPulseEnable                  
+0001ae34  EMACTxIntPulseDisable                 
+0001ae90  EMACRxIntPulseEnable                  
+0001aeec  EMACRxIntPulseDisable                 
+0001af48  EMACRMIISpeedSet                      
+0001af88  EMACMIIEnable                         
+0001afac  EMACMIIDisable                        
+0001afd0  EMACDuplexSet                         
+0001b010  EMACTxEnable                          
+0001b02c  EMACTxDisable                         
+0001b048  EMACRxEnable                          
+0001b064  EMACRxDisable                         
+0001b080  EMACTxHdrDescPtrWrite                 
+0001b0ac  EMACRxHdrDescPtrWrite                 
+0001b0d8  EMACInit                              
+0001b214  EMACMACSrcAddrSet                     
+0001b278  EMACMACAddrSet                        
+0001b300  EMACCoreIntAck                        
+0001b320  EMACTxCPWrite                         
+0001b34c  EMACRxCPWrite                         
+0001b378  EMACRxBroadCastEnable                 
+0001b3bc  EMACRxBroadCastDisable                
+0001b3f8  EMACRxMultiCastEnable                 
+0001b43c  EMACRxMultiCastDisable                
+0001b478  EMACRxUnicastSet                      
+0001b4a8  EMACRxUnicastClear                    
+0001b4d8  EMACNumFreeBufSet                     
+0001b504  EMACIntVectorGet                      
+0001b51c  EMACInstConfig                        
+0001b580  EMACLinkSetup                         
+0001b658  EMACTxTeardown                        
+0001b684  EMACRxTeardown                        
+0001b6b0  EMACFrameSelect                       
+0001b6dc  EMACTxPrioritySelect                  
+0001b73c  EMACSoftReset                         
+0001b788  EMACEnableIdleState                   
+0001b7ac  EMACDisableIdleState                  
+0001b7d0  EMACEnableLoopback                    
+0001b838  EMACDisableLoopback                   
+0001b8a0  EMACTxFlowControlEnable               
+0001b8c4  EMACTxFlowControlDisable              
+0001b8e8  EMACRxFlowControlEnable               
+0001b90c  EMACRxFlowControlDisable              
+0001b930  EMACRxSetFlowThreshold                
+0001b984  EMACReadNetStatRegisters              
+0001b9a8  EMACTxIntStat                         
+0001b9f8  EMACRxIntStat                         
+0001ba88  EMACDMAInit                           
+0001bc60  EMACHWInit                            
+0001bf5c  EMACTransmit                          
+0001c148  EMACTxIntHandler                      
+0001c23c  EMACReceive                           
+0001c398  EMACGetConfigValue                    
+0001c5c4  etharp_tmr                            
+0001cd28  etharp_cleanup_netif                  
+0001cdd8  etharp_find_addr                      
+0001cef4  etharp_get_entry                      
+0001cffc  etharp_input                          
+0001d384  etharp_output                         
+0001d660  etharp_query                          
+0001dbf0  etharp_request                        
+0001dcc0  ip_reass_tmr                          
+0001e7c8  ip4_reass                             
+0001edb8  ip4_frag                              
+0001f1f8  udp_init                              
+0001f490  udp_input                             
+0001f83c  udp_send                              
+0001f8ec  udp_sendto                            
+0001f9e4  udp_sendto_if                         
+0001fc40  udp_sendto_if_src                     
+0001ffc4  udp_bind                              
+000201a4  udp_bind_netif                        
+00020224  udp_connect                           
+00020374  udp_disconnect                        
+000203f4  udp_recv                              
+00020448  udp_remove                            
+00020518  udp_new                               
+00020558  udp_new_ip_type                       
+00020574  udp_netif_ip_addr_changed             
+00020728  osKernelStart                         
+00020738  osKernelRunning                       
+00020758  osKernelSysTick                       
+00020778  osThreadCreate                        
+000207dc  osThreadGetId                         
+000207e8  osThreadTerminate                     
+00020800  osThreadYield                         
+00020810  osThreadSetPriority                   
+00020838  osThreadGetPriority                   
+0002086c  osDelay                               
+000208a0  osTimerCreate                         
+000208bc  osTimerStart                          
+000208e4  osTimerStop                           
+00020908  osTimerDelete                         
+0002092c  osSignalSet                           
+000209d8  osSignalWait                          
+00020ac8  osMutexCreate                         
+00020adc  osMutexWait                           
+00020bac  osMutexRelease                        
+00020c18  osMutexDelete                         
+00020c44  osSemaphoreCreate                     
+00020ca0  osSemaphoreWait                       
+00020d70  osSemaphoreRelease                    
+00020ddc  osSemaphoreDelete                     
+00020e08  osPoolCreate                          
+00020f3c  osPoolAlloc                           
+00021034  osPoolCAlloc                          
+0002106c  osPoolFree                            
+0002113c  osMessageCreate                       
+00021164  osMessagePut                          
+000211fc  osMessageGet                          
+0002131c  osMailCreate                          
+00021444  osMailAlloc                           
+0002147c  osMailCAlloc                          
+000214f4  osMailPut                             
+00021580  osMailGet                             
+000216a0  osMailFree                            
+000216d4  osSystickHandler                      
+000216ec  osThreadGetState                      
+00021784  osThreadIsSuspended                   
+000217ac  osThreadSuspend                       
+000217c4  osThreadResume                        
+00021810  osThreadSuspendAll                    
+00021820  osThreadResumeAll                     
+00021840  osDelayUntil                          
+0002187c  osAbortDelay                          
+00021894  osThreadList                          
+000218a8  osMessagePeek                         
+0002197c  osMessageWaiting                      
+000219a8  osMessageAvailableSpace               
+000219bc  osMessageDelete                       
+000219e8  osRecursiveMutexCreate                
+000219fc  osRecursiveMutexRelease               
+00021a2c  osRecursiveMutexWait                  
+00021ab8  osSemaphoreGetCount                   
+00021acc  xPortSysTickHandler                   
+00021cf8  mem_init                              
+00021f2c  mem_free                              
+00022144  mem_trim                              
+000224c4  mem_malloc                            
+000227c8  mem_calloc                            
+000228e8  netif_init                            
+000228ec  netif_input                           
+00022968  netif_add_noaddr                      
+000229b4  netif_add                             
+00022d08  netif_set_ipaddr                      
+00022e34  netif_set_netmask                     
+00022f0c  netif_set_gw                          
+00022f84  netif_set_addr                        
+00023078  netif_remove                          
+000230f4  netif_set_default                     
+00023130  netif_set_up                          
+0002325c  netif_set_down                        
+000232e8  netif_set_status_callback             
+00023330  netif_set_link_up                     
+000233b8  netif_set_link_down                   
+0002342c  netif_set_link_callback               
+00023474  netif_name_to_index                   
+000234b0  netif_index_to_name                   
+00023538  netif_get_by_index                    
+000235b4  netif_find                            
+000236c8  setupPLL                              
+00023728  trimLPO                               
+0002379c  setupFlash                            
+000237dc  periphInit                            
+00023830  mapClocks                             
+00023958  systemInit                            
+00023a24  systemPowerDown                       
+00023a54  systemGetConfigValue                  
+00023e68  tcmflashGetConfigValue                
+00024014  sramGetConfigValue                    
+00024150  customTrimLPO                         
+0002422c  MPU_xTaskCreate                       
+00024290  MPU_xTaskCreateRestricted             
+000242d4  MPU_vTaskAllocateMPURegions           
+00024308  MPU_vTaskDelete                       
+00024334  MPU_vTaskDelay                        
+00024360  MPU_vTaskDelayUntil                   
+00024394  MPU_xTaskAbortDelay                   
+000243c8  MPU_uxTaskPriorityGet                 
+000243fc  MPU_eTaskGetState                     
+00024430  MPU_vTaskPrioritySet                  
+00024464  MPU_vTaskSuspend                      
+00024490  MPU_vTaskResume                       
+000244bc  MPU_vTaskSuspendAll                   
+000244e0  MPU_xTaskResumeAll                    
+0002450c  MPU_xTaskGetTickCount                 
+00024538  MPU_uxTaskGetNumberOfTasks            
+00024564  MPU_pcTaskGetName                     
+00024598  MPU_xTaskGetHandle                    
+000245cc  MPU_uxTaskGetStackHighWaterMark       
+00024600  MPU_vTaskSetThreadLocalStoragePointer 
+00024644  MPU_pvTaskGetThreadLocalStoragePointer
+00024688  MPU_xTaskGetIdleTaskHandle            
+000246b4  MPU_xTaskGenericNotify                
+00024708  MPU_xTaskNotifyWait                   
+0002475c  MPU_ulTaskNotifyTake                  
+000247a0  MPU_xTaskNotifyStateClear             
+000247d4  MPU_xTaskGetCurrentTaskHandle         
+00024800  MPU_vTaskSetTimeOutState              
+0002482c  MPU_xTaskCheckForTimeOut              
+00024870  MPU_xTaskGetSchedulerState            
+0002489c  MPU_xQueueGenericSend                 
+000248f0  MPU_xQueueGenericReceive              
+00024944  MPU_uxQueueMessagesWaiting            
+00024978  MPU_uxQueueSpacesAvailable            
+000249ac  MPU_vQueueDelete                      
+000249d8  MPU_xQueueCreateMutex                 
+00024a0c  MPU_xQueueTakeMutexRecursive          
+00024a50  MPU_xQueueGiveMutexRecursive          
+00024a84  MPU_xQueueGenericCreate               
+00024ad0  MPU_xQueueGenericReset                
+00024b14  MPU_xEventGroupCreate                 
+00024b40  MPU_xEventGroupWaitBits               
+00024b9c  MPU_xEventGroupClearBits              
+00024be0  MPU_xEventGroupSetBits                
+00024c24  MPU_xEventGroupSync                   
+00024c78  MPU_vEventGroupDelete                 
+00024ca4  ip4_route                             
+00024dc8  ip4_input                             
+000251a4  ip4_output_if                         
+00025228  ip4_output_if_src                     
+00025518  ip4_output                            
+00025880  tcpip_inpkt                           
+0002593c  tcpip_input                           
+00025980  tcpip_callback                        
+00025a08  tcpip_try_callback                    
+00025b0c  tcpip_timeout                         
+00025bbc  tcpip_untimeout                       
+00025c44  tcpip_send_msg_wait_sem               
+00025c78  tcpip_api_call                        
+00025cbc  tcpip_callbackmsg_new                 
+00025d14  tcpip_callbackmsg_delete              
+00025d2c  tcpip_callbackmsg_trycallback         
+00025d68  tcpip_callbackmsg_trycallback_fromisr 
+00025da4  tcpip_init                            
+00025e54  pbuf_free_callback                    
+00025e6c  mem_free_callback                     
+00025f00  vimInit                               
+00025fd4  vimChannelMap                         
+00026078  vimEnableInterrupt                    
+000261d0  vimDisableInterrupt                   
+00026254  vimGetConfigValue                     
+0002679c  lwip_standard_chksum                  
+00026a2c  inet_chksum_pseudo                    
+00026ae8  ip_chksum_pseudo                      
+00026ce0  inet_chksum_pseudo_partial            
+00026da4  ip_chksum_pseudo_partial              
+00026de8  inet_chksum                           
+00026e0c  inet_chksum_pbuf                      
+00026fcc  tcp_timer_needed                      
+00027288  sys_timeouts_init                     
+000272f0  sys_timeout_debug                     
+000273e8  sys_untimeout                         
+000274b8  sys_check_timeouts                    
+00027574  sys_restart_timeouts                  
+000275f4  sys_timeouts_sleeptime                
+00027714  ethernetif_init                       
+00027784  EMAC_to_pbuf                          
+000278c4  ethernetif_rx_callback                
+000278e4  ethernetif_tx_callback                
+000278fc  ethernetif_set_mac_address            
+00027d40  convert_pbuf_to_pbuf_t                
+00027dc8  free_pbuf_t                           
+00027e4c  Dp83640IDGet                          
+00027ec4  Dp83640LinkStatusGet                  
+00027fa0  Dp83640AutoNegotiate                  
+00028130  Dp83640PartnerAbilityGet              
+00028158  Dp83640Reset                          
+000281bc  Dp83640EnableLoopback                 
+0002824c  Dp83640DisableLoopback                
+000282d0  Dp83640GetTimeStamp                   
+000284f4  Dp83640PartnerSpdGet                  
+0002851c  ip4_addr_isbroadcast_u32              
+000285ec  ip4_addr_netmask_valid                
+00028680  ipaddr_addr                           
+000286ac  ip4addr_aton                          
+000289d0  ip4addr_ntoa                          
+000289ec  ip4addr_ntoa_r                        
+00028bbc  _errata_SSWF021_45_both_plls          
+00028db0  _errata_SSWF021_45_pll1               
+00028f28  _errata_SSWF021_45_pll2               
+00029220  muxInit                               
+000295a0  pinmuxGetConfigValue                  
+00029870  icmp_input                            
+00029c14  icmp_dest_unreach                     
+00029c34  icmp_time_exceeded                    
+00029e84  esmInit                               
+00029f8c  esmError                              
+00029fa8  esmEnableError                        
+00029fd0  esmDisableError                       
+00029ff8  esmTriggerErrorPinReset               
+0002a008  esmActivateNormalOperation            
+0002a018  esmEnableInterrupt                    
+0002a040  esmDisableInterrupt                   
+0002a068  esmSetInterruptLevel                  
+0002a0dc  esmClearStatus                        
+0002a11c  esmClearStatusBuffer                  
+0002a138  esmSetCounterPreloadValue             
+0002a158  esmGetStatus                          
+0002a1dc  esmGetStatusBuffer                    
+0002a214  esmEnterSelfTest                      
+0002a29c  esmSelfTestStatus                     
+0002a2ec  esmGetConfigValue                     
+0002a440  sys_mbox_new                          
+0002a49c  sys_mbox_free                         
+0002a4c0  sys_mbox_post                         
+0002a4ec  sys_mbox_trypost                      
+0002a530  sys_mbox_trypost_fromisr              
+0002a54c  sys_arch_mbox_fetch                   
+0002a5ec  sys_arch_mbox_tryfetch                
+0002a63c  sys_mbox_valid                        
+0002a668  sys_mbox_set_invalid                  
+0002a684  sys_sem_new                           
+0002a6ec  sys_arch_sem_wait                     
+0002a764  sys_sem_signal                        
+0002a77c  sys_sem_free                          
+0002a794  sys_sem_valid                         
+0002a7c0  sys_sem_set_invalid                   
+0002a7dc  sys_init                              
+0002a7f4  sys_mutex_new                         
+0002a838  sys_mutex_free                        
+0002a850  sys_mutex_lock                        
+0002a86c  sys_mutex_unlock                      
+0002a884  sys_thread_new                        
+0002a8e8  sys_arch_protect                      
+0002a904  sys_arch_unprotect                    
+0002a91c  sys_now                               
+0002a940  memp_init_pool                        
+0002a9d8  memp_init                             
+0002aa9c  memp_malloc_pool                      
+0002aae4  memp_malloc                           
+0002aba4  memp_free_pool                        
+0002abfc  memp_free                             
+0002ad28  lwip_strnstr                          
+0002ade8  lwip_stricmp                          
+0002ae8c  lwip_strnicmp                         
+0002af4c  lwip_itoa                             
+0002b0cc  _coreInitRegisters_                   
+0002b1d8  _coreInitStackPointer_                
+0002b224  _getCPSRValue_                        
+0002b22c  _gotoCPUIdle_                         
+0002b244  _coreEnableVfp_                       
+0002b25c  _coreEnableEventBusExport_            
+0002b26c  _coreDisableEventBusExport_           
+0002b27c  _coreEnableRamEcc_                    
+0002b28c  _coreDisableRamEcc_                   
+0002b29c  _coreEnableFlashEcc_                  
+0002b2b0  _coreDisableFlashEcc_                 
+0002b2c0  _coreEnableIrqVicOffset_              
+0002b2d0  _coreGetDataFault_                    
+0002b2d8  _coreClearDataFault_                  
+0002b2e4  _coreGetInstructionFault_             
+0002b2ec  _coreClearInstructionFault_           
+0002b2f8  _coreGetDataFaultAddress_             
+0002b300  _coreClearDataFaultAddress_           
+0002b30c  _coreGetInstructionFaultAddress_      
+0002b314  _coreClearInstructionFaultAddress_    
+0002b320  _coreGetAuxiliaryDataFault_           
+0002b328  _coreClearAuxiliaryDataFault_         
+0002b334  _coreGetAuxiliaryInstructionFault_    
+0002b33c  _coreClearAuxiliaryInstructionFault_  
+0002b348  _disable_interrupt_                   
+0002b350  _disable_FIQ_interrupt_               
+0002b358  _disable_IRQ_interrupt_               
+0002b360  _enable_interrupt_                    
+0002b368  _esmCcmErrorsClear_                   
+0002b3f0  _errata_CORTEXR4_57_                  
+0002b400  _errata_CORTEXR4_66_                  
+0002b410  __TI_PINIT_Base                       
+0002b414  __TI_PINIT_Limit                      
+0002b418  ethernet_input                        
+0002b598  ethernet_output                       
+0002b6d0  _c_int00                              
+0002b974  vimParityErrorHandler                 
+0002be7c  vListInitialise                       
+0002bed4  vListInitialiseItem                   
+0002bef0  vListInsertEnd                        
+0002bf64  vListInsert                           
+0002c028  uxListRemove                          
+0002c0b4  MDIOPhyRegRead                        
+0002c14c  MDIOPhyRegWrite                       
+0002c1b4  MDIOPhyAliveStatusGet                 
+0002c1cc  MDIOPhyLinkStatusGet                  
+0002c1e4  MDIOInit                              
+0002c22c  MDIOEnable                            
+0002c250  MDIODisable                           
+0002c4f0  xTaskNotifyStateClear                 
+0002c568  esmHighInterrupt                      
+0002c67c  _dabort                               
+0002c764  _pmuInit_                             
+0002c7b0  _pmuEnableCountersGlobal_             
+0002c7c0  _pmuDisableCountersGlobal_            
+0002c7d0  _pmuResetCycleCounter_                
+0002c7e0  _pmuResetEventCounters_               
+0002c7f0  _pmuResetCounters_                    
+0002c800  _pmuStartCounters_                    
+0002c808  _pmuStopCounters_                     
+0002c810  _pmuSetCountEvent_                    
+0002c81c  _pmuGetCycleCount_                    
+0002c824  _pmuGetEventCount_                    
+0002c830  _pmuGetOverflow_                      
+0002c844  user_main                             
+0002c8dc  log_printf                            
+0002c918  lwip_init                             
+0002c9e4  EMACTxIntISR                          
+0002ca48  EMACRxIntISR                          
+0002cab1  __aeabi_memcpy                        
+0002cab1  __aeabi_memcpy4                       
+0002cab1  __aeabi_memcpy8                       
+0002cab1  memcpy                                
+0002cb4c  esmGroup1Notification                 
+0002cb5c  esmGroup2Notification                 
+0002cb6c  memoryPort0TestFailNotification       
+0002cb88  memoryPort1TestFailNotification       
+0002cba4  dmaGroupANotification                 
+0002cbd9  __aeabi_memclr                        
+0002cbd9  __aeabi_memclr4                       
+0002cbd9  __aeabi_memclr8                       
+0002cbdb  __aeabi_memset                        
+0002cbdb  __aeabi_memset4                       
+0002cbdb  __aeabi_memset8                       
+0002cbe1  memset                                
+0002cc53  __TI_decompress_lzss                  
+0002ccbf  _nop                                  
+0002ccc0  get_processor_mode                    
+0002ccdc  is_processor_in_isr                   
+0002cd1c  __aeabi_idiv                          
+0002cd1c  __aeabi_idivmod                       
+0002cd71  atoi                                  
+0002cdc0  emacTxNotification                    
+0002cde4  emacRxNotification                    
+0002ce10  __aeabi_uidiv                         
+0002ce10  __aeabi_uidivmod                      
+0002ce61  __TI_auto_init_nobinit_nopinit        
+0002cea5  rand                                  
+0002ced9  strncmp                               
+0002cf03  memmove                               
+0002cf2b  memcmp                                
+0002cf51  strlen                                
+0002cf67  __aeabi_idiv0                         
+0002cf67  __aeabi_ldiv0                         
+0002cf69  isdigit                               
+0002cf79  islower                               
+0002cf89  isspace                               
+0002cf99  isxdigit                              
+0002cfa8  main                                  
+0002cfb9  __TI_decompress_none                  
+0002cfc7  __TI_zero_init                        
+0002cfd3  C$$EXIT                               
+0002cfd3  abort                                 
+0002cfd8  phantomInterrupt                      
+0002cfdc  handlePLLLockFail                     
+0002d160  _ctypes_                              
+0002d320  lwip_cyclic_timers                    
+0002d35c  memp_pools                            
+0002d3e4  tcp_pcb_lists                         
+0002d410  memp_FRAG_PBUF                        
+0002d41c  memp_NETBUF                           
+0002d428  memp_NETCONN                          
+0002d434  memp_PBUF                             
+0002d440  memp_PBUF_POOL                        
+0002d44c  memp_REASSDATA                        
+0002d458  memp_SYS_TIMEOUT                      
+0002d464  memp_TCPIP_MSG_API                    
+0002d470  memp_TCPIP_MSG_INPKT                  
+0002d47c  memp_TCP_PCB                          
+0002d488  memp_TCP_PCB_LISTEN                   
+0002d494  memp_TCP_SEG                          
+0002d4a0  memp_UDP_PCB                          
+0002d4bb  ethbroadcast                          
+0002d4c1  ethzero                               
+0002d4d0  ip_addr_any                           
+0002d4d4  ip_addr_broadcast                     
+0002d4d8  os_mutex_def_lwip_sys_mutex           
 080008d0  pxCurrentTCB                          
 08001000  __start___llvm_prf_cnts               
 08001000  __stop___llvm_prf_cnts                
@@ -1935,47 +1910,44 @@ address   name
 08008670  memp_memory_PBUF_POOL_base            
 0800ac74  ram_heap                              
 0800c088  memp_memory_TCP_PCB_base              
-0800c438  memp_memory_FRAG_PBUF_base            
-0800c5a4  memp_memory_TCP_SEG_base              
-0800c6e8  memp_memory_PBUF_base                 
-0800c8dc  memp_memory_TCP_PCB_LISTEN_base       
-0800c9c0  memp_memory_NETCONN_base              
-0800ca64  memp_memory_REASSDATA_base            
-0800cb08  memp_memory_TCPIP_MSG_API_base        
-0800cb8c  memp_memory_TCPIP_MSG_INPKT_base      
-0800cc10  memp_memory_UDP_PCB_base              
-0800cc94  memp_memory_SYS_TIMEOUT_base          
-0800ccf8  gnetif                                
-0800cd38  hdkif_data                            
-0800cdcc  memp_memory_NETBUF_base               
-0800cdf0  dhcp_rx_options_val                   
-0800ce10  ip_data                               
-0800ce90  dhcp_rx_options_given                 
-0800cea0  EMAC_to_pbuf_counter                  
-0800cea4  lock_tcpip_core                       
-0800cea8  lwip_sys_mutex                        
-0800ceac  netif_default                         
-0800ceb0  rx_queue                              
-0800ceb4  tcp_active_pcbs                       
-0800ceb8  tcp_bound_pcbs                        
-0800cebc  tcp_input_pcb                         
-0800cec0  tcp_listen_pcbs                       
-0800cec4  tcp_ticks                             
-0800cec8  tcp_tw_pcbs                           
-0800cecc  udp_pcbs                              
-0800ced4  pbuf_free_ooseq_pending               
-0800ced5  tcp_active_pcbs_changed               
-080146e8  ethernetif_rx_quiue_counter           
-080146ec  RxPktSemaphore                        
-080146f0  TxPktSemaphore                        
-080146f4  _lock                                 
-080146f8  _unlock                               
-080146fc  emacTxNotification_counter            
-08014700  emacRxNotification_counter            
-08014704  ulCriticalNesting                     
-08014708  ulTaskHasFPUContext                   
-08014714  emacAddress                           
-08014723  dhcp_status                           
+0800c438  memp_memory_SYS_TIMEOUT_base          
+0800c5cc  memp_memory_FRAG_PBUF_base            
+0800c738  memp_memory_PBUF_base                 
+0800c83c  memp_memory_TCP_SEG_base              
+0800ca30  memp_memory_TCP_PCB_LISTEN_base       
+0800cb14  memp_memory_NETCONN_base              
+0800cbb8  memp_memory_REASSDATA_base            
+0800cc5c  memp_memory_TCPIP_MSG_API_base        
+0800cce0  memp_memory_TCPIP_MSG_INPKT_base      
+0800cd64  memp_memory_UDP_PCB_base              
+0800cde8  hdkif_data                            
+0800ce7c  memp_memory_NETBUF_base               
+0800cea0  dhcp_rx_options_val                   
+0800cec0  ip_data                               
+0800cf3c  dhcp_rx_options_given                 
+0800cf4c  EMAC_to_pbuf_counter                  
+0800cf50  lock_tcpip_core                       
+0800cf54  lwip_sys_mutex                        
+0800cf58  netif_default                         
+0800cf5c  rx_queue                              
+0800cf60  tcp_active_pcbs                       
+0800cf64  tcp_bound_pcbs                        
+0800cf68  tcp_input_pcb                         
+0800cf6c  tcp_listen_pcbs                       
+0800cf70  tcp_ticks                             
+0800cf74  tcp_tw_pcbs                           
+0800cf78  udp_pcbs                              
+0800cf80  pbuf_free_ooseq_pending               
+0800cf81  tcp_active_pcbs_changed               
+08016ea4  ethernetif_rx_quiue_counter           
+08016ea8  RxPktSemaphore                        
+08016eac  TxPktSemaphore                        
+08016eb0  _lock                                 
+08016eb4  _unlock                               
+08016eb8  emacTxNotification_counter            
+08016ebc  emacRxNotification_counter            
+08016ec0  ulCriticalNesting                     
+08016ec4  ulTaskHasFPUContext                   
 ffffffff  __TI_pprof_out_hndl                   
 ffffffff  __TI_prof_data_size                   
 ffffffff  __TI_prof_data_start                  
@@ -1986,4 +1958,4 @@ UNDEFED   SHT$$INIT_ARRAY$$Base
 UNDEFED   SHT$$INIT_ARRAY$$Limit                
 UNDEFED   _system_post_cinit                    
 
-[790 symbols]
+[780 symbols]

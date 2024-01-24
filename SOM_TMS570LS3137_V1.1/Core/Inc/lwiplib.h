@@ -79,7 +79,7 @@ extern struct netif gnetif;
 ******************************************************************************/
 
 void MX_LWIP_Init(void);
-results_enum_t lwip_init_sync(uint8_t instance_number, uint8_t *mac_address, uint8_t *ip_address_array, uint8_t *net_mask_array, uint8_t *gateway_address_array, uint8_t ip_mode);
+results_enum_t lwip_init_async(uint8_t instance_number, uint8_t *mac_address, uint8_t *ip_address_array, uint8_t *net_mask_array, uint8_t *gateway_address_array, uint8_t ip_mode, bool is_reconncet);
 
 struct netif* lwip_get_hdkNetIF_p(void);
 

@@ -1,3 +1,4 @@
+#include "main.h"
 #include "FreeRTOS.h"
 #include "os_queue.h"
 #include "os_task.h"
@@ -18,6 +19,8 @@
 #include "lwip/init.h"
 #include "lwip/dhcp.h"
 
+#include "mqtt_example.h"
+#include "lwip/altcp.h"
 static results_enum_t ethernet_lwip_init(bool is_async);
 
 /*
@@ -25,7 +28,6 @@ static results_enum_t ethernet_lwip_init(bool is_async);
  */
 static void defaultTask(void *pvParameters);
 static void userTask(void *pvParameters);
-
 
 extern uint8 emacAddress[6U];
 void user_main(void)
@@ -36,10 +38,12 @@ void user_main(void)
     vimInit();
     esmInit();
     _enable_IRQ();
+    _enable_FIQ();
     _enable_interrupt_();
     esmEnableInterrupt(0xffffffff);
 
-    sys_thread_new("default", defaultTask, NULL, configMINIMAL_STACK_SIZE * 2, osPriorityIdle);
+    sys_thread_new("default", defaultTask, NULL, configMINIMAL_STACK_SIZE * 4,
+                   osPriorityIdle);
 
     vTaskStartScheduler();
 
@@ -81,19 +85,44 @@ static results_enum_t ethernet_lwip_init(bool is_async)
     tcpip_init(NULL, NULL);
 #endif
 
-    uint8_t ip_address_array[] = { 192, 168, 1, 182 };
-    uint8_t net_mask_array[] = { 255, 255, 255, 0 };
-    uint8_t gateway_address_array[] = { 192, 168, 1, 1 };
+    do
+    {
+        uint8_t ip_address_array[] = { 192, 168, 1, 14 };
+        uint8_t net_mask_array[] = { 255, 255, 255, 0 };
+        uint8_t gateway_address_array[] = { 192, 168, 1, 253 };
 
-    return_value = lwip_init_sync(0, &emacAddress[0], &ip_address_array[0],
-                                  &net_mask_array[0], &gateway_address_array[0],
-                                  IPADDR_USE_DHCP);
+        do
+        {
+            return_value = lwip_init_async((uint8_t) 0, &emacAddress[0],
+                                           &ip_address_array[0],
+                                           &net_mask_array[0],
+                                           &gateway_address_array[0],
+                                           IPADDR_USE_DHCP,
+                                           false);
+        }
+        while (RESULT_IN_THE_PROCESS == return_value && is_async == false);
+
+        if (RESULT_SUCCESS == return_value)
+        {
+
+        }
+        else
+        {
+        }
+    }
+    while (return_value != RESULT_SUCCESS);
 
     return return_value;
 }
-
+int task_counter = 0;
 /*-----------------------------------------------------------*/
 
+static err_t tcp_connect_cb(void *arg, struct altcp_pcb *tpcb, err_t err)
+{
+    return ERR_OK;
+}
+
+uint8_t lock_mqtt_connect = 0;
 volatile uint8_t dhcp_status = 0;
 static void defaultTask(void *pvParameters)
 {
@@ -103,9 +132,15 @@ static void defaultTask(void *pvParameters)
 
     for (;;)
     {
-         dhcp_status = dhcp_supplied_address(&gnetif);
-        // log_printf("fatih, %d", i);
-        // i++;
+        dhcp_status = dhcp_supplied_address(&gnetif);
+
+        if (1 == dhcp_status && 0 == lock_mqtt_connect)
+        {
+            mqtt_example_init();
+            lock_mqtt_connect = 1;
+        }
+
+        task_counter++;
         vTaskDelay(1000);
     }
 }
@@ -114,22 +149,21 @@ static void defaultTask(void *pvParameters)
 
 int log_printf(const char *__restrict _format, ...)
 {
-/*
-    char log_buffer[3000];
+    /*
+     char log_buffer[3000];
 
-    va_list va;
-    va_start(va, _format);
-    int size = vsprintf(log_buffer, _format, va);
+     va_list va;
+     va_start(va, _format);
+     int size = vsprintf(log_buffer, _format, va);
 
-    if (size > 0)
-    {
-        sciSend(scilinREG, size, (uint8_t*) &log_buffer[0]);
-    }
+     if (size > 0)
+     {
+     sciSend(scilinREG, size, (uint8_t*) &log_buffer[0]);
+     }
 
-    va_end(va);
+     va_end(va);
 
-    return size;*/
+     return size;*/
     return 0;
 }
-
 

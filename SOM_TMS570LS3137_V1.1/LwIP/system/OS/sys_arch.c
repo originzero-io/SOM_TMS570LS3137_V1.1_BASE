@@ -490,6 +490,7 @@ sys_prot_t sys_arch_protect(void)
 #else
   osMutexAcquire(lwip_sys_mutex, osWaitForever);
 #endif
+
   return (sys_prot_t)1;
 }
 
@@ -511,6 +512,6 @@ void sys_arch_unprotect(sys_prot_t pval)
 
 u32_t sys_now(void)
 {
-    return xTaskGetTickCount() * portTICK_PERIOD_MS;
+    return xTaskGetTickCount() * portTICK_PERIOD_MS;;
 }
 #endif /* !NO_SYS */

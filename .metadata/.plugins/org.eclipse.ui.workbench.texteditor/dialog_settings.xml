@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="USER"/>
+		<item key="selection" value="conn ="/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="USER"/>
-			<item value="user"/>
-			<item value="MPU_xTaskGetCurrentTaskHandle"/>
-			<item value="INCLUDE_xTaskGetCurrentTaskHandle"/>
-			<item value="MPU_xTaskGet"/>
-			<item value="EMAC_PHYADDRESS"/>
-			<item value="EMACRxIntISR"/>
-			<item value="dma"/>
-			<item value="emac"/>
-			<item value="EMAC_to_pbuf_counter"/>
-			<item value="low_level_init"/>
-			<item value="EMACHWInit"/>
-			<item value="EMAC_LOOPBACK_ENABLE"/>
-			<item value="low_level_output"/>
-			<item value="xSemaphoreGiveFromISR"/>
+			<item value="conn ="/>
+			<item value="conn"/>
+			<item value="mqtt_tcp_connect_cb"/>
+			<item value="LWIP_NETCONN"/>
+			<item value="SYS_LIGHTWEIGHT_PROT"/>
+			<item value="sys_timeout"/>
+			<item value="sys_"/>
+			<item value="defaultTask"/>
+			<item value="next_timeout"/>
+			<item value="next_timeout-&gt;"/>
+			<item value="next_timeout-&gt;n"/>
+			<item value="next_timeout-&gt;ne"/>
+			<item value="next_timeout-&gt;next"/>
+			<item value="next_timeout-&gt;NEXT"/>
+			<item value="time"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&amp;gnetif"/>
 			<item value="gnetif"/>
 			<item value=""/>
 			<item value="ethernetif"/>

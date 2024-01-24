@@ -46,10 +46,6 @@
 #include "esm.h"
 
 /* USER CODE BEGIN (0) */
-void vPreemptiveTick(void)
-{
-
-}
 /* USER CODE END */
 
 /* Vim Ram Definition */

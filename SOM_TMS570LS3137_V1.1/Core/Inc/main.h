@@ -10,6 +10,13 @@
 
 #include "core.h"
 
+
+/* MQTT SETTINGS BEGIN */
+#define MQTT_CYCLIC_TIMER_INTERVAL 5
+
+/* MQTT SETTINGS END*/
+
+
 void user_main(void);
 
 int log_printf(const char *__restrict _format, ...);

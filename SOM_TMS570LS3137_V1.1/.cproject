@@ -83,10 +83,10 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="LwIP|Core|HalCoGen|libraries" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="HalCoGen"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="LwIP"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="libraries"/>
+						<entry excluding="Src/lwip.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Core"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

@@ -50,6 +50,8 @@
 
 #include "esm.h"
 #include "sys_selftest.h"
+#include "sci.h"
+#include "dcc.h"
 #include "sys_dma.h"
 #include "emac.h" 
 
@@ -95,7 +97,27 @@ void memoryPort1TestFailNotification(uint32 groupSelect, uint32 dataSelect, uint
 
 /* USER CODE BEGIN (8) */
 /* USER CODE END */
+#pragma WEAK(dccNotification)
+void dccNotification(dccBASE_t  *dcc,uint32 flags)
+{
+/*  enter user code between the USER CODE BEGIN and USER CODE END. */
+/* USER CODE BEGIN (17) */
+/* USER CODE END */
+}
 
+/* USER CODE BEGIN (18) */
+/* USER CODE END */
+
+#pragma WEAK(sciNotification)
+void sciNotification(sciBASE_t *sci, uint32 flags)     
+{
+/*  enter user code between the USER CODE BEGIN and USER CODE END. */
+/* USER CODE BEGIN (29) */
+/* USER CODE END */
+}
+
+/* USER CODE BEGIN (30) */
+/* USER CODE END */
 
 
 

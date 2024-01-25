@@ -17,6 +17,7 @@ ASM_SRCS += \
 ../HalCoGen/source/sys_pmu.asm 
 
 C_SRCS += \
+../HalCoGen/source/dcc.c \
 ../HalCoGen/source/emac.c \
 ../HalCoGen/source/errata_SSWF021_45.c \
 ../HalCoGen/source/esm.c \
@@ -33,6 +34,7 @@ C_SRCS += \
 ../HalCoGen/source/os_timer.c \
 ../HalCoGen/source/phy_dp83640.c \
 ../HalCoGen/source/pinmux.c \
+../HalCoGen/source/sci.c \
 ../HalCoGen/source/sys_dma.c \
 ../HalCoGen/source/sys_main.c \
 ../HalCoGen/source/sys_pcr.c \
@@ -44,6 +46,7 @@ C_SRCS += \
 ../HalCoGen/source/system.c 
 
 C_DEPS += \
+./HalCoGen/source/dcc.d \
 ./HalCoGen/source/emac.d \
 ./HalCoGen/source/errata_SSWF021_45.d \
 ./HalCoGen/source/esm.d \
@@ -60,6 +63,7 @@ C_DEPS += \
 ./HalCoGen/source/os_timer.d \
 ./HalCoGen/source/phy_dp83640.d \
 ./HalCoGen/source/pinmux.d \
+./HalCoGen/source/sci.d \
 ./HalCoGen/source/sys_dma.d \
 ./HalCoGen/source/sys_main.d \
 ./HalCoGen/source/sys_pcr.d \
@@ -72,6 +76,7 @@ C_DEPS += \
 
 OBJS += \
 ./HalCoGen/source/dabort.obj \
+./HalCoGen/source/dcc.obj \
 ./HalCoGen/source/emac.obj \
 ./HalCoGen/source/errata_SSWF021_45.obj \
 ./HalCoGen/source/esm.obj \
@@ -89,6 +94,7 @@ OBJS += \
 ./HalCoGen/source/os_timer.obj \
 ./HalCoGen/source/phy_dp83640.obj \
 ./HalCoGen/source/pinmux.obj \
+./HalCoGen/source/sci.obj \
 ./HalCoGen/source/sys_core.obj \
 ./HalCoGen/source/sys_dma.obj \
 ./HalCoGen/source/sys_intvecs.obj \
@@ -113,6 +119,7 @@ ASM_DEPS += \
 
 OBJS__QUOTED += \
 "HalCoGen\source\dabort.obj" \
+"HalCoGen\source\dcc.obj" \
 "HalCoGen\source\emac.obj" \
 "HalCoGen\source\errata_SSWF021_45.obj" \
 "HalCoGen\source\esm.obj" \
@@ -130,6 +137,7 @@ OBJS__QUOTED += \
 "HalCoGen\source\os_timer.obj" \
 "HalCoGen\source\phy_dp83640.obj" \
 "HalCoGen\source\pinmux.obj" \
+"HalCoGen\source\sci.obj" \
 "HalCoGen\source\sys_core.obj" \
 "HalCoGen\source\sys_dma.obj" \
 "HalCoGen\source\sys_intvecs.obj" \
@@ -145,6 +153,7 @@ OBJS__QUOTED += \
 "HalCoGen\source\system.obj" 
 
 C_DEPS__QUOTED += \
+"HalCoGen\source\dcc.d" \
 "HalCoGen\source\emac.d" \
 "HalCoGen\source\errata_SSWF021_45.d" \
 "HalCoGen\source\esm.d" \
@@ -161,6 +170,7 @@ C_DEPS__QUOTED += \
 "HalCoGen\source\os_timer.d" \
 "HalCoGen\source\phy_dp83640.d" \
 "HalCoGen\source\pinmux.d" \
+"HalCoGen\source\sci.d" \
 "HalCoGen\source\sys_dma.d" \
 "HalCoGen\source\sys_main.d" \
 "HalCoGen\source\sys_pcr.d" \
@@ -188,6 +198,7 @@ ASM_SRCS__QUOTED += \
 "../HalCoGen/source/sys_pmu.asm" 
 
 C_SRCS__QUOTED += \
+"../HalCoGen/source/dcc.c" \
 "../HalCoGen/source/emac.c" \
 "../HalCoGen/source/errata_SSWF021_45.c" \
 "../HalCoGen/source/esm.c" \
@@ -204,6 +215,7 @@ C_SRCS__QUOTED += \
 "../HalCoGen/source/os_timer.c" \
 "../HalCoGen/source/phy_dp83640.c" \
 "../HalCoGen/source/pinmux.c" \
+"../HalCoGen/source/sci.c" \
 "../HalCoGen/source/sys_dma.c" \
 "../HalCoGen/source/sys_main.c" \
 "../HalCoGen/source/sys_pcr.c" \

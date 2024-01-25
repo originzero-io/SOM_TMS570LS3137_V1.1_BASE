@@ -1,21 +1,4 @@
-/* USER CODE BEGIN Header */
-/**
- ******************************************************************************
- * File Name          : Target/lwipopts.h
- * Description        : This file overrides LwIP stack default configuration
- *                      done in opt.h file.
- ******************************************************************************
- * @attention
- *
- * Copyright (c) 2023 STMicroelectronics.
- * All rights reserved.
- *
- * This software is licensed under terms that can be found in the LICENSE file
- * in the root directory of this software component.
- * If no LICENSE file comes with this software, it is provided AS-IS.
- *
- ******************************************************************************
- */
+
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion --------------------------------------*/
@@ -24,23 +7,15 @@
 
 #include "main.h"
 
-/*-----------------------------------------------------------------------------*/
-/* Current version of LwIP supported by CubeMx: 2.1.2 -*/
-/*-----------------------------------------------------------------------------*/
 
-/* Within 'USER CODE' section, code will be kept by default at each generation */
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
 
 #ifdef __cplusplus
-extern "C" {
+ extern "C" {
 #endif
 
+#define WITH_RTOS 1
 /* Temporary workaround to avoid conflict on errno defined in STM32CubeIDE and lwip sys_arch.c errno */
 #undef LWIP_PROVIDE_ERRNO
-/*----- CHECKSUM_BY_HARDWARE enabled -----*/
-#define CHECKSUM_BY_HARDWARE 0
 /*-----------------------------------------------------------------------------*/
 
 
@@ -49,9 +24,9 @@ extern "C" {
 /*----- Value in opt.h for MEM_ALIGNMENT: 1 -----*/
 #define MEM_ALIGNMENT 4
 /*----- Default Value for MEM_SIZE: 1600 ---*/
-#define MEM_SIZE (1024*5)
+#define MEM_SIZE 1024*10
 /*----- Default Value for MEMP_NUM_SYS_TIMEOUT: 5 ---*/
-#define MEMP_NUM_SYS_TIMEOUT 20
+#define MEMP_NUM_SYS_TIMEOUT 6
 /*----- Value in opt.h for LWIP_ETHERNET: LWIP_ARP || PPPOE_SUPPORT -*/
 #define LWIP_ETHERNET 1
 /*----- Value in opt.h for LWIP_DNS_SECURE: (LWIP_DNS_SECURE_RAND_XID | LWIP_DNS_SECURE_NO_MULTIPLE_OUTSTANDING | LWIP_DNS_SECURE_RAND_SRC_PORT) -*/
@@ -102,21 +77,15 @@ extern "C" {
 #define RECV_BUFSIZE_DEFAULT 2000000000
 /*----- Value in opt.h for LWIP_STATS: 1 -----*/
 #define LWIP_STATS 0
-/*-----------------------------------------------------------------------------*/
-/* USER CODE BEGIN 1 */
-#define LWIP_AUTOIP                     0
-/*
-#define SYS_LIGHTWEIGHT_PROT 1
-#define LWIP_NETCONN 1
-#define LWIP_SOCKET 1
-*/
-#define LWIP_DEBUG_TIMERNAMES 1
 
-#define MEM_SANITY_CHECK                0
-#define MEM_OVERFLOW_CHECK              0
-#define MEMP_SANITY_CHECK               0
-#define MEMP_OVERFLOW_CHECK             0
-/* USER CODE END 1 */
+
+
+#define LWIP_DEBUG 1
+#define LWIP_DEBUG_TIMERNAMES 1
+#define MEMP_DEBUG 1
+
+/*-----------------------------------------------------------------------------*/
+
 
 #ifdef __cplusplus
 }

@@ -145,7 +145,8 @@ static void tcpip_thread(void *arg)
         TCPIP_MBOX_FETCH(&tcpip_mbox, (void** )&msg);
         if (msg == NULL)
         {
-            LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: invalid message: NULL\n")); LWIP_ASSERT("tcpip_thread: invalid message", 0);
+            LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: invalid message: NULL\n"));
+            LWIP_ASSERT("tcpip_thread: invalid message", 0);
             continue;
         }
         tcpip_thread_handle_msg(msg);
@@ -184,15 +185,15 @@ static void tcpip_thread_handle_msg(struct tcpip_msg *msg)
 
 #if LWIP_TCPIP_TIMEOUT && LWIP_TIMERS
     case TCPIP_MSG_TIMEOUT:
-      LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: TIMEOUT %p\n", (void *)msg));
-      sys_timeout(msg->msg.tmo.msecs, msg->msg.tmo.h, msg->msg.tmo.arg);
-      memp_free(MEMP_TCPIP_MSG_API, msg);
-      break;
+        LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: TIMEOUT %p\n", (void *)msg));
+        sys_timeout(msg->msg.tmo.msecs, msg->msg.tmo.h, msg->msg.tmo.arg);
+        memp_free(MEMP_TCPIP_MSG_API, msg);
+        break;
     case TCPIP_MSG_UNTIMEOUT:
-      LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: UNTIMEOUT %p\n", (void *)msg));
-      sys_untimeout(msg->msg.tmo.h, msg->msg.tmo.arg);
-      memp_free(MEMP_TCPIP_MSG_API, msg);
-      break;
+        LWIP_DEBUGF(TCPIP_DEBUG, ("tcpip_thread: UNTIMEOUT %p\n", (void *)msg));
+        sys_untimeout(msg->msg.tmo.h, msg->msg.tmo.arg);
+        memp_free(MEMP_TCPIP_MSG_API, msg);
+        break;
 #endif /* LWIP_TCPIP_TIMEOUT && LWIP_TIMERS */
 
     case TCPIP_MSG_CALLBACK:
@@ -380,24 +381,24 @@ err_t tcpip_try_callback(tcpip_callback_fn function, void *ctx)
  * @param arg argument to pass to timeout function h
  * @return ERR_MEM on memory error, ERR_OK otherwise
  */
-err_t
-tcpip_timeout(u32_t msecs, sys_timeout_handler h, void *arg)
+err_t tcpip_timeout(u32_t msecs, sys_timeout_handler h, void *arg)
 {
-  struct tcpip_msg *msg;
+    struct tcpip_msg *msg;
 
-  LWIP_ASSERT("Invalid mbox", sys_mbox_valid_val(tcpip_mbox));
+    LWIP_ASSERT("Invalid mbox", sys_mbox_valid_val(tcpip_mbox));
 
-  msg = (struct tcpip_msg *)memp_malloc(MEMP_TCPIP_MSG_API);
-  if (msg == NULL) {
-    return ERR_MEM;
-  }
+    msg = (struct tcpip_msg*) memp_malloc(MEMP_TCPIP_MSG_API);
+    if (msg == NULL)
+    {
+        return ERR_MEM;
+    }
 
-  msg->type = TCPIP_MSG_TIMEOUT;
-  msg->msg.tmo.msecs = msecs;
-  msg->msg.tmo.h = h;
-  msg->msg.tmo.arg = arg;
-  sys_mbox_post(&tcpip_mbox, msg);
-  return ERR_OK;
+    msg->type = TCPIP_MSG_TIMEOUT;
+    msg->msg.tmo.msecs = msecs;
+    msg->msg.tmo.h = h;
+    msg->msg.tmo.arg = arg;
+    sys_mbox_post(&tcpip_mbox, msg);
+    return ERR_OK;
 }
 
 /**
@@ -407,23 +408,23 @@ tcpip_timeout(u32_t msecs, sys_timeout_handler h, void *arg)
  * @param arg argument to pass to timeout function h
  * @return ERR_MEM on memory error, ERR_OK otherwise
  */
-err_t
-tcpip_untimeout(sys_timeout_handler h, void *arg)
+err_t tcpip_untimeout(sys_timeout_handler h, void *arg)
 {
-  struct tcpip_msg *msg;
+    struct tcpip_msg *msg;
 
-  LWIP_ASSERT("Invalid mbox", sys_mbox_valid_val(tcpip_mbox));
+    LWIP_ASSERT("Invalid mbox", sys_mbox_valid_val(tcpip_mbox));
 
-  msg = (struct tcpip_msg *)memp_malloc(MEMP_TCPIP_MSG_API);
-  if (msg == NULL) {
-    return ERR_MEM;
-  }
+    msg = (struct tcpip_msg*) memp_malloc(MEMP_TCPIP_MSG_API);
+    if (msg == NULL)
+    {
+        return ERR_MEM;
+    }
 
-  msg->type = TCPIP_MSG_UNTIMEOUT;
-  msg->msg.tmo.h = h;
-  msg->msg.tmo.arg = arg;
-  sys_mbox_post(&tcpip_mbox, msg);
-  return ERR_OK;
+    msg->type = TCPIP_MSG_UNTIMEOUT;
+    msg->msg.tmo.h = h;
+    msg->msg.tmo.arg = arg;
+    sys_mbox_post(&tcpip_mbox, msg);
+    return ERR_OK;
 }
 #endif /* LWIP_TCPIP_TIMEOUT && LWIP_TIMERS */
 
@@ -619,7 +620,8 @@ void tcpip_init(tcpip_init_done_fn initfunc, void *arg)
 #endif /* LWIP_TCPIP_CORE_LOCKING */
 
     sys_thread_new(TCPIP_THREAD_NAME, tcpip_thread, NULL,
-                   TCPIP_THREAD_STACKSIZE, TCPIP_THREAD_PRIO);
+    TCPIP_THREAD_STACKSIZE,
+                   TCPIP_THREAD_PRIO);
 }
 
 /**

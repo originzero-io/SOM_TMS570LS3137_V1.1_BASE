@@ -142,8 +142,14 @@ Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/dhcp.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/mqtt_example.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/apps/mqtt.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/apps/mqtt_opts.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/iana.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/altcp.h
 Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sci.h
+Core/Src/main.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_sci.h
 
 ../Core/Src/main.c:
 
@@ -429,7 +435,19 @@ D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/Core/Inc/mqtt_example.h:
 
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/apps/mqtt.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/apps/mqtt_opts.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/prot/iana.h:
+
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/altcp.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/LwIP/src/include/lwip/opt.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sci.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_sci.h:
 

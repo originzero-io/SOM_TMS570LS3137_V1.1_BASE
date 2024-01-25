@@ -55,6 +55,8 @@ typedef int sys_prot_t;
 #define LWIP_PLATFORM_ASSERT(x) do {log_printf("Assertion \"%s\" failed at line %d in %s\n", \
                                      x, __LINE__, __FILE__); } while(0)
 #define LWIP_PLATFORM_DIAG(x) do {log_printf x;} while(0)
+
+
 /* Define random number generator function */
 #define LWIP_RAND() ((uint32_t)rand())
 

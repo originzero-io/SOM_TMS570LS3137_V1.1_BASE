@@ -34,6 +34,9 @@
 extern "C" {
 #endif
 
+#include "lwip/apps/mqtt.h"
+
+extern mqtt_client_t *mqtt_client;
 void mqtt_example_init(void);
 
 #ifdef __cplusplus

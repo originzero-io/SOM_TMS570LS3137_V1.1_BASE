@@ -979,7 +979,7 @@
  * LWIP_AUTOIP==1: Enable AUTOIP module.
  */
 #if !defined LWIP_AUTOIP || defined __DOXYGEN__
-#define LWIP_AUTOIP                     1
+#define LWIP_AUTOIP                     0
 #endif
 #if !LWIP_IPV4
 /* disable AUTOIP when IPv4 is disabled */
@@ -2178,7 +2178,7 @@
  * MEMP_STATS==1: Enable memp.c pool stats.
  */
 #if !defined MEMP_STATS || defined __DOXYGEN__
-#define MEMP_STATS                      (MEMP_MEM_MALLOC == 0)
+#define MEMP_STATSMEM_STATS                      (MEMP_MEM_MALLOC == 0)
 #endif
 
 /**

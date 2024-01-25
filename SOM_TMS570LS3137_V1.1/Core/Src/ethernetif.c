@@ -109,11 +109,6 @@ struct pbuf* EMAC_to_pbuf(hdkif_t *hdkif)
 
     while ((curr_bd->flags_pktlen & EMAC_BUF_DESC_OWNER) != EMAC_BUF_DESC_OWNER)
     {
-        if (300 < (curr_bd->bufoff_len & 0xFFFF))
-        {
-            p = NULL;
-        }
-
         // Copy data from buffer descriptor to pbuf
         ethernetif_rx_quiue[ethernetif_rx_quiue_counter].len =
                 (curr_bd->bufoff_len & 0xFFFF);
@@ -295,11 +290,6 @@ static void ethernetif_input(void const *argument)
                 p = low_level_input(netif);
                 if (p != NULL)
                 {
-                    uint8_t byte = ((uint8_t*) p->payload)[11];
-                    if (byte == 0x6c)
-                    {
-                        EMAC_to_pbuf_counter++;
-                    }
                     if (netif->input(p, netif) != ERR_OK)
                     {
                         pbuf_free(p);

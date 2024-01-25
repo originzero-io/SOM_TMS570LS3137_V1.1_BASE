@@ -21,12 +21,19 @@
 
 #include "mqtt_example.h"
 #include "lwip/altcp.h"
+
+#include "sci.h"
+
 static results_enum_t ethernet_lwip_init(bool is_async);
 
 /*
  * The tasks as described in the comments at the top of this file.
  */
 static void defaultTask(void *pvParameters);
+
+static void echo_server_thread(void *arg);
+static void start_echo_server(void);
+
 static void userTask(void *pvParameters);
 
 extern uint8 emacAddress[6U];
@@ -41,6 +48,7 @@ void user_main(void)
     _enable_FIQ();
     _enable_interrupt_();
     esmEnableInterrupt(0xffffffff);
+    sciInit();
 
     sys_thread_new("default", defaultTask, NULL, configMINIMAL_STACK_SIZE * 4,
                    osPriorityIdle);
@@ -115,15 +123,10 @@ static results_enum_t ethernet_lwip_init(bool is_async)
     return return_value;
 }
 int task_counter = 0;
+uint8_t dhcp_status;
+uint8_t lock_mqtt_connect;
 /*-----------------------------------------------------------*/
 
-static err_t tcp_connect_cb(void *arg, struct altcp_pcb *tpcb, err_t err)
-{
-    return ERR_OK;
-}
-
-uint8_t lock_mqtt_connect = 0;
-volatile uint8_t dhcp_status = 0;
 static void defaultTask(void *pvParameters)
 {
     log_printf("program started\n");
@@ -135,21 +138,89 @@ static void defaultTask(void *pvParameters)
         dhcp_status = dhcp_supplied_address(&gnetif);
 
         if (1 == dhcp_status && 0 == lock_mqtt_connect)
+
         {
-            mqtt_example_init();
+            start_echo_server();
+            //   mqtt_example_init();
             lock_mqtt_connect = 1;
+
         }
 
-        task_counter++;
-        vTaskDelay(1000);
+        vTaskDelay(10);
     }
+}
+#include "lwip/api.h"
+
+#define ECHO_SERVER_PORT 7  // Standard echo server TCP port
+
+static void echo_server_thread(void *arg)
+{
+    struct netconn *conn, *newconn;
+    err_t err, accept_err;
+
+    // Create a new connection identifier.
+    conn = netconn_new(NETCONN_TCP);
+
+    if (conn != NULL)
+    {
+        // Bind connection to the defined port number.
+        err = netconn_bind(conn, NULL, ECHO_SERVER_PORT);
+
+        if (err == ERR_OK)
+        {
+            // Start listening for incoming connections.
+            netconn_listen(conn);
+
+            while (1)
+            {
+                // Accept any incoming connection.
+                accept_err = netconn_accept(conn, &newconn);
+                if (accept_err == ERR_OK)
+                {
+                    struct netbuf *buf;
+                    void *data;
+                    u16_t len;
+
+                    while ((err = netconn_recv(newconn, &buf)) == ERR_OK)
+                    {
+                        do
+                        {
+                            netbuf_data(buf, &data, &len);
+                            netconn_write(newconn, data, len, NETCONN_COPY);
+                        }
+                        while (netbuf_next(buf) >= 0);
+
+                        netbuf_delete(buf);
+                    }
+
+                    // Close connection and clean up.
+                    netconn_close(newconn);
+                    netconn_delete(newconn);
+                }
+            }
+        }
+        else
+        {
+            // Error occurred during bind, handle it.
+            netconn_delete(newconn);
+        }
+    }
+    else
+    {
+        // Error occurred during connection creation, handle it.
+    }
+}
+
+static void start_echo_server(void)
+{
+    sys_thread_new("echo_server_tsk", echo_server_thread, NULL, DEFAULT_THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
 }
 
 /*-----------------------------------------------------------*/
 
 int log_printf(const char *__restrict _format, ...)
 {
-    /*
+
      char log_buffer[3000];
 
      va_list va;
@@ -163,7 +234,6 @@ int log_printf(const char *__restrict _format, ...)
 
      va_end(va);
 
-     return size;*/
-    return 0;
+     return size;
 }
 

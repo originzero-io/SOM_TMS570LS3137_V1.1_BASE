@@ -40,6 +40,10 @@ HalCoGen/source/notification.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20
 HalCoGen/source/notification.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/htu.h
 HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_htu.h
+HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sci.h
+HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_sci.h
+HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/dcc.h
+HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_dcc.h
 HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sys_dma.h
 HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_dma.h
 HalCoGen/source/notification.obj: D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/emac.h
@@ -129,6 +133,14 @@ C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/htu.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_htu.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sci.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_sci.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/dcc.h:
+
+D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/reg_dcc.h:
 
 D:/Projects/001-ANAKS/Projects/Software/ES/SOM_TMS570LS3137_V1.1_BASE/SOM_TMS570LS3137_V1.1/HalCoGen/include/sys_dma.h:
 

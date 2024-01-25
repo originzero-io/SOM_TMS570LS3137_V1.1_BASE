@@ -27,7 +27,6 @@
  *
  */
 
-#include "lwip/apps/mqtt.h"
 #include "mqtt_example.h"
 
 #if LWIP_TCP
@@ -44,7 +43,7 @@
 #endif
 
 static ip_addr_t mqtt_ip LWIP_MQTT_EXAMPLE_IPADDR_INIT;
-static mqtt_client_t *mqtt_client;
+mqtt_client_t *mqtt_client;
 
 static const struct mqtt_connect_client_info_t mqtt_client_info = { "test",
                                                                     NULL, /* user */
@@ -58,14 +57,14 @@ static const struct mqtt_connect_client_info_t mqtt_client_info = { "test",
   , NULL
 #endif
         };
-
+int receive_counter = 0;
 static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len,
                                   u8_t flags)
 {
     const struct mqtt_connect_client_info_t *client_info =
             (const struct mqtt_connect_client_info_t*) arg;
     LWIP_UNUSED_ARG(data);
-
+    receive_counter++;
     LWIP_PLATFORM_DIAG(
             ("MQTT client \"%s\" data cb: len %d, flags %d\n", client_info->client_id, (int)len, (int)flags));
 }

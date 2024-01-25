@@ -414,7 +414,8 @@
         <NAME>dcc.h</NAME>
       </HDRDCC>
       <SRCDCC>
-        </SRCDCC>
+        <NAME>dcc.c</NAME>
+      </SRCDCC>
       <HDRRTP_R>
         <NAME>reg_rtp.h</NAME>
       </HDRRTP_R>
@@ -768,7 +769,7 @@
         <PATH>include\dcc.h</PATH>
       </HDRDCC>
       <SRCDCC>
-        <PATH></PATH>
+        <PATH>source\dcc.c</PATH>
       </SRCDCC>
     </FILENAMES>
   </DCC>
